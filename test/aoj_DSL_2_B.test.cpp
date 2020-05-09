@@ -1,7 +1,7 @@
 #define PROBLEM "https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/all/DSL_2_B"
 
 #include <iostream>
-#include "Datastructure/Segmenttree.cpp"
+#include "DataStructure/SegmentTree.cpp"
 using namespace std;
 
 int main(){
