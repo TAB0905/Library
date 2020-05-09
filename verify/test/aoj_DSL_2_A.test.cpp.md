@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#098f6bcd4621d373cade4e832627b4f6">test</a>
 * <a href="{{ site.github.repository_url }}/blob/master/test/aoj_DSL_2_A.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-05-09 14:22:30+09:00
+    - Last commit date: 2020-05-09 14:30:34+09:00
 
 
 * see: <a href="https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/all/DSL_2_A">https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/all/DSL_2_A</a>
@@ -125,25 +125,6 @@ public:
   }
 };
 
-// void RSQ(){
-//   int n, q;
-//   cin >> n >> q;
-//   using T = long long;
-//   SegmentTree<T> rsq([](T a, T b){return a+b;},0LL);
-//   rsq.build(n);
-//   while(q--){
-//     int c, x, y;
-//     cin >> c >> x >> y;
-//     if(c){
-//       --x,--y;
-//       cout << rsq.query(x,y+1) << endl;
-//     }else{
-//       --x;
-//       long long t = rsq.query(x,x+1);
-//       rsq.set_val(x,t+y);
-//     }
-//   }
-// }
 #line 5 "test/aoj_DSL_2_A.test.cpp"
 using namespace std;
 

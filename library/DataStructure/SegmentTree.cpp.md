@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#5e248f107086635fddcead5bf28943fc">DataStructure</a>
 * <a href="{{ site.github.repository_url }}/blob/master/DataStructure/SegmentTree.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-05-09 14:18:03+09:00
+    - Last commit date: 2020-05-09 14:30:34+09:00
 
 
 
@@ -91,25 +91,6 @@ public:
   }
 };
 
-// void RSQ(){
-//   int n, q;
-//   cin >> n >> q;
-//   using T = long long;
-//   SegmentTree<T> rsq([](T a, T b){return a+b;},0LL);
-//   rsq.build(n);
-//   while(q--){
-//     int c, x, y;
-//     cin >> c >> x >> y;
-//     if(c){
-//       --x,--y;
-//       cout << rsq.query(x,y+1) << endl;
-//     }else{
-//       --x;
-//       long long t = rsq.query(x,x+1);
-//       rsq.set_val(x,t+y);
-//     }
-//   }
-// }
 
 ```
 {% endraw %}
@@ -163,25 +144,6 @@ public:
   }
 };
 
-// void RSQ(){
-//   int n, q;
-//   cin >> n >> q;
-//   using T = long long;
-//   SegmentTree<T> rsq([](T a, T b){return a+b;},0LL);
-//   rsq.build(n);
-//   while(q--){
-//     int c, x, y;
-//     cin >> c >> x >> y;
-//     if(c){
-//       --x,--y;
-//       cout << rsq.query(x,y+1) << endl;
-//     }else{
-//       --x;
-//       long long t = rsq.query(x,x+1);
-//       rsq.set_val(x,t+y);
-//     }
-//   }
-// }
 
 ```
 {% endraw %}
