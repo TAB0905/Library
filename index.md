@@ -40,10 +40,12 @@ layout: default
 
 * :heavy_check_mark: <a href="library/DataStructure/LazySegmentTree.cpp.html">DataStructure/LazySegmentTree.cpp</a>
 * :heavy_check_mark: <a href="library/DataStructure/SegmentTree.cpp.html">DataStructure/SegmentTree.cpp</a>
+* :heavy_check_mark: <a href="library/DataStructure/UnionFind.cpp.html">DataStructure/UnionFind.cpp</a>
 
 
 ## Verify Files
 
+* :heavy_check_mark: <a href="verify/test/aoj_DSL_1_A.test.cpp.html">test/aoj_DSL_1_A.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/aoj_DSL_2_A.test.cpp.html">test/aoj_DSL_2_A.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/aoj_DSL_2_B.test.cpp.html">test/aoj_DSL_2_B.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/aoj_DSL_2_D.test.cpp.html">test/aoj_DSL_2_D.test.cpp</a>
