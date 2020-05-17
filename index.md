@@ -48,7 +48,7 @@ layout: default
 ### Graph
 
 * :heavy_check_mark: <a href="library/Graph/FordFulkerson.cpp.html">Graph/FordFulkerson.cpp</a>
-* :heavy_check_mark: <a href="library/Graph/Lowlink.cpp.html">Graph/Lowlink.cpp</a>
+* :x: <a href="library/Graph/Lowlink.cpp.html">Graph/Lowlink.cpp</a>
 * :heavy_check_mark: <a href="library/Graph/MinCostFlow.cpp.html">Graph/MinCostFlow.cpp</a>
 
 
@@ -70,6 +70,6 @@ layout: default
 * :heavy_check_mark: <a href="verify/test/aoj_DSL_2_G.test.cpp.html">test/aoj_DSL_2_G.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/aoj_GRL_6_A_FordFulkerson.test.cpp.html">test/aoj_GRL_6_A_FordFulkerson.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/aoj_GRL_6_B.test.cpp.html">test/aoj_GRL_6_B.test.cpp</a>
-* :heavy_check_mark: <a href="verify/test/library_checker_two_edge_connected_components.test.cpp.html">test/library_checker_two_edge_connected_components.test.cpp</a>
+* :x: <a href="verify/test/library_checker_two_edge_connected_components.test.cpp.html">test/library_checker_two_edge_connected_components.test.cpp</a>
 
 

@@ -25,13 +25,13 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: test/library_checker_two_edge_connected_components.test.cpp
+# :x: test/library_checker_two_edge_connected_components.test.cpp
 
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#098f6bcd4621d373cade4e832627b4f6">test</a>
 * <a href="{{ site.github.repository_url }}/blob/master/test/library_checker_two_edge_connected_components.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-05-17 17:36:08+09:00
+    - Last commit date: 2020-05-17 17:44:46+09:00
 
 
 * see: <a href="https://judge.yosupo.jp/problem/two_edge_connected_components">https://judge.yosupo.jp/problem/two_edge_connected_components</a>
@@ -39,7 +39,7 @@ layout: default
 
 ## Depends on
 
-* :heavy_check_mark: <a href="../../library/Graph/Lowlink.cpp.html">Graph/Lowlink.cpp</a>
+* :x: <a href="../../library/Graph/Lowlink.cpp.html">Graph/Lowlink.cpp</a>
 
 
 ## Code
@@ -119,7 +119,7 @@ DecomposedGraph TwoEdgeConnectedComponentsDeconposition(const std::vector<std::p
   std::vector<int> low(n), ord(n,-1), node_idx(n,-1);
   std::stack<int> st;
   int t = 0;
-  auto lowlink = [&](auto lowlink, int v, int edge_idx, int& t) -> void {
+  auto lowlink = [&](auto lowlink, int v, int edge_idx) -> void {
                    st.push(v);
                    ord[v] = t++;
                    low[v] = ord[v];
@@ -129,7 +129,7 @@ DecomposedGraph TwoEdgeConnectedComponentsDeconposition(const std::vector<std::p
                      if(ord[v_] >= 0){
                        low[v] = std::min(low[v],ord[v_]);
                      }else{
-                       lowlink(lowlink,v_,idx,t);
+                       lowlink(lowlink,v_,idx);
                        low[v] = std::min(low[v],low[v_]);
                      }
                      if(ord[v] < low[v_]){// u-v is bridge
@@ -161,16 +161,6 @@ DecomposedGraph TwoEdgeConnectedComponentsDeconposition(const std::vector<std::p
     }
     ret.components.push_back(cc);
   }
-  
-  // fprintf(stderr,"node_idx\n");
-  // for(int i = 0; i < n; ++i){
-  //   fprintf(stderr,"%d ",node_idx[i]);
-  // }
-  // fprintf(stderr,"\n");
-
-  // fprintf(stderr,"bridge\n");
-  // for(auto b : ret.bridge)
-  //   fprintf(stderr,"(%d,%d)\n",b.first,b.second);
 
   int n_ = ret.components.size();
   ret.graph.resize(n_);
