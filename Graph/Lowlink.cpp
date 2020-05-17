@@ -1,10 +1,8 @@
 #include <algorithm>
 #include <cassert>
 #include <cstdio>
-#include <iomanip>
 #include <vector>
-#include <map>
-#include "DataStructure/UnionFind.cpp"
+#include <stack>
 
 struct DecomposedGraph {
   std::vector<std::vector<int>> graph;
@@ -27,9 +25,12 @@ DecomposedGraph TwoEdgeConnectedComponentsDeconposition(const std::vector<std::p
     G[e.second].emplace_back(e.first,i);
   }
 
-  std::vector<int> low(n), ord(n,-1);
+  DecomposedGraph ret;
+  std::vector<int> low(n), ord(n,-1), node_idx(n,-1);
+  std::stack<int> st;
   int t = 0;
   auto lowlink = [&](auto lowlink, int v, int edge_idx, int& t) -> void {
+                   st.push(v);
                    ord[v] = t++;
                    low[v] = ord[v];
                    for(const auto& e : G[v]){
@@ -41,48 +42,51 @@ DecomposedGraph TwoEdgeConnectedComponentsDeconposition(const std::vector<std::p
                        lowlink(lowlink,v_,idx,t);
                        low[v] = std::min(low[v],low[v_]);
                      }
+                     if(ord[v] < low[v_]){// u-v is bridge
+                       std::vector<int> cc;
+                       int n_idx = ret.components.size();
+                       while(true){
+                         int tp = st.top();
+                         cc.push_back(tp);
+                         node_idx[tp] = n_idx;
+                         st.pop();
+                         if(tp == v_) break;
+                       }
+                       ret.components.push_back(cc);
+                       ret.bridge.push_back(E[idx]);
+                     }
                    }
                  };
-  
+
   for(int i = 0; i < n; ++i){
     if(ord[i] >= 0) continue;
     lowlink(lowlink,i,-1,t);
-  }
-  
-  DecomposedGraph ret;
 
-  UnionFind uf(n);
-  for(auto [u, v] : E){
-    if(ord[u] > ord[v]) std::swap(u,v);
-    if(ord[u] < low[v]){
-      ret.bridge.emplace_back(u,v);
-    }else{
-      uf.unite(u,v);
+    std::vector<int> cc;
+    int idx = ret.components.size();
+    while(st.size()){
+      cc.push_back(st.top());
+      node_idx[st.top()] = idx;
+      st.pop();
     }
-  }
-
-  std::vector<int> P(n);
-  for(int i = 0; i < n; ++i)
-    P[i] = uf.find(i);
-
-  std::sort(P.begin(), P.end());
-  P.erase(unique(P.begin(), P.end()), P.end());
-
-  int n_ = P.size();
-  std::map<int,int> M;
-
-  for(int i = 0; i < n_; ++i){
-    M[P[i]] = i;
-  }
-
-  ret.components.resize(n_);
-  for(int i = 0; i < n; ++i){
-    ret.components[M[uf.find(i)]].push_back(i);
+    ret.components.push_back(cc);
   }
   
+  // fprintf(stderr,"node_idx\n");
+  // for(int i = 0; i < n; ++i){
+  //   fprintf(stderr,"%d ",node_idx[i]);
+  // }
+  // fprintf(stderr,"\n");
+
+  // fprintf(stderr,"bridge\n");
+  // for(auto b : ret.bridge)
+  //   fprintf(stderr,"(%d,%d)\n",b.first,b.second);
+
+  int n_ = ret.components.size();
   ret.graph.resize(n_);
   for(auto b : ret.bridge){
-    int u = M[uf.find(b.first)], v = M[uf.find(b.second)];
+    int u = node_idx[b.first], v = node_idx[b.second];
+    assert(u != v);
     ret.graph[u].emplace_back(v);
     ret.graph[v].emplace_back(u);
   }
