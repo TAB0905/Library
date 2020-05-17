@@ -25,20 +25,20 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :x: Graph/Lowlink.cpp
+# :heavy_check_mark: Graph/Lowlink.cpp
 
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#4cdbd2bafa8193091ba09509cedf94fd">Graph</a>
 * <a href="{{ site.github.repository_url }}/blob/master/Graph/Lowlink.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-05-17 17:44:46+09:00
+    - Last commit date: 2020-05-17 17:48:02+09:00
 
 
 
 
 ## Verified with
 
-* :x: <a href="../../verify/test/library_checker_two_edge_connected_components.test.cpp.html">test/library_checker_two_edge_connected_components.test.cpp</a>
+* :heavy_check_mark: <a href="../../verify/test/library_checker_two_edge_connected_components.test.cpp.html">test/library_checker_two_edge_connected_components.test.cpp</a>
 
 
 ## Code
@@ -108,7 +108,7 @@ DecomposedGraph TwoEdgeConnectedComponentsDeconposition(const std::vector<std::p
 
   for(int i = 0; i < n; ++i){
     if(ord[i] >= 0) continue;
-    lowlink(lowlink,i,-1,t);
+    lowlink(lowlink,i,-1);
 
     std::vector<int> cc;
     int idx = ret.components.size();
@@ -201,7 +201,7 @@ DecomposedGraph TwoEdgeConnectedComponentsDeconposition(const std::vector<std::p
 
   for(int i = 0; i < n; ++i){
     if(ord[i] >= 0) continue;
-    lowlink(lowlink,i,-1,t);
+    lowlink(lowlink,i,-1);
 
     std::vector<int> cc;
     int idx = ret.components.size();
