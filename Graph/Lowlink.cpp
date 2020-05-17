@@ -60,7 +60,7 @@ DecomposedGraph TwoEdgeConnectedComponentsDeconposition(const std::vector<std::p
 
   for(int i = 0; i < n; ++i){
     if(ord[i] >= 0) continue;
-    lowlink(lowlink,i,-1,t);
+    lowlink(lowlink,i,-1);
 
     std::vector<int> cc;
     int idx = ret.components.size();
