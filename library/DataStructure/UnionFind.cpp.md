@@ -36,15 +36,9 @@ layout: default
 
 
 
-## Required by
-
-* :heavy_check_mark: <a href="../Graph/Lowlink.cpp.html">Graph/Lowlink.cpp</a>
-
-
 ## Verified with
 
 * :heavy_check_mark: <a href="../../verify/test/aoj_DSL_1_A.test.cpp.html">test/aoj_DSL_1_A.test.cpp</a>
-* :heavy_check_mark: <a href="../../verify/test/library_checker_two_edge_connected_components.test.cpp.html">test/library_checker_two_edge_connected_components.test.cpp</a>
 
 
 ## Code
