@@ -75,7 +75,11 @@ DecomposedGraph TwoEdgeConnectedComponentsDeconposition(const std::vector<std::p
     M[P[i]] = i;
   }
 
-
+  ret.components.resize(n_);
+  for(int i = 0; i < n; ++i){
+    ret.components[M[uf.find(i)]].push_back(i);
+  }
+  
   ret.graph.resize(n_);
   for(auto b : ret.bridge){
     int u = M[uf.find(b.first)], v = M[uf.find(b.second)];
