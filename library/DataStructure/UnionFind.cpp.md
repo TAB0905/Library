@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: DataStructure/UnionFind.cpp
+# :question: DataStructure/UnionFind.cpp
 
 <a href="../../index.html">Back to top page</a>
 
@@ -36,9 +36,15 @@ layout: default
 
 
 
+## Required by
+
+* :x: <a href="../Graph/Lowlink.cpp.html">Graph/Lowlink.cpp</a>
+
+
 ## Verified with
 
 * :heavy_check_mark: <a href="../../verify/test/aoj_DSL_1_A.test.cpp.html">test/aoj_DSL_1_A.test.cpp</a>
+* :x: <a href="../../verify/test/library_checker_two_edge_connected_components.test.cpp.html">test/library_checker_two_edge_connected_components.test.cpp</a>
 
 
 ## Code
