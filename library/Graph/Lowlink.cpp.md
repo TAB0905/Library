@@ -25,25 +25,25 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :x: Graph/Lowlink.cpp
+# :heavy_check_mark: Graph/Lowlink.cpp
 
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#4cdbd2bafa8193091ba09509cedf94fd">Graph</a>
 * <a href="{{ site.github.repository_url }}/blob/master/Graph/Lowlink.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-05-17 16:57:22+09:00
+    - Last commit date: 2020-05-17 17:03:21+09:00
 
 
 
 
 ## Depends on
 
-* :question: <a href="../DataStructure/UnionFind.cpp.html">DataStructure/UnionFind.cpp</a>
+* :heavy_check_mark: <a href="../DataStructure/UnionFind.cpp.html">DataStructure/UnionFind.cpp</a>
 
 
 ## Verified with
 
-* :x: <a href="../../verify/test/library_checker_two_edge_connected_components.test.cpp.html">test/library_checker_two_edge_connected_components.test.cpp</a>
+* :heavy_check_mark: <a href="../../verify/test/library_checker_two_edge_connected_components.test.cpp.html">test/library_checker_two_edge_connected_components.test.cpp</a>
 
 
 ## Code
@@ -128,7 +128,11 @@ DecomposedGraph TwoEdgeConnectedComponentsDeconposition(const std::vector<std::p
     M[P[i]] = i;
   }
 
-
+  ret.components.resize(n_);
+  for(int i = 0; i < n; ++i){
+    ret.components[M[uf.find(i)]].push_back(i);
+  }
+  
   ret.graph.resize(n_);
   for(auto b : ret.bridge){
     int u = M[uf.find(b.first)], v = M[uf.find(b.second)];
@@ -245,7 +249,11 @@ DecomposedGraph TwoEdgeConnectedComponentsDeconposition(const std::vector<std::p
     M[P[i]] = i;
   }
 
-
+  ret.components.resize(n_);
+  for(int i = 0; i < n; ++i){
+    ret.components[M[uf.find(i)]].push_back(i);
+  }
+  
   ret.graph.resize(n_);
   for(auto b : ret.bridge){
     int u = M[uf.find(b.first)], v = M[uf.find(b.second)];

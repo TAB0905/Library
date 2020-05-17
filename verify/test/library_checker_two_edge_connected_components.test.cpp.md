@@ -25,13 +25,13 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :x: test/library_checker_two_edge_connected_components.test.cpp
+# :heavy_check_mark: test/library_checker_two_edge_connected_components.test.cpp
 
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#098f6bcd4621d373cade4e832627b4f6">test</a>
 * <a href="{{ site.github.repository_url }}/blob/master/test/library_checker_two_edge_connected_components.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-05-17 16:57:22+09:00
+    - Last commit date: 2020-05-17 17:03:21+09:00
 
 
 * see: <a href="https://judge.yosupo.jp/problem/two_edge_connected_components">https://judge.yosupo.jp/problem/two_edge_connected_components</a>
@@ -39,8 +39,8 @@ layout: default
 
 ## Depends on
 
-* :question: <a href="../../library/DataStructure/UnionFind.cpp.html">DataStructure/UnionFind.cpp</a>
-* :x: <a href="../../library/Graph/Lowlink.cpp.html">Graph/Lowlink.cpp</a>
+* :heavy_check_mark: <a href="../../library/DataStructure/UnionFind.cpp.html">DataStructure/UnionFind.cpp</a>
+* :heavy_check_mark: <a href="../../library/Graph/Lowlink.cpp.html">Graph/Lowlink.cpp</a>
 
 
 ## Code
@@ -189,7 +189,11 @@ DecomposedGraph TwoEdgeConnectedComponentsDeconposition(const std::vector<std::p
     M[P[i]] = i;
   }
 
-
+  ret.components.resize(n_);
+  for(int i = 0; i < n; ++i){
+    ret.components[M[uf.find(i)]].push_back(i);
+  }
+  
   ret.graph.resize(n_);
   for(auto b : ret.bridge){
     int u = M[uf.find(b.first)], v = M[uf.find(b.second)];
