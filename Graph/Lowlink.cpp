@@ -29,7 +29,7 @@ DecomposedGraph TwoEdgeConnectedComponentsDeconposition(const std::vector<std::p
   std::vector<int> low(n), ord(n,-1), node_idx(n,-1);
   std::stack<int> st;
   int t = 0;
-  auto lowlink = [&](auto lowlink, int v, int edge_idx, int& t) -> void {
+  auto lowlink = [&](auto lowlink, int v, int edge_idx) -> void {
                    st.push(v);
                    ord[v] = t++;
                    low[v] = ord[v];
@@ -39,7 +39,7 @@ DecomposedGraph TwoEdgeConnectedComponentsDeconposition(const std::vector<std::p
                      if(ord[v_] >= 0){
                        low[v] = std::min(low[v],ord[v_]);
                      }else{
-                       lowlink(lowlink,v_,idx,t);
+                       lowlink(lowlink,v_,idx);
                        low[v] = std::min(low[v],low[v_]);
                      }
                      if(ord[v] < low[v_]){// u-v is bridge
@@ -71,16 +71,6 @@ DecomposedGraph TwoEdgeConnectedComponentsDeconposition(const std::vector<std::p
     }
     ret.components.push_back(cc);
   }
-  
-  // fprintf(stderr,"node_idx\n");
-  // for(int i = 0; i < n; ++i){
-  //   fprintf(stderr,"%d ",node_idx[i]);
-  // }
-  // fprintf(stderr,"\n");
-
-  // fprintf(stderr,"bridge\n");
-  // for(auto b : ret.bridge)
-  //   fprintf(stderr,"(%d,%d)\n",b.first,b.second);
 
   int n_ = ret.components.size();
   ret.graph.resize(n_);
