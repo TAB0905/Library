@@ -8,6 +8,7 @@ struct DecomposedGraph {
   std::vector<std::vector<int>> graph;
   std::vector<std::pair<int,int>> bridge;
   std::vector<std::vector<int>> components;
+  std::vector<int> affiliation;
 };
 
 DecomposedGraph TwoEdgeConnectedComponentsDeconposition(const std::vector<std::pair<int,int>>& E, int n){
@@ -72,6 +73,7 @@ DecomposedGraph TwoEdgeConnectedComponentsDeconposition(const std::vector<std::p
     ret.components.push_back(cc);
   }
 
+  ret.affiliation = node_idx;
   int n_ = ret.components.size();
   ret.graph.resize(n_);
   for(auto b : ret.bridge){
