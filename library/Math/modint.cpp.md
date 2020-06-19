@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: Math/modint.cpp
+# :heavy_check_mark: Math/modint.cpp
 
 <a href="../../index.html">Back to top page</a>
 
@@ -34,6 +34,11 @@ layout: default
     - Last commit date: 2020-05-16 16:33:09+09:00
 
 
+
+
+## Verified with
+
+* :heavy_check_mark: <a href="../../verify/test/library_checker_queue_operate_all_composite.test.cpp.html">test/library_checker_queue_operate_all_composite.test.cpp</a>
 
 
 ## Code
