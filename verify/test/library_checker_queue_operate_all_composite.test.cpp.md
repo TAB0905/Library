@@ -46,7 +46,7 @@ layout: default
 #include <array>
 #include <cstdio>
 
-#include "Datastructue/FoldableQueue.cpp"
+#include "Datastructure/FoldableQueue.cpp"
 #include "Math/modint.cpp"
 
 using namespace std;
@@ -102,7 +102,7 @@ Traceback (most recent call last):
     self.update(self._resolve(pathlib.Path(included), included_from=path))
   File "/opt/hostedtoolcache/Python/3.8.3/x64/lib/python3.8/site-packages/onlinejudge_verify/languages/cplusplus_bundle.py", line 187, in _resolve
     raise BundleErrorAt(path, -1, "no such header")
-onlinejudge_verify.languages.cplusplus_bundle.BundleErrorAt: Datastructue/FoldableQueue.cpp: line -1: no such header
+onlinejudge_verify.languages.cplusplus_bundle.BundleErrorAt: Datastructure/FoldableQueue.cpp: line -1: no such header
 
 ```
 {% endraw %}
