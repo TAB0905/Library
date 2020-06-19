@@ -3,7 +3,7 @@
 #include <array>
 #include <cstdio>
 
-#include "Datastructue/FoldableQueue.cpp"
+#include "Datastructure/FoldableQueue.cpp"
 #include "Math/modint.cpp"
 
 using namespace std;
