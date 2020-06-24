@@ -38,6 +38,7 @@ layout: default
 
 ### DataStructure
 
+* :warning: <a href="library/DataStructure/BinaryTrie.cpp.html">DataStructure/BinaryTrie.cpp</a>
 * :heavy_check_mark: <a href="library/DataStructure/DualSegmentTree.cpp.html">DataStructure/DualSegmentTree.cpp</a>
 * :heavy_check_mark: <a href="library/DataStructure/FoldableQueue.cpp.html">DataStructure/FoldableQueue.cpp</a>
 * :heavy_check_mark: <a href="library/DataStructure/LazySegmentTree.cpp.html">DataStructure/LazySegmentTree.cpp</a>
@@ -59,6 +60,7 @@ layout: default
 
 ### Math
 
+* :warning: <a href="library/Math/FFT.cpp.html">Math/FFT.cpp</a>
 * :heavy_check_mark: <a href="library/Math/modint.cpp.html">Math/modint.cpp</a>
 
 
