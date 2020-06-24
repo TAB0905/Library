@@ -31,6 +31,8 @@ std::vector<std::complex<double>> convolution(std::vector<std::complex<double>> 
   return ret;
 }
 
+using namespace std;
+
 int main(){
   int N;
   cin >> N;

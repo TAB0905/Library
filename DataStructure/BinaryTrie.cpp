@@ -1,4 +1,5 @@
 #include <array>
+#include <memory>
 
 template<int length>
 class BinaryTrie {
@@ -14,3 +15,7 @@ public:
   long long lower_bound();
   long long upper_bound();
 };
+
+int main(){
+  
+}
