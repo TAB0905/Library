@@ -5,7 +5,7 @@ class modint{
 private:
   long long a;
 public:
-  constexpr modint(const long long x = 0) noexcept : a(x%mod) {}
+  constexpr modint(const long long x = 0) noexcept : a((x%mod+mod)%mod) {}
   constexpr long long& value() noexcept { return a; }
   constexpr const long long& value() const noexcept { return a; }
   constexpr modint operator+(const modint rhs) const noexcept {
