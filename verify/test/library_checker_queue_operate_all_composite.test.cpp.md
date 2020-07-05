@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#098f6bcd4621d373cade4e832627b4f6">test</a>
 * <a href="{{ site.github.repository_url }}/blob/master/test/library_checker_queue_operate_all_composite.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-06-19 16:40:36+09:00
+    - Last commit date: 2020-07-05 20:33:01+09:00
 
 
 * see: <a href="https://judge.yosupo.jp/problem/queue_operate_all_composite">https://judge.yosupo.jp/problem/queue_operate_all_composite</a>
@@ -148,7 +148,7 @@ class modint{
 private:
   long long a;
 public:
-  constexpr modint(const long long x = 0) noexcept : a(x%mod) {}
+  constexpr modint(const long long x = 0) noexcept : a((x%mod+mod)%mod) {}
   constexpr long long& value() noexcept { return a; }
   constexpr const long long& value() const noexcept { return a; }
   constexpr modint operator+(const modint rhs) const noexcept {

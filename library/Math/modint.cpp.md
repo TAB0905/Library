@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#a49950aa047c2292e989e368a97a3aae">Math</a>
 * <a href="{{ site.github.repository_url }}/blob/master/Math/modint.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-05-16 16:33:09+09:00
+    - Last commit date: 2020-07-05 20:33:01+09:00
 
 
 
@@ -53,7 +53,7 @@ class modint{
 private:
   long long a;
 public:
-  constexpr modint(const long long x = 0) noexcept : a(x%mod) {}
+  constexpr modint(const long long x = 0) noexcept : a((x%mod+mod)%mod) {}
   constexpr long long& value() noexcept { return a; }
   constexpr const long long& value() const noexcept { return a; }
   constexpr modint operator+(const modint rhs) const noexcept {
@@ -118,7 +118,7 @@ class modint{
 private:
   long long a;
 public:
-  constexpr modint(const long long x = 0) noexcept : a(x%mod) {}
+  constexpr modint(const long long x = 0) noexcept : a((x%mod+mod)%mod) {}
   constexpr long long& value() noexcept { return a; }
   constexpr const long long& value() const noexcept { return a; }
   constexpr modint operator+(const modint rhs) const noexcept {
