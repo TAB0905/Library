@@ -42,6 +42,7 @@ layout: default
 * :heavy_check_mark: <a href="library/DataStructure/DualSegmentTree.cpp.html">DataStructure/DualSegmentTree.cpp</a>
 * :heavy_check_mark: <a href="library/DataStructure/FoldableQueue.cpp.html">DataStructure/FoldableQueue.cpp</a>
 * :heavy_check_mark: <a href="library/DataStructure/LazySegmentTree.cpp.html">DataStructure/LazySegmentTree.cpp</a>
+* :heavy_check_mark: <a href="library/DataStructure/LineSet.cpp.html">DataStructure/LineSet.cpp</a>
 * :heavy_check_mark: <a href="library/DataStructure/SegmentTree.cpp.html">DataStructure/SegmentTree.cpp</a>
 * :heavy_check_mark: <a href="library/DataStructure/UnionFind.cpp.html">DataStructure/UnionFind.cpp</a>
 
@@ -83,6 +84,7 @@ layout: default
 * :heavy_check_mark: <a href="verify/test/aoj_DSL_2_G.test.cpp.html">test/aoj_DSL_2_G.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/aoj_GRL_6_A_FordFulkerson.test.cpp.html">test/aoj_GRL_6_A_FordFulkerson.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/aoj_GRL_6_B.test.cpp.html">test/aoj_GRL_6_B.test.cpp</a>
+* :heavy_check_mark: <a href="verify/test/library_checker_line_add_get_min.test.cpp.html">test/library_checker_line_add_get_min.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/library_checker_queue_operate_all_composite.test.cpp.html">test/library_checker_queue_operate_all_composite.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/library_checker_suffix_array.test.cpp.html">test/library_checker_suffix_array.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/library_checker_two_edge_connected_components.test.cpp.html">test/library_checker_two_edge_connected_components.test.cpp</a>
