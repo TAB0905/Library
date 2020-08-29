@@ -55,6 +55,7 @@ layout: default
 * :heavy_check_mark: <a href="library/Graph/FordFulkerson.cpp.html">Graph/FordFulkerson.cpp</a>
 * :heavy_check_mark: <a href="library/Graph/Lowlink.cpp.html">Graph/Lowlink.cpp</a>
 * :heavy_check_mark: <a href="library/Graph/MinCostFlow.cpp.html">Graph/MinCostFlow.cpp</a>
+* :heavy_check_mark: <a href="library/Graph/SCCD.cpp.html">Graph/SCCD.cpp</a>
 
 
 <div id="a49950aa047c2292e989e368a97a3aae"></div>
@@ -86,6 +87,7 @@ layout: default
 * :heavy_check_mark: <a href="verify/test/aoj_GRL_6_B.test.cpp.html">test/aoj_GRL_6_B.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/library_checker_line_add_get_min.test.cpp.html">test/library_checker_line_add_get_min.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/library_checker_queue_operate_all_composite.test.cpp.html">test/library_checker_queue_operate_all_composite.test.cpp</a>
+* :heavy_check_mark: <a href="verify/test/library_checker_scc.test.cpp.html">test/library_checker_scc.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/library_checker_suffix_array.test.cpp.html">test/library_checker_suffix_array.test.cpp</a>
 * :heavy_check_mark: <a href="verify/test/library_checker_two_edge_connected_components.test.cpp.html">test/library_checker_two_edge_connected_components.test.cpp</a>
 
