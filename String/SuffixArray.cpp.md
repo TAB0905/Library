@@ -4,8 +4,8 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: test/library_checker_suffix_array.test.cpp
-    title: test/library_checker_suffix_array.test.cpp
+    path: test/LibraryChecker/suffix_array.test.cpp
+    title: test/LibraryChecker/suffix_array.test.cpp
   _pathExtension: cpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
@@ -71,7 +71,7 @@ data:
   timestamp: '2020-05-23 18:04:07+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/library_checker_suffix_array.test.cpp
+  - test/LibraryChecker/suffix_array.test.cpp
 documentation_of: String/SuffixArray.cpp
 layout: document
 redirect_from:

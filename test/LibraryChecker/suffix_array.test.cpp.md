@@ -13,7 +13,7 @@ data:
     PROBLEM: https://judge.yosupo.jp/problem/suffixarray
     links:
     - https://judge.yosupo.jp/problem/suffixarray
-  bundledCode: "#line 1 \"test/library_checker_suffix_array.test.cpp\"\n#define PROBLEM\
+  bundledCode: "#line 1 \"test/LibraryChecker/suffix_array.test.cpp\"\n#define PROBLEM\
     \ \"https://judge.yosupo.jp/problem/suffixarray\"\n\n#include <iostream>\n#line\
     \ 1 \"String/SuffixArray.cpp\"\n#include <cassert>\n#line 3 \"String/SuffixArray.cpp\"\
     \n#include <vector>\n\n//\u69CB\u7BC9 : O(|S|log|S|)\nstruct SuffixArray {\nprivate:\n\
@@ -41,7 +41,7 @@ data:
     \   for(int i = 1; i < size; ++i){\n        if((c[p[i]] != c[p[i-1]]) or (c[(p[i]+k)%size]\
     \ != c[(p[i-1]+k)%size]))\n          ++classes;\n        c_[p[i]] = classes-1;\n\
     \      }\n      std::swap(c,c_);\n    }\n\n    SA = p;\n    constructLCPArray();\n\
-    \  }\n};\n\n#line 5 \"test/library_checker_suffix_array.test.cpp\"\nusing namespace\
+    \  }\n};\n\n#line 5 \"test/LibraryChecker/suffix_array.test.cpp\"\nusing namespace\
     \ std;\n\nint main(){\n  string s;\n  cin >> s;\n  SuffixArray sa(s);\n  sa.construct();\n\
     \  for(size_t i = 1; i <= s.length(); ++i){\n    cout << sa.SA[i] << (i+1 <= s.length()\
     \ ? \" \" : \"\\n\");\n  }\n}\n"
@@ -53,15 +53,15 @@ data:
   dependsOn:
   - String/SuffixArray.cpp
   isVerificationFile: true
-  path: test/library_checker_suffix_array.test.cpp
+  path: test/LibraryChecker/suffix_array.test.cpp
   requiredBy: []
-  timestamp: '2020-05-23 18:04:07+09:00'
+  timestamp: '2020-09-24 02:37:40+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: test/library_checker_suffix_array.test.cpp
+documentation_of: test/LibraryChecker/suffix_array.test.cpp
 layout: document
 redirect_from:
-- /verify/test/library_checker_suffix_array.test.cpp
-- /verify/test/library_checker_suffix_array.test.cpp.html
-title: test/library_checker_suffix_array.test.cpp
+- /verify/test/LibraryChecker/suffix_array.test.cpp
+- /verify/test/LibraryChecker/suffix_array.test.cpp.html
+title: test/LibraryChecker/suffix_array.test.cpp
 ---

@@ -4,8 +4,8 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: test/aoj_DSL_2_D_DualSegmentTree.test.cpp
-    title: test/aoj_DSL_2_D_DualSegmentTree.test.cpp
+    path: test/AOJ/DSL_2_D_DualSegmentTree.test.cpp
+    title: test/AOJ/DSL_2_D_DualSegmentTree.test.cpp
   _pathExtension: cpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
@@ -51,7 +51,7 @@ data:
   timestamp: '2020-06-16 02:17:44+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/aoj_DSL_2_D_DualSegmentTree.test.cpp
+  - test/AOJ/DSL_2_D_DualSegmentTree.test.cpp
 documentation_of: DataStructure/DualSegmentTree.cpp
 layout: document
 redirect_from:

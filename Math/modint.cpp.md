@@ -4,8 +4,8 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: test/library_checker_queue_operate_all_composite.test.cpp
-    title: test/library_checker_queue_operate_all_composite.test.cpp
+    path: test/LibraryChecker/queue_operate_all_composite.test.cpp
+    title: test/LibraryChecker/queue_operate_all_composite.test.cpp
   _pathExtension: cpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
@@ -59,7 +59,7 @@ data:
   timestamp: '2020-07-05 20:33:01+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/library_checker_queue_operate_all_composite.test.cpp
+  - test/LibraryChecker/queue_operate_all_composite.test.cpp
 documentation_of: Math/modint.cpp
 layout: document
 redirect_from:

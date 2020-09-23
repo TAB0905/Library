@@ -4,8 +4,8 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: test/library_checker_two_edge_connected_components.test.cpp
-    title: test/library_checker_two_edge_connected_components.test.cpp
+    path: test/LibraryChecker/two_edge_connected_components.test.cpp
+    title: test/LibraryChecker/two_edge_connected_components.test.cpp
   _pathExtension: cpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
@@ -83,7 +83,7 @@ data:
   timestamp: '2020-05-18 10:46:00+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/library_checker_two_edge_connected_components.test.cpp
+  - test/LibraryChecker/two_edge_connected_components.test.cpp
 documentation_of: Graph/Lowlink.cpp
 layout: document
 redirect_from:

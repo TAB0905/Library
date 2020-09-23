@@ -13,7 +13,7 @@ data:
     PROBLEM: https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/all/GRL_6_B
     links:
     - https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/all/GRL_6_B
-  bundledCode: "#line 1 \"test/aoj_GRL_6_B.test.cpp\"\n#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/all/GRL_6_B\"\
+  bundledCode: "#line 1 \"test/AOJ/aoj_GRL_6_B.test.cpp\"\n#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/all/GRL_6_B\"\
     \n\n#include <iostream>\n#line 1 \"Graph/MinCostFlow.cpp\"\n#include <cassert>\n\
     #include <cstdio>\n#include <vector>\n#include <queue>\n#include <utility>\n#include\
     \ <tuple>\n#include <limits>\nusing namespace std;\n\nstruct MinCostFlowGraph\
@@ -41,10 +41,10 @@ data:
     \      }\n      v = to;\n      while(v != from){\n        int v_ = prev_v[v];\n\
     \        auto& e = G[v_][prev_e[v]];\n        e.cap -= flow;\n        ans += flow*e.cost;\n\
     \        G[v][e.r_idx].cap += flow;\n        v = v_;\n      }\n      f -= flow;\n\
-    \    }\n    return ans;\n  }\n};\n#line 5 \"test/aoj_GRL_6_B.test.cpp\"\nusing\
-    \ namespace std;\n\nint main(){\n  int n, m, f;\n  cin >> n >> m >> f;\n  MinCostFlowGraph\
-    \ G(n);\n  for(int i = 0; i < m; ++i){\n    long long u, v, c, d;\n    cin >>\
-    \ u >> v >> c >> d;\n    G.add_edge(u,v,c,d);\n  }\n  cout << G.min_cost_flow(0,n-1,f)\
+    \    }\n    return ans;\n  }\n};\n#line 5 \"test/AOJ/aoj_GRL_6_B.test.cpp\"\n\
+    using namespace std;\n\nint main(){\n  int n, m, f;\n  cin >> n >> m >> f;\n \
+    \ MinCostFlowGraph G(n);\n  for(int i = 0; i < m; ++i){\n    long long u, v, c,\
+    \ d;\n    cin >> u >> v >> c >> d;\n    G.add_edge(u,v,c,d);\n  }\n  cout << G.min_cost_flow(0,n-1,f)\
     \ << endl;\n}\n"
   code: "#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/all/GRL_6_B\"\
     \n\n#include <iostream>\n#include \"Graph/MinCostFlow.cpp\"\nusing namespace std;\n\
@@ -55,15 +55,15 @@ data:
   dependsOn:
   - Graph/MinCostFlow.cpp
   isVerificationFile: true
-  path: test/aoj_GRL_6_B.test.cpp
+  path: test/AOJ/aoj_GRL_6_B.test.cpp
   requiredBy: []
-  timestamp: '2020-05-14 11:55:44+09:00'
+  timestamp: '2020-09-24 02:37:40+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: test/aoj_GRL_6_B.test.cpp
+documentation_of: test/AOJ/aoj_GRL_6_B.test.cpp
 layout: document
 redirect_from:
-- /verify/test/aoj_GRL_6_B.test.cpp
-- /verify/test/aoj_GRL_6_B.test.cpp.html
-title: test/aoj_GRL_6_B.test.cpp
+- /verify/test/AOJ/aoj_GRL_6_B.test.cpp
+- /verify/test/AOJ/aoj_GRL_6_B.test.cpp.html
+title: test/AOJ/aoj_GRL_6_B.test.cpp
 ---

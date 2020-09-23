@@ -16,7 +16,7 @@ data:
     PROBLEM: https://judge.yosupo.jp/problem/queue_operate_all_composite
     links:
     - https://judge.yosupo.jp/problem/queue_operate_all_composite
-  bundledCode: "#line 1 \"test/library_checker_queue_operate_all_composite.test.cpp\"\
+  bundledCode: "#line 1 \"test/LibraryChecker/queue_operate_all_composite.test.cpp\"\
     \n#define PROBLEM \"https://judge.yosupo.jp/problem/queue_operate_all_composite\"\
     \n\n#include <array>\n#include <cstdio>\n\n#line 1 \"DataStructure/FoldableQueue.cpp\"\
     \n#include <algorithm>\n#include <vector>\n\ntemplate<typename T, typename F>\n\
@@ -47,7 +47,7 @@ data:
     \ std::ostream& operator<<(std::ostream &os, const modint &X){\n    return os\
     \ << X.a;\n  }\n  friend std::istream& operator>>(std::istream &is, modint &X){\n\
     \    is >> X.a;\n    X.a %= mod;\n    if(X.a < 0) X.a += mod;\n    return is;\n\
-    \  }\n};\n#line 8 \"test/library_checker_queue_operate_all_composite.test.cpp\"\
+    \  }\n};\n#line 8 \"test/LibraryChecker/queue_operate_all_composite.test.cpp\"\
     \n\nusing namespace std;\n\nint main(){\n  using mint = modint<998244353>;\n \
     \ using T = array<mint,2>;\n  \n  auto f = [](const T& a, const T& b) -> T {\n\
     \             return {b[0]*a[0],b[0]*a[1]+b[1]};\n           };\n  \n  T ti =\
@@ -74,15 +74,15 @@ data:
   - DataStructure/FoldableQueue.cpp
   - Math/modint.cpp
   isVerificationFile: true
-  path: test/library_checker_queue_operate_all_composite.test.cpp
+  path: test/LibraryChecker/queue_operate_all_composite.test.cpp
   requiredBy: []
-  timestamp: '2020-07-05 20:33:01+09:00'
+  timestamp: '2020-09-24 02:37:40+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: test/library_checker_queue_operate_all_composite.test.cpp
+documentation_of: test/LibraryChecker/queue_operate_all_composite.test.cpp
 layout: document
 redirect_from:
-- /verify/test/library_checker_queue_operate_all_composite.test.cpp
-- /verify/test/library_checker_queue_operate_all_composite.test.cpp.html
-title: test/library_checker_queue_operate_all_composite.test.cpp
+- /verify/test/LibraryChecker/queue_operate_all_composite.test.cpp
+- /verify/test/LibraryChecker/queue_operate_all_composite.test.cpp.html
+title: test/LibraryChecker/queue_operate_all_composite.test.cpp
 ---

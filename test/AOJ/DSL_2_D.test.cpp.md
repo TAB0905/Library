@@ -13,7 +13,7 @@ data:
     PROBLEM: https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/all/DSL_2_D
     links:
     - https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/all/DSL_2_D
-  bundledCode: "#line 1 \"test/aoj_DSL_2_D.test.cpp\"\n#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/all/DSL_2_D\"\
+  bundledCode: "#line 1 \"test/AOJ/DSL_2_D.test.cpp\"\n#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/all/DSL_2_D\"\
     \n\n#include <algorithm>\n#include <iostream>\n#include <vector>\n#line 4 \"DataStructure/LazySegmentTree.cpp\"\
     \n#include <functional>\n#include <utility>\n\ntemplate <typename T, typename\
     \ E>\nstruct LazySegmentTree{\nprivate:\n  using F = std::function<T(T,T)>;\n\
@@ -40,7 +40,7 @@ data:
     \ T query(int l, int r){\n    if(l >= r) return ti;\n    l += n;\n    r += n;\n\
     \    thrust(l);\n    thrust(r-1);\n    T vl = ti, vr = ti;\n    for(; l < r; l\
     \ >>= 1, r >>= 1){\n      if(l&1) vl = f(vl,reflect(l++));\n      if(r&1) vr =\
-    \ f(reflect(--r),vr);\n    }\n    return f(vl,vr);\n  }\n};\n\n#line 7 \"test/aoj_DSL_2_D.test.cpp\"\
+    \ f(reflect(--r),vr);\n    }\n    return f(vl,vr);\n  }\n};\n\n#line 7 \"test/AOJ/DSL_2_D.test.cpp\"\
     \nusing namespace std;\n\nint main(){\n\n  using T = int;\n  using E = int;\n\
     \  T ti = 0;\n  E ei = -1;\n  function<T(T,T)> f = [](T a, T b){ return max(a,b);};\n\
     \  function<T(T,E)> g = [](T a, E b){ return b;};\n  function<E(E,E)> h = [](E\
@@ -64,15 +64,15 @@ data:
   dependsOn:
   - DataStructure/LazySegmentTree.cpp
   isVerificationFile: true
-  path: test/aoj_DSL_2_D.test.cpp
+  path: test/AOJ/DSL_2_D.test.cpp
   requiredBy: []
-  timestamp: '2020-05-09 15:26:14+09:00'
+  timestamp: '2020-09-24 02:37:40+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: test/aoj_DSL_2_D.test.cpp
+documentation_of: test/AOJ/DSL_2_D.test.cpp
 layout: document
 redirect_from:
-- /verify/test/aoj_DSL_2_D.test.cpp
-- /verify/test/aoj_DSL_2_D.test.cpp.html
-title: test/aoj_DSL_2_D.test.cpp
+- /verify/test/AOJ/DSL_2_D.test.cpp
+- /verify/test/AOJ/DSL_2_D.test.cpp.html
+title: test/AOJ/DSL_2_D.test.cpp
 ---

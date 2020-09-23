@@ -3,7 +3,7 @@ data:
   libraryCategories:
   - name: DataStructure
     pages:
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: DataStructure/BinaryTrie.cpp
       title: DataStructure/BinaryTrie.cpp
     - icon: ':heavy_check_mark:'
@@ -38,7 +38,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: Graph/MinCostFlow.cpp
       title: Graph/MinCostFlow.cpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':warning:'
       path: Graph/SCCD.cpp
       title: Graph/SCCD.cpp
   - name: Math
@@ -55,52 +55,57 @@ data:
       path: String/SuffixArray.cpp
       title: String/SuffixArray.cpp
   verificationCategories:
-  - name: test
+  - name: test/AOJ
     pages:
     - icon: ':heavy_check_mark:'
-      path: test/aoj_DSL_1_A.test.cpp
-      title: test/aoj_DSL_1_A.test.cpp
+      path: test/AOJ/DSL_1_A.test.cpp
+      title: test/AOJ/DSL_1_A.test.cpp
     - icon: ':heavy_check_mark:'
-      path: test/aoj_DSL_2_A.test.cpp
-      title: test/aoj_DSL_2_A.test.cpp
+      path: test/AOJ/DSL_2_A.test.cpp
+      title: test/AOJ/DSL_2_A.test.cpp
     - icon: ':heavy_check_mark:'
-      path: test/aoj_DSL_2_B.test.cpp
-      title: test/aoj_DSL_2_B.test.cpp
+      path: test/AOJ/DSL_2_B.test.cpp
+      title: test/AOJ/DSL_2_B.test.cpp
     - icon: ':heavy_check_mark:'
-      path: test/aoj_DSL_2_D.test.cpp
-      title: test/aoj_DSL_2_D.test.cpp
+      path: test/AOJ/DSL_2_D.test.cpp
+      title: test/AOJ/DSL_2_D.test.cpp
     - icon: ':heavy_check_mark:'
-      path: test/aoj_DSL_2_D_DualSegmentTree.test.cpp
-      title: test/aoj_DSL_2_D_DualSegmentTree.test.cpp
+      path: test/AOJ/DSL_2_D_DualSegmentTree.test.cpp
+      title: test/AOJ/DSL_2_D_DualSegmentTree.test.cpp
     - icon: ':heavy_check_mark:'
-      path: test/aoj_DSL_2_E.test.cpp
-      title: test/aoj_DSL_2_E.test.cpp
+      path: test/AOJ/DSL_2_E.test.cpp
+      title: test/AOJ/DSL_2_E.test.cpp
     - icon: ':heavy_check_mark:'
-      path: test/aoj_DSL_2_F.test.cpp
-      title: test/aoj_DSL_2_F.test.cpp
+      path: test/AOJ/DSL_2_F.test.cpp
+      title: test/AOJ/DSL_2_F.test.cpp
     - icon: ':heavy_check_mark:'
-      path: test/aoj_DSL_2_G.test.cpp
-      title: test/aoj_DSL_2_G.test.cpp
+      path: test/AOJ/aoj_DSL_2_G.test.cpp
+      title: test/AOJ/aoj_DSL_2_G.test.cpp
     - icon: ':heavy_check_mark:'
-      path: test/aoj_GRL_6_A_FordFulkerson.test.cpp
-      title: test/aoj_GRL_6_A_FordFulkerson.test.cpp
+      path: test/AOJ/aoj_GRL_6_A_FordFulkerson.test.cpp
+      title: test/AOJ/aoj_GRL_6_A_FordFulkerson.test.cpp
     - icon: ':heavy_check_mark:'
-      path: test/aoj_GRL_6_B.test.cpp
-      title: test/aoj_GRL_6_B.test.cpp
+      path: test/AOJ/aoj_GRL_6_B.test.cpp
+      title: test/AOJ/aoj_GRL_6_B.test.cpp
+  - name: test/LibraryChecker
+    pages:
     - icon: ':heavy_check_mark:'
-      path: test/library_checker_line_add_get_min.test.cpp
-      title: test/library_checker_line_add_get_min.test.cpp
+      path: test/LibraryChecker/line_add_get_min.test.cpp
+      title: test/LibraryChecker/line_add_get_min.test.cpp
     - icon: ':heavy_check_mark:'
-      path: test/library_checker_queue_operate_all_composite.test.cpp
-      title: test/library_checker_queue_operate_all_composite.test.cpp
+      path: test/LibraryChecker/queue_operate_all_composite.test.cpp
+      title: test/LibraryChecker/queue_operate_all_composite.test.cpp
+    - icon: ':x:'
+      path: test/LibraryChecker/scc.test.cpp
+      title: test/LibraryChecker/scc.test.cpp
     - icon: ':heavy_check_mark:'
-      path: test/library_checker_scc.test.cpp
-      title: test/library_checker_scc.test.cpp
+      path: test/LibraryChecker/set_xor_min.test.cpp
+      title: test/LibraryChecker/set_xor_min.test.cpp
     - icon: ':heavy_check_mark:'
-      path: test/library_checker_suffix_array.test.cpp
-      title: test/library_checker_suffix_array.test.cpp
+      path: test/LibraryChecker/suffix_array.test.cpp
+      title: test/LibraryChecker/suffix_array.test.cpp
     - icon: ':heavy_check_mark:'
-      path: test/library_checker_two_edge_connected_components.test.cpp
-      title: test/library_checker_two_edge_connected_components.test.cpp
+      path: test/LibraryChecker/two_edge_connected_components.test.cpp
+      title: test/LibraryChecker/two_edge_connected_components.test.cpp
 layout: toppage
 ---

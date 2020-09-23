@@ -4,11 +4,11 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: test/aoj_DSL_2_A.test.cpp
-    title: test/aoj_DSL_2_A.test.cpp
+    path: test/AOJ/DSL_2_A.test.cpp
+    title: test/AOJ/DSL_2_A.test.cpp
   - icon: ':heavy_check_mark:'
-    path: test/aoj_DSL_2_B.test.cpp
-    title: test/aoj_DSL_2_B.test.cpp
+    path: test/AOJ/DSL_2_B.test.cpp
+    title: test/AOJ/DSL_2_B.test.cpp
   _pathExtension: cpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
@@ -46,8 +46,8 @@ data:
   timestamp: '2020-05-09 14:30:34+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/aoj_DSL_2_A.test.cpp
-  - test/aoj_DSL_2_B.test.cpp
+  - test/AOJ/DSL_2_A.test.cpp
+  - test/AOJ/DSL_2_B.test.cpp
 documentation_of: DataStructure/SegmentTree.cpp
 layout: document
 redirect_from:

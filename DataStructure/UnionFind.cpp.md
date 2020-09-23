@@ -4,8 +4,8 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: test/aoj_DSL_1_A.test.cpp
-    title: test/aoj_DSL_1_A.test.cpp
+    path: test/AOJ/DSL_1_A.test.cpp
+    title: test/AOJ/DSL_1_A.test.cpp
   _pathExtension: cpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
@@ -33,7 +33,7 @@ data:
   timestamp: '2020-05-09 15:40:50+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/aoj_DSL_1_A.test.cpp
+  - test/AOJ/DSL_1_A.test.cpp
 documentation_of: DataStructure/UnionFind.cpp
 layout: document
 redirect_from:

@@ -13,7 +13,7 @@ data:
     PROBLEM: https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/all/DSL_2_D
     links:
     - https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/all/DSL_2_D
-  bundledCode: "#line 1 \"test/aoj_DSL_2_D_DualSegmentTree.test.cpp\"\n#define PROBLEM\
+  bundledCode: "#line 1 \"test/AOJ/DSL_2_D_DualSegmentTree.test.cpp\"\n#define PROBLEM\
     \ \"https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/all/DSL_2_D\"\n\n#include\
     \ <array>\n#include <vector>\n#include <cstdio>\n#include <climits>\n\n#line 1\
     \ \"DataStructure/DualSegmentTree.cpp\"\n#include <cassert>\n#include <numeric>\n\
@@ -32,7 +32,7 @@ data:
     \   if(l&1) laz[l] = h(laz[l],x), ++l;\n      if(r&1) --r, laz[r] = h(laz[r],x);\n\
     \    }\n  }\n  E operator[](int i){\n    assert(i >= 0 and i < n);\n    i += n;\n\
     \    E ret = laz[i];\n    while(i > 0){\n      i /= 2;\n      ret = h(ret,laz[i]);\n\
-    \    }\n    return ret;\n  }\n};\n#line 9 \"test/aoj_DSL_2_D_DualSegmentTree.test.cpp\"\
+    \    }\n    return ret;\n  }\n};\n#line 9 \"test/AOJ/DSL_2_D_DualSegmentTree.test.cpp\"\
     \n\nusing namespace std;\n\nint main(){\n  using E = int;\n  E ei = numeric_limits<E>::max();\n\
     \n  auto f = [&](E a, E b){\n             if(b == ei) return a;\n            \
     \ return b;\n           };\n  \n  int n, q;\n  scanf(\"%d %d\",&n,&q);\n\n  DualSegmentTree\
@@ -53,15 +53,15 @@ data:
   dependsOn:
   - DataStructure/DualSegmentTree.cpp
   isVerificationFile: true
-  path: test/aoj_DSL_2_D_DualSegmentTree.test.cpp
+  path: test/AOJ/DSL_2_D_DualSegmentTree.test.cpp
   requiredBy: []
-  timestamp: '2020-06-16 02:17:44+09:00'
+  timestamp: '2020-09-24 02:37:40+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: test/aoj_DSL_2_D_DualSegmentTree.test.cpp
+documentation_of: test/AOJ/DSL_2_D_DualSegmentTree.test.cpp
 layout: document
 redirect_from:
-- /verify/test/aoj_DSL_2_D_DualSegmentTree.test.cpp
-- /verify/test/aoj_DSL_2_D_DualSegmentTree.test.cpp.html
-title: test/aoj_DSL_2_D_DualSegmentTree.test.cpp
+- /verify/test/AOJ/DSL_2_D_DualSegmentTree.test.cpp
+- /verify/test/AOJ/DSL_2_D_DualSegmentTree.test.cpp.html
+title: test/AOJ/DSL_2_D_DualSegmentTree.test.cpp
 ---

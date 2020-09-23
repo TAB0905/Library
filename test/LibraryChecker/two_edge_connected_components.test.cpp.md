@@ -13,7 +13,7 @@ data:
     PROBLEM: https://judge.yosupo.jp/problem/two_edge_connected_components
     links:
     - https://judge.yosupo.jp/problem/two_edge_connected_components
-  bundledCode: "#line 1 \"test/library_checker_two_edge_connected_components.test.cpp\"\
+  bundledCode: "#line 1 \"test/LibraryChecker/two_edge_connected_components.test.cpp\"\
     \n#define PROBLEM \"https://judge.yosupo.jp/problem/two_edge_connected_components\"\
     \n\n#include <cstdio>\n#include <vector>\n#include <utility>\n#line 1 \"Graph/Lowlink.cpp\"\
     \n#include <algorithm>\n#include <cassert>\n#line 5 \"Graph/Lowlink.cpp\"\n#include\
@@ -47,7 +47,7 @@ data:
     \  }\n\n  ret.affiliation = node_idx;\n  int n_ = ret.components.size();\n  ret.graph.resize(n_);\n\
     \  for(auto b : ret.bridge){\n    int u = node_idx[b.first], v = node_idx[b.second];\n\
     \    assert(u != v);\n    ret.graph[u].emplace_back(v);\n    ret.graph[v].emplace_back(u);\n\
-    \  }\n  return ret;\n}\n\n#line 7 \"test/library_checker_two_edge_connected_components.test.cpp\"\
+    \  }\n  return ret;\n}\n\n#line 7 \"test/LibraryChecker/two_edge_connected_components.test.cpp\"\
     \nusing namespace std;\n\nint main(){\n  int n, m;\n  scanf(\"%d %d\",&n,&m);\n\
     \n  vector<pair<int,int>> E;\n  for(int i = 0; i < m; ++i){\n    int x, y;\n \
     \   scanf(\"%d %d\",&x,&y);\n    E.emplace_back(x,y);\n  }\n\n  auto G = TwoEdgeConnectedComponentsDeconposition(E,n);\n\
@@ -65,15 +65,15 @@ data:
   dependsOn:
   - Graph/Lowlink.cpp
   isVerificationFile: true
-  path: test/library_checker_two_edge_connected_components.test.cpp
+  path: test/LibraryChecker/two_edge_connected_components.test.cpp
   requiredBy: []
-  timestamp: '2020-05-18 10:46:00+09:00'
+  timestamp: '2020-09-24 02:37:40+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: test/library_checker_two_edge_connected_components.test.cpp
+documentation_of: test/LibraryChecker/two_edge_connected_components.test.cpp
 layout: document
 redirect_from:
-- /verify/test/library_checker_two_edge_connected_components.test.cpp
-- /verify/test/library_checker_two_edge_connected_components.test.cpp.html
-title: test/library_checker_two_edge_connected_components.test.cpp
+- /verify/test/LibraryChecker/two_edge_connected_components.test.cpp
+- /verify/test/LibraryChecker/two_edge_connected_components.test.cpp.html
+title: test/LibraryChecker/two_edge_connected_components.test.cpp
 ---

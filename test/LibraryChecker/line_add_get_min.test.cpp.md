@@ -13,7 +13,7 @@ data:
     PROBLEM: https://judge.yosupo.jp/problem/line_add_get_min
     links:
     - https://judge.yosupo.jp/problem/line_add_get_min
-  bundledCode: "#line 1 \"test/library_checker_line_add_get_min.test.cpp\"\n#define\
+  bundledCode: "#line 1 \"test/LibraryChecker/line_add_get_min.test.cpp\"\n#define\
     \ PROBLEM \"https://judge.yosupo.jp/problem/line_add_get_min\"\n\n#include <iostream>\n\
     #line 1 \"DataStructure/LineSet.cpp\"\n#include <cassert>\n#line 3 \"DataStructure/LineSet.cpp\"\
     \n#include <map>\n#include <vector>\n\ntemplate<typename T>\nclass LineSet {\n\
@@ -47,7 +47,7 @@ data:
     \ and next(itr) != L.end()){\n      auto nex = next(itr);\n      ret = std::min(ret,nex->first*x\
     \ + nex->second);\n    }\n    if(itr != L.begin()){\n      auto pre = prev(itr);\n\
     \      ret = std::min(ret,pre->first*x + pre->second);\n    }\n    return ret;\n\
-    \  }\n};\n\n#line 5 \"test/library_checker_line_add_get_min.test.cpp\"\n\nusing\
+    \  }\n};\n\n#line 5 \"test/LibraryChecker/line_add_get_min.test.cpp\"\n\nusing\
     \ namespace std;\n\nint main(){\n  using int128 = __int128_t;\n  int N, Q;\n \
     \ cin >> N >> Q;\n  LineSet<int128> cht(1e18);\n  for(int i = 0; i < N; ++i){\n\
     \    long long a, b;\n    cin >> a >> b;\n    cht.push(a,b);\n  }\n  while(Q--){\n\
@@ -66,15 +66,15 @@ data:
   dependsOn:
   - DataStructure/LineSet.cpp
   isVerificationFile: true
-  path: test/library_checker_line_add_get_min.test.cpp
+  path: test/LibraryChecker/line_add_get_min.test.cpp
   requiredBy: []
-  timestamp: '2020-07-26 22:06:14+09:00'
+  timestamp: '2020-09-24 02:37:40+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: test/library_checker_line_add_get_min.test.cpp
+documentation_of: test/LibraryChecker/line_add_get_min.test.cpp
 layout: document
 redirect_from:
-- /verify/test/library_checker_line_add_get_min.test.cpp
-- /verify/test/library_checker_line_add_get_min.test.cpp.html
-title: test/library_checker_line_add_get_min.test.cpp
+- /verify/test/LibraryChecker/line_add_get_min.test.cpp
+- /verify/test/LibraryChecker/line_add_get_min.test.cpp.html
+title: test/LibraryChecker/line_add_get_min.test.cpp
 ---

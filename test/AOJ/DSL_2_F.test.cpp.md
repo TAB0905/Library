@@ -13,7 +13,7 @@ data:
     PROBLEM: https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/all/DSL_2_F
     links:
     - https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/all/DSL_2_F
-  bundledCode: "#line 1 \"test/aoj_DSL_2_F.test.cpp\"\n#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/all/DSL_2_F\"\
+  bundledCode: "#line 1 \"test/AOJ/DSL_2_F.test.cpp\"\n#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/all/DSL_2_F\"\
     \n\n#include <iostream>\n#line 1 \"DataStructure/LazySegmentTree.cpp\"\n#include\
     \ <algorithm>\n#line 3 \"DataStructure/LazySegmentTree.cpp\"\n#include <vector>\n\
     #include <functional>\n#include <utility>\n\ntemplate <typename T, typename E>\n\
@@ -41,7 +41,7 @@ data:
     \ T query(int l, int r){\n    if(l >= r) return ti;\n    l += n;\n    r += n;\n\
     \    thrust(l);\n    thrust(r-1);\n    T vl = ti, vr = ti;\n    for(; l < r; l\
     \ >>= 1, r >>= 1){\n      if(l&1) vl = f(vl,reflect(l++));\n      if(r&1) vr =\
-    \ f(reflect(--r),vr);\n    }\n    return f(vl,vr);\n  }\n};\n\n#line 5 \"test/aoj_DSL_2_F.test.cpp\"\
+    \ f(reflect(--r),vr);\n    }\n    return f(vl,vr);\n  }\n};\n\n#line 5 \"test/AOJ/DSL_2_F.test.cpp\"\
     \nusing namespace std;\n\nint main(){\n  using T = long long;\n  using E = long\
     \ long;\n  T ti = (1LL<<31)-1;\n  E ei = (1LL<<31)-1;\n  function<T(T,T)> f =\
     \ [](T a, T b){return min(a,b);};\n  function<T(T,E)> g = [](T a, E b){return\
@@ -65,15 +65,15 @@ data:
   dependsOn:
   - DataStructure/LazySegmentTree.cpp
   isVerificationFile: true
-  path: test/aoj_DSL_2_F.test.cpp
+  path: test/AOJ/DSL_2_F.test.cpp
   requiredBy: []
-  timestamp: '2020-05-09 14:54:10+09:00'
+  timestamp: '2020-09-24 02:37:40+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: test/aoj_DSL_2_F.test.cpp
+documentation_of: test/AOJ/DSL_2_F.test.cpp
 layout: document
 redirect_from:
-- /verify/test/aoj_DSL_2_F.test.cpp
-- /verify/test/aoj_DSL_2_F.test.cpp.html
-title: test/aoj_DSL_2_F.test.cpp
+- /verify/test/AOJ/DSL_2_F.test.cpp
+- /verify/test/AOJ/DSL_2_F.test.cpp.html
+title: test/AOJ/DSL_2_F.test.cpp
 ---

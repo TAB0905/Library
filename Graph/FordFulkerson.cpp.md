@@ -4,8 +4,8 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: test/aoj_GRL_6_A_FordFulkerson.test.cpp
-    title: test/aoj_GRL_6_A_FordFulkerson.test.cpp
+    path: test/AOJ/aoj_GRL_6_A_FordFulkerson.test.cpp
+    title: test/AOJ/aoj_GRL_6_A_FordFulkerson.test.cpp
   _pathExtension: cpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
@@ -49,7 +49,7 @@ data:
   timestamp: '2020-05-09 17:45:06+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/aoj_GRL_6_A_FordFulkerson.test.cpp
+  - test/AOJ/aoj_GRL_6_A_FordFulkerson.test.cpp
 documentation_of: Graph/FordFulkerson.cpp
 layout: document
 redirect_from:

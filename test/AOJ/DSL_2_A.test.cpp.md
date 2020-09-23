@@ -10,10 +10,10 @@ data:
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
-    PROBLEM: https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/all/DSL_2_B
+    PROBLEM: https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/all/DSL_2_A
     links:
-    - https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/all/DSL_2_B
-  bundledCode: "#line 1 \"test/aoj_DSL_2_B.test.cpp\"\n#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/all/DSL_2_B\"\
+    - https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/all/DSL_2_A
+  bundledCode: "#line 1 \"test/AOJ/DSL_2_A.test.cpp\"\n#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/all/DSL_2_A\"\
     \n\n#include <iostream>\n#line 1 \"DataStructure/SegmentTree.cpp\"\n#include <vector>\n\
     #line 3 \"DataStructure/SegmentTree.cpp\"\n#include <climits>\n#include <functional>\n\
     \ntemplate <typename T>\nstruct SegmentTree{\nprivate:\n  using F = std::function<T(T,T)>;\n\
@@ -27,31 +27,29 @@ data:
     \ a,int b){\n    if(a == b) return ti;\n    T vl = ti, vr = ti;\n    for(int l\
     \ = a+n, r = b+n; l < r; l >>= 1, r >>= 1){\n      if(l&1) vl = f(vl,dat[l++]);\n\
     \      if(r&1) vr = f(dat[--r],vr);\n    }\n    return f(vl,vr);\n  }\n};\n\n\
-    #line 5 \"test/aoj_DSL_2_B.test.cpp\"\nusing namespace std;\n\nint main(){\n \
-    \ int n, q;\n  cin >> n >> q;\n  using T = long long;\n  SegmentTree<T> rsq([](T\
-    \ a, T b){return a+b;},0LL);\n  rsq.build(n);\n  while(q--){\n    int c, x, y;\n\
-    \    cin >> c >> x >> y;\n    if(c){\n      --x,--y;\n      cout << rsq.query(x,y+1)\
-    \ << endl;\n    }else{\n      --x;\n      long long t = rsq.query(x,x+1);\n  \
-    \    rsq.set_val(x,t+y);\n    }\n  }\n}\n"
-  code: "#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/all/DSL_2_B\"\
+    #line 5 \"test/AOJ/DSL_2_A.test.cpp\"\nusing namespace std;\n\nint main(){\n \
+    \ int n, q;\n  cin >> n >> q;\n  SegmentTree<int> rmq([](int a, int b){return\
+    \ min(a,b);}, INT_MAX);\n  rmq.build(n);\n  while(q--){\n    int c, x, y;\n  \
+    \  cin >> c >> x >> y;\n    if(c){\n      cout << rmq.query(x,y+1) << endl;\n\
+    \    }else{\n      rmq.set_val(x,y);\n    }\n  }\n}\n"
+  code: "#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/all/DSL_2_A\"\
     \n\n#include <iostream>\n#include \"DataStructure/SegmentTree.cpp\"\nusing namespace\
-    \ std;\n\nint main(){\n  int n, q;\n  cin >> n >> q;\n  using T = long long;\n\
-    \  SegmentTree<T> rsq([](T a, T b){return a+b;},0LL);\n  rsq.build(n);\n  while(q--){\n\
-    \    int c, x, y;\n    cin >> c >> x >> y;\n    if(c){\n      --x,--y;\n     \
-    \ cout << rsq.query(x,y+1) << endl;\n    }else{\n      --x;\n      long long t\
-    \ = rsq.query(x,x+1);\n      rsq.set_val(x,t+y);\n    }\n  }\n}\n"
+    \ std;\n\nint main(){\n  int n, q;\n  cin >> n >> q;\n  SegmentTree<int> rmq([](int\
+    \ a, int b){return min(a,b);}, INT_MAX);\n  rmq.build(n);\n  while(q--){\n   \
+    \ int c, x, y;\n    cin >> c >> x >> y;\n    if(c){\n      cout << rmq.query(x,y+1)\
+    \ << endl;\n    }else{\n      rmq.set_val(x,y);\n    }\n  }\n}\n"
   dependsOn:
   - DataStructure/SegmentTree.cpp
   isVerificationFile: true
-  path: test/aoj_DSL_2_B.test.cpp
+  path: test/AOJ/DSL_2_A.test.cpp
   requiredBy: []
-  timestamp: '2020-05-09 14:35:19+09:00'
+  timestamp: '2020-09-24 02:37:40+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: test/aoj_DSL_2_B.test.cpp
+documentation_of: test/AOJ/DSL_2_A.test.cpp
 layout: document
 redirect_from:
-- /verify/test/aoj_DSL_2_B.test.cpp
-- /verify/test/aoj_DSL_2_B.test.cpp.html
-title: test/aoj_DSL_2_B.test.cpp
+- /verify/test/AOJ/DSL_2_A.test.cpp
+- /verify/test/AOJ/DSL_2_A.test.cpp.html
+title: test/AOJ/DSL_2_A.test.cpp
 ---
