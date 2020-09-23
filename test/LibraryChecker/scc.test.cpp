@@ -3,7 +3,7 @@
 #include <iostream>
 #include <vector>
 
-#include "../Graph/SCCD.cpp"
+#include "Graph/SCCD.cpp"
 using namespace std;
 
 int main(){
