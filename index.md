@@ -38,7 +38,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: Graph/MinCostFlow.cpp
       title: Graph/MinCostFlow.cpp
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: Graph/SCCD.cpp
       title: Graph/SCCD.cpp
   - name: Math
@@ -95,7 +95,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/LibraryChecker/queue_operate_all_composite.test.cpp
       title: test/LibraryChecker/queue_operate_all_composite.test.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/LibraryChecker/scc.test.cpp
       title: test/LibraryChecker/scc.test.cpp
     - icon: ':heavy_check_mark:'

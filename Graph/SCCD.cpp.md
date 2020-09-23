@@ -2,9 +2,12 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: test/LibraryChecker/scc.test.cpp
+    title: test/LibraryChecker/scc.test.cpp
   _pathExtension: cpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     links: []
@@ -39,8 +42,9 @@ data:
   path: Graph/SCCD.cpp
   requiredBy: []
   timestamp: '2020-08-30 04:56:29+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - test/LibraryChecker/scc.test.cpp
 documentation_of: Graph/SCCD.cpp
 layout: document
 redirect_from:
