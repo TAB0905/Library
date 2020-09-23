@@ -11,6 +11,7 @@
 "test/AOJ/aoj_GRL_6_B.test.cpp": "2020-09-24 02:37:40 +0900",
 "test/LibraryChecker/line_add_get_min.test.cpp": "2020-09-24 02:37:40 +0900",
 "test/LibraryChecker/queue_operate_all_composite.test.cpp": "2020-09-24 02:37:40 +0900",
+"test/LibraryChecker/scc.test.cpp": "2020-09-24 02:45:42 +0900",
 "test/LibraryChecker/set_xor_min.test.cpp": "2020-09-24 02:37:40 +0900",
 "test/LibraryChecker/suffix_array.test.cpp": "2020-09-24 02:37:40 +0900",
 "test/LibraryChecker/two_edge_connected_components.test.cpp": "2020-09-24 02:37:40 +0900"
