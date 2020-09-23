@@ -1,94 +1,106 @@
 ---
-layout: default
+data:
+  libraryCategories:
+  - name: DataStructure
+    pages:
+    - icon: ':warning:'
+      path: DataStructure/BinaryTrie.cpp
+      title: DataStructure/BinaryTrie.cpp
+    - icon: ':heavy_check_mark:'
+      path: DataStructure/DualSegmentTree.cpp
+      title: DataStructure/DualSegmentTree.cpp
+    - icon: ':heavy_check_mark:'
+      path: DataStructure/FoldableQueue.cpp
+      title: DataStructure/FoldableQueue.cpp
+    - icon: ':heavy_check_mark:'
+      path: DataStructure/LazySegmentTree.cpp
+      title: DataStructure/LazySegmentTree.cpp
+    - icon: ':heavy_check_mark:'
+      path: DataStructure/LineSet.cpp
+      title: DataStructure/LineSet.cpp
+    - icon: ':heavy_check_mark:'
+      path: DataStructure/SegmentTree.cpp
+      title: DataStructure/SegmentTree.cpp
+    - icon: ':heavy_check_mark:'
+      path: DataStructure/UnionFind.cpp
+      title: DataStructure/UnionFind.cpp
+  - name: Graph
+    pages:
+    - icon: ':warning:'
+      path: Graph/Dijkstra.cpp
+      title: Graph/Dijkstra.cpp
+    - icon: ':heavy_check_mark:'
+      path: Graph/FordFulkerson.cpp
+      title: Graph/FordFulkerson.cpp
+    - icon: ':heavy_check_mark:'
+      path: Graph/Lowlink.cpp
+      title: Graph/Lowlink.cpp
+    - icon: ':heavy_check_mark:'
+      path: Graph/MinCostFlow.cpp
+      title: Graph/MinCostFlow.cpp
+    - icon: ':heavy_check_mark:'
+      path: Graph/SCCD.cpp
+      title: Graph/SCCD.cpp
+  - name: Math
+    pages:
+    - icon: ':warning:'
+      path: Math/FFT.cpp
+      title: Math/FFT.cpp
+    - icon: ':heavy_check_mark:'
+      path: Math/modint.cpp
+      title: Math/modint.cpp
+  - name: String
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: String/SuffixArray.cpp
+      title: String/SuffixArray.cpp
+  verificationCategories:
+  - name: test
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: test/aoj_DSL_1_A.test.cpp
+      title: test/aoj_DSL_1_A.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/aoj_DSL_2_A.test.cpp
+      title: test/aoj_DSL_2_A.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/aoj_DSL_2_B.test.cpp
+      title: test/aoj_DSL_2_B.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/aoj_DSL_2_D.test.cpp
+      title: test/aoj_DSL_2_D.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/aoj_DSL_2_D_DualSegmentTree.test.cpp
+      title: test/aoj_DSL_2_D_DualSegmentTree.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/aoj_DSL_2_E.test.cpp
+      title: test/aoj_DSL_2_E.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/aoj_DSL_2_F.test.cpp
+      title: test/aoj_DSL_2_F.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/aoj_DSL_2_G.test.cpp
+      title: test/aoj_DSL_2_G.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/aoj_GRL_6_A_FordFulkerson.test.cpp
+      title: test/aoj_GRL_6_A_FordFulkerson.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/aoj_GRL_6_B.test.cpp
+      title: test/aoj_GRL_6_B.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/library_checker_line_add_get_min.test.cpp
+      title: test/library_checker_line_add_get_min.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/library_checker_queue_operate_all_composite.test.cpp
+      title: test/library_checker_queue_operate_all_composite.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/library_checker_scc.test.cpp
+      title: test/library_checker_scc.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/library_checker_suffix_array.test.cpp
+      title: test/library_checker_suffix_array.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/library_checker_two_edge_connected_components.test.cpp
+      title: test/library_checker_two_edge_connected_components.test.cpp
+layout: toppage
 ---
-
-<!-- mathjax config similar to math.stackexchange -->
-<script type="text/javascript" async
-  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
-</script>
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-    TeX: { equationNumbers: { autoNumber: "AMS" }},
-    tex2jax: {
-      inlineMath: [ ['$','$'] ],
-      processEscapes: true
-    },
-    "HTML-CSS": { matchFontHeight: false },
-    displayAlign: "left",
-    displayIndent: "2em"
-  });
-</script>
-
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/jquery-balloon-js@1.1.2/jquery.balloon.min.js" integrity="sha256-ZEYs9VrgAeNuPvs15E39OsyOJaIkXEEt10fzxJ20+2I=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="assets/js/copy-button.js"></script>
-<link rel="stylesheet" href="assets/css/copy-button.css" />
-
-
-# {{ site.title }}
-
-[![Actions Status]({{ site.github.repository_url }}/workflows/verify/badge.svg)]({{ site.github.repository_url }}/actions)
-<a href="{{ site.github.repository_url }}"><img src="https://img.shields.io/github/last-commit/{{ site.github.owner_name }}/{{ site.github.repository_name }}" /></a>
-
-{% if site.github.project_tagline %}{{ site.github.project_tagline }}{% else %}This documentation is automatically generated by <a href="https://github.com/online-judge-tools/verification-helper">online-judge-tools/verification-helper</a>.{% endif %}
-
-## Library Files
-
-<div id="5e248f107086635fddcead5bf28943fc"></div>
-
-### DataStructure
-
-* :warning: <a href="library/DataStructure/BinaryTrie.cpp.html">DataStructure/BinaryTrie.cpp</a>
-* :heavy_check_mark: <a href="library/DataStructure/DualSegmentTree.cpp.html">DataStructure/DualSegmentTree.cpp</a>
-* :heavy_check_mark: <a href="library/DataStructure/FoldableQueue.cpp.html">DataStructure/FoldableQueue.cpp</a>
-* :heavy_check_mark: <a href="library/DataStructure/LazySegmentTree.cpp.html">DataStructure/LazySegmentTree.cpp</a>
-* :heavy_check_mark: <a href="library/DataStructure/LineSet.cpp.html">DataStructure/LineSet.cpp</a>
-* :heavy_check_mark: <a href="library/DataStructure/SegmentTree.cpp.html">DataStructure/SegmentTree.cpp</a>
-* :heavy_check_mark: <a href="library/DataStructure/UnionFind.cpp.html">DataStructure/UnionFind.cpp</a>
-
-
-<div id="4cdbd2bafa8193091ba09509cedf94fd"></div>
-
-### Graph
-
-* :warning: <a href="library/Graph/Dijkstra.cpp.html">Graph/Dijkstra.cpp</a>
-* :heavy_check_mark: <a href="library/Graph/FordFulkerson.cpp.html">Graph/FordFulkerson.cpp</a>
-* :heavy_check_mark: <a href="library/Graph/Lowlink.cpp.html">Graph/Lowlink.cpp</a>
-* :heavy_check_mark: <a href="library/Graph/MinCostFlow.cpp.html">Graph/MinCostFlow.cpp</a>
-* :heavy_check_mark: <a href="library/Graph/SCCD.cpp.html">Graph/SCCD.cpp</a>
-
-
-<div id="a49950aa047c2292e989e368a97a3aae"></div>
-
-### Math
-
-* :warning: <a href="library/Math/FFT.cpp.html">Math/FFT.cpp</a>
-* :heavy_check_mark: <a href="library/Math/modint.cpp.html">Math/modint.cpp</a>
-
-
-<div id="27118326006d3829667a400ad23d5d98"></div>
-
-### String
-
-* :heavy_check_mark: <a href="library/String/SuffixArray.cpp.html">String/SuffixArray.cpp</a>
-
-
-## Verify Files
-
-* :heavy_check_mark: <a href="verify/test/aoj_DSL_1_A.test.cpp.html">test/aoj_DSL_1_A.test.cpp</a>
-* :heavy_check_mark: <a href="verify/test/aoj_DSL_2_A.test.cpp.html">test/aoj_DSL_2_A.test.cpp</a>
-* :heavy_check_mark: <a href="verify/test/aoj_DSL_2_B.test.cpp.html">test/aoj_DSL_2_B.test.cpp</a>
-* :heavy_check_mark: <a href="verify/test/aoj_DSL_2_D.test.cpp.html">test/aoj_DSL_2_D.test.cpp</a>
-* :heavy_check_mark: <a href="verify/test/aoj_DSL_2_D_DualSegmentTree.test.cpp.html">test/aoj_DSL_2_D_DualSegmentTree.test.cpp</a>
-* :heavy_check_mark: <a href="verify/test/aoj_DSL_2_E.test.cpp.html">test/aoj_DSL_2_E.test.cpp</a>
-* :heavy_check_mark: <a href="verify/test/aoj_DSL_2_F.test.cpp.html">test/aoj_DSL_2_F.test.cpp</a>
-* :heavy_check_mark: <a href="verify/test/aoj_DSL_2_G.test.cpp.html">test/aoj_DSL_2_G.test.cpp</a>
-* :heavy_check_mark: <a href="verify/test/aoj_GRL_6_A_FordFulkerson.test.cpp.html">test/aoj_GRL_6_A_FordFulkerson.test.cpp</a>
-* :heavy_check_mark: <a href="verify/test/aoj_GRL_6_B.test.cpp.html">test/aoj_GRL_6_B.test.cpp</a>
-* :heavy_check_mark: <a href="verify/test/library_checker_line_add_get_min.test.cpp.html">test/library_checker_line_add_get_min.test.cpp</a>
-* :heavy_check_mark: <a href="verify/test/library_checker_queue_operate_all_composite.test.cpp.html">test/library_checker_queue_operate_all_composite.test.cpp</a>
-* :heavy_check_mark: <a href="verify/test/library_checker_scc.test.cpp.html">test/library_checker_scc.test.cpp</a>
-* :heavy_check_mark: <a href="verify/test/library_checker_suffix_array.test.cpp.html">test/library_checker_suffix_array.test.cpp</a>
-* :heavy_check_mark: <a href="verify/test/library_checker_two_edge_connected_components.test.cpp.html">test/library_checker_two_edge_connected_components.test.cpp</a>
-
-
