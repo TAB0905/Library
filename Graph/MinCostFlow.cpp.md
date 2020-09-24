@@ -4,8 +4,8 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: test/AOJ/aoj_GRL_6_B.test.cpp
-    title: test/AOJ/aoj_GRL_6_B.test.cpp
+    path: test/AOJ/GRL_6_B.test.cpp
+    title: test/AOJ/GRL_6_B.test.cpp
   _pathExtension: cpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
@@ -73,7 +73,7 @@ data:
   timestamp: '2020-05-14 11:55:44+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/AOJ/aoj_GRL_6_B.test.cpp
+  - test/AOJ/GRL_6_B.test.cpp
 documentation_of: Graph/MinCostFlow.cpp
 layout: document
 redirect_from:

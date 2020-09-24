@@ -29,7 +29,7 @@ data:
       title: DataStructure/UnionFind.cpp
   - name: Graph
     pages:
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: Graph/Dijkstra.cpp
       title: Graph/Dijkstra.cpp
     - icon: ':heavy_check_mark:'
@@ -82,14 +82,14 @@ data:
       path: test/AOJ/DSL_2_F.test.cpp
       title: test/AOJ/DSL_2_F.test.cpp
     - icon: ':heavy_check_mark:'
-      path: test/AOJ/aoj_DSL_2_G.test.cpp
-      title: test/AOJ/aoj_DSL_2_G.test.cpp
+      path: test/AOJ/DSL_2_G.test.cpp
+      title: test/AOJ/DSL_2_G.test.cpp
     - icon: ':heavy_check_mark:'
-      path: test/AOJ/aoj_GRL_6_A_FordFulkerson.test.cpp
-      title: test/AOJ/aoj_GRL_6_A_FordFulkerson.test.cpp
+      path: test/AOJ/GRL_6_A_FordFulkerson.test.cpp
+      title: test/AOJ/GRL_6_A_FordFulkerson.test.cpp
     - icon: ':heavy_check_mark:'
-      path: test/AOJ/aoj_GRL_6_B.test.cpp
-      title: test/AOJ/aoj_GRL_6_B.test.cpp
+      path: test/AOJ/GRL_6_B.test.cpp
+      title: test/AOJ/GRL_6_B.test.cpp
   - name: test/LibraryChecker
     pages:
     - icon: ':heavy_check_mark:'
@@ -104,6 +104,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/LibraryChecker/set_xor_min.test.cpp
       title: test/LibraryChecker/set_xor_min.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/LibraryChecker/shortest_path.test.cpp
+      title: test/LibraryChecker/shortest_path.test.cpp
     - icon: ':heavy_check_mark:'
       path: test/LibraryChecker/static_range_sum.test.cpp
       title: test/LibraryChecker/static_range_sum.test.cpp
