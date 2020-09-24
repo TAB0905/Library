@@ -2,9 +2,12 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: test/LibraryChecker/static_range_sum.test.cpp
+    title: test/LibraryChecker/static_range_sum.test.cpp
   _pathExtension: cpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     links: []
@@ -25,8 +28,9 @@ data:
   path: DataStructure/CumulativeSum.cpp
   requiredBy: []
   timestamp: '2020-09-24 20:16:46+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - test/LibraryChecker/static_range_sum.test.cpp
 documentation_of: DataStructure/CumulativeSum.cpp
 layout: document
 redirect_from:
