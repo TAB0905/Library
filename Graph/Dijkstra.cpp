@@ -1,18 +1,16 @@
-#include <iostream>
 #include <algorithm>
 #include <queue>
 #include <vector>
-using namespace std;
 
 using ll = long long;
 const ll INF = 1e18;
 
-vector<long long> dijkstra(const vector<vector<pair<long long,int>>>& G, int s){
+std::pair<std::vector<ll>,std::vector<int>> dijkstra(const std::vector<std::vector<std::pair<ll,int>>>& G, int s){
   const int n = G.size();
-  vector<ll> D(n,INF);
+  std::vector<ll> D(n,INF);
   D[s] = 0;
-  vector<int> pre(n,-1);
-  priority_queue<pair<ll,ll>, vector<pair<ll,ll>>, greater<pair<ll,ll>>> pq;
+  std::vector<int> pre(n,-1);
+  std::priority_queue<std::pair<ll,ll>, std::vector<std::pair<ll,ll>>, std::greater<std::pair<ll,ll>>> pq;
   pq.emplace(0,s);
   while(pq.size()){
     auto [d, v] = pq.top();
@@ -29,23 +27,14 @@ vector<long long> dijkstra(const vector<vector<pair<long long,int>>>& G, int s){
   return {D,pre};
 }
 
-int main(){
-  int N, M, s, t;
-  cin >> N >> M >> s >> t;
-  vector<vector<pair<ll,int>>> G(N);
-  for(int i = 0; i < M; ++i){
-    int a, b;
-    ll c;
-    cin >> a >> b >> c;
-    G[a].emplace_back(c,b);
+std::vector<int> restor_shortest_path(const std::vector<int>& pre, int s, int t){
+  std::vector<int> P;
+  while(t != s){
+    P.emplace_back(t);
+    t = pre[t];
   }
-  auto [D, pre] = dijkstra(G,s);
-  if(D[t] >= INF){
-    cout << -1 << endl;
-    return 0;
-  }
-  auto P = restor_shortest_path(pre,s,t);
-  cout << D[t] << " " << P.size()-1 << endl;
-  for(int i = 0; i+1 < P.size(); ++i)
-    cout << P[i] << " " << P[i+1] << "\n";
+  P.emplace_back(s);
+  reverse(P.begin(), P.end());
+  return P;
 }
+
