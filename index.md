@@ -36,6 +36,9 @@ data:
       path: Graph/FordFulkerson.cpp
       title: Graph/FordFulkerson.cpp
     - icon: ':heavy_check_mark:'
+      path: Graph/LCA.cpp
+      title: Graph/LCA.cpp
+    - icon: ':heavy_check_mark:'
       path: Graph/Lowlink.cpp
       title: Graph/Lowlink.cpp
     - icon: ':heavy_check_mark:'
@@ -92,6 +95,9 @@ data:
       title: test/AOJ/GRL_6_B.test.cpp
   - name: test/LibraryChecker
     pages:
+    - icon: ':heavy_check_mark:'
+      path: test/LibraryChecker/lca.test.cpp
+      title: test/LibraryChecker/lca.test.cpp
     - icon: ':heavy_check_mark:'
       path: test/LibraryChecker/line_add_get_min.test.cpp
       title: test/LibraryChecker/line_add_get_min.test.cpp
