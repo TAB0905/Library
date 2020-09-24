@@ -116,5 +116,8 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/LibraryChecker/two_edge_connected_components.test.cpp
       title: test/LibraryChecker/two_edge_connected_components.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/LibraryChecker/unionfind.test.cpp
+      title: test/LibraryChecker/unionfind.test.cpp
 layout: toppage
 ---
