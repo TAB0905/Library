@@ -6,6 +6,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: DataStructure/BinaryTrie.cpp
       title: DataStructure/BinaryTrie.cpp
+    - icon: ':warning:'
+      path: DataStructure/CumulativeSum.cpp
+      title: DataStructure/CumulativeSum.cpp
     - icon: ':heavy_check_mark:'
       path: DataStructure/DualSegmentTree.cpp
       title: DataStructure/DualSegmentTree.cpp
@@ -101,6 +104,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/LibraryChecker/set_xor_min.test.cpp
       title: test/LibraryChecker/set_xor_min.test.cpp
+    - icon: ':x:'
+      path: test/LibraryChecker/static_range_sum.test.cpp
+      title: test/LibraryChecker/static_range_sum.test.cpp
     - icon: ':heavy_check_mark:'
       path: test/LibraryChecker/suffix_array.test.cpp
       title: test/LibraryChecker/suffix_array.test.cpp
