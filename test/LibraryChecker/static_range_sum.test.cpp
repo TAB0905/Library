@@ -1,5 +1,8 @@
+#define PROBLEM "https://judge.yosupo.jp/problem/static_range_sum"
+
 #include <iostream>
 #include <vector>
+#include "DataStructure/CumulativeSum.cpp"
 using namespace std;
 
 int main(){
