@@ -52,6 +52,9 @@ data:
       title: Graph/SCCD.cpp
   - name: Math
     pages:
+    - icon: ':x:'
+      path: Math/EratosthenesSieve.cpp
+      title: Math/EratosthenesSieve.cpp
     - icon: ':warning:'
       path: Math/FFT.cpp
       title: Math/FFT.cpp
@@ -69,6 +72,9 @@ data:
   verificationCategories:
   - name: test/AOJ
     pages:
+    - icon: ':x:'
+      path: test/AOJ/0009.test.cpp
+      title: test/AOJ/0009.test.cpp
     - icon: ':heavy_check_mark:'
       path: test/AOJ/DSL_1_A.test.cpp
       title: test/AOJ/DSL_1_A.test.cpp
