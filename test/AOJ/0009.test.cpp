@@ -1,4 +1,6 @@
-#define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=0009"
+#define IGNORE
+
+#define PROBLEM "https://onlinejudge.u-aizu.ac.jp/problems/0009"
 
 #include "Math/EratosthenesSieve.cpp"
 
