@@ -52,6 +52,9 @@ data:
     - icon: ':warning:'
       path: Math/FFT.cpp
       title: Math/FFT.cpp
+    - icon: ':warning:'
+      path: Math/fraction.cpp
+      title: Math/fraction.cpp
     - icon: ':heavy_check_mark:'
       path: Math/modint.cpp
       title: Math/modint.cpp

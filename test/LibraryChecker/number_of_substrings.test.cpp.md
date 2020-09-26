@@ -44,22 +44,20 @@ data:
     \ SA = p;\n    constructLCPArray();\n  }\n};\n\n#line 7 \"test/LibraryChecker/number_of_substrings.test.cpp\"\
     \n\nusing namespace std;\n\nint main(){\n  using ll = long long;\n  string s;\n\
     \  cin >> s;\n  SuffixArray sa(s);\n  sa.construct();\n  int n = s.length();\n\
-    \  ll ans = 0;\n\n  auto sum = [](ll l, ll r){// sum [l,r)\n    return (r-l);\n\
-    \  };\n  \n  for(int i = 1; i <= n; ++i){\n    int l = sa.LCP[i-1] + 1, r = n\
-    \ - sa.SA[i] + 1;\n    ans += sum(l, r);\n  }\n  cout << ans << endl;\n}\n"
+    \  ll ans = 0;\n  \n  for(int i = 1; i <= n; ++i){\n    int l = sa.LCP[i-1] +\
+    \ 1, r = n - sa.SA[i] + 1;\n    ans += r-l;\n  }\n  cout << ans << endl;\n}\n"
   code: "#define PROBLEM \"https://judge.yosupo.jp/problem/number_of_substrings\"\n\
     \n#include <iostream>\n#include <vector>\n\n#include \"String/SuffixArray.cpp\"\
     \n\nusing namespace std;\n\nint main(){\n  using ll = long long;\n  string s;\n\
     \  cin >> s;\n  SuffixArray sa(s);\n  sa.construct();\n  int n = s.length();\n\
-    \  ll ans = 0;\n\n  auto sum = [](ll l, ll r){// sum [l,r)\n    return (r-l);\n\
-    \  };\n  \n  for(int i = 1; i <= n; ++i){\n    int l = sa.LCP[i-1] + 1, r = n\
-    \ - sa.SA[i] + 1;\n    ans += sum(l, r);\n  }\n  cout << ans << endl;\n}\n"
+    \  ll ans = 0;\n  \n  for(int i = 1; i <= n; ++i){\n    int l = sa.LCP[i-1] +\
+    \ 1, r = n - sa.SA[i] + 1;\n    ans += r-l;\n  }\n  cout << ans << endl;\n}\n"
   dependsOn:
   - String/SuffixArray.cpp
   isVerificationFile: true
   path: test/LibraryChecker/number_of_substrings.test.cpp
   requiredBy: []
-  timestamp: '2020-09-26 19:28:00+09:00'
+  timestamp: '2020-09-27 01:04:25+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/LibraryChecker/number_of_substrings.test.cpp
