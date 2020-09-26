@@ -15,14 +15,10 @@ int main(){
   sa.construct();
   int n = s.length();
   ll ans = 0;
-
-  auto sum = [](ll l, ll r){// sum [l,r)
-    return (r-l);
-  };
   
   for(int i = 1; i <= n; ++i){
     int l = sa.LCP[i-1] + 1, r = n - sa.SA[i] + 1;
-    ans += sum(l, r);
+    ans += r-l;
   }
   cout << ans << endl;
 }
