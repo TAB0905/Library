@@ -6,6 +6,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/LibraryChecker/suffix_array.test.cpp
     title: test/LibraryChecker/suffix_array.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/LibraryChecker/number_of_substrings.test.cpp
+    title: test/LibraryChecker/number_of_substrings.test.cpp
   _pathExtension: cpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
@@ -72,6 +75,7 @@ data:
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/LibraryChecker/suffix_array.test.cpp
+  - test/LibraryChecker/number_of_substrings.test.cpp
 documentation_of: String/SuffixArray.cpp
 layout: document
 redirect_from:
