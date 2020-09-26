@@ -33,6 +33,9 @@ data:
       path: Graph/Dijkstra.cpp
       title: Graph/Dijkstra.cpp
     - icon: ':heavy_check_mark:'
+      path: Graph/Dinic.cpp
+      title: Graph/Dinic.cpp
+    - icon: ':heavy_check_mark:'
       path: Graph/FordFulkerson.cpp
       title: Graph/FordFulkerson.cpp
     - icon: ':heavy_check_mark:'
@@ -90,6 +93,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/AOJ/DSL_2_G.test.cpp
       title: test/AOJ/DSL_2_G.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/AOJ/GRL_6_A_Dinic.test.cpp
+      title: test/AOJ/GRL_6_A_Dinic.test.cpp
     - icon: ':heavy_check_mark:'
       path: test/AOJ/GRL_6_A_FordFulkerson.test.cpp
       title: test/AOJ/GRL_6_A_FordFulkerson.test.cpp
