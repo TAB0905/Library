@@ -44,7 +44,7 @@ public:
       if(factor.empty() or factor.back().first != p){
         factor.emplace_back(p,T(1));
       }else{
-        ++factor.back().first;
+        ++factor.back().second;
       }
     }
     return factor;
