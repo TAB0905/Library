@@ -26,7 +26,7 @@ data:
     \ factorize(T x) const noexcept {\n    std::vector<std::pair<T,T>> factor;\n \
     \   while(x > 1){\n      T p = min_div[x];\n      x /= p;\n      if(factor.empty()\
     \ or factor.back().first != p){\n        factor.emplace_back(p,T(1));\n      }else{\n\
-    \        ++factor.back().first;\n      }\n    }\n    return factor;\n  }\n};\n"
+    \        ++factor.back().second;\n      }\n    }\n    return factor;\n  }\n};\n"
   code: "#include <algorithm>\n#include <vector>\n#include <utility>\n\ntemplate<typename\
     \ T>\nstruct PrimeSieve {\n  T sz;\n  std::vector<T> min_div;\n  std::vector<T>\
     \ primes;\n\npublic:\n  constexpr PrimeSieve(T sz) : sz(sz), min_div(sz+1,-1)\
@@ -41,13 +41,13 @@ data:
     \  }\n\n  constexpr std::vector<std::pair<T,T>> factorize(T x) const noexcept\
     \ {\n    std::vector<std::pair<T,T>> factor;\n    while(x > 1){\n      T p = min_div[x];\n\
     \      x /= p;\n      if(factor.empty() or factor.back().first != p){\n      \
-    \  factor.emplace_back(p,T(1));\n      }else{\n        ++factor.back().first;\n\
+    \  factor.emplace_back(p,T(1));\n      }else{\n        ++factor.back().second;\n\
     \      }\n    }\n    return factor;\n  }\n};\n"
   dependsOn: []
   isVerificationFile: false
   path: Math/EratosthenesSieve.cpp
   requiredBy: []
-  timestamp: '2020-09-27 02:13:17+09:00'
+  timestamp: '2020-09-27 13:27:31+09:00'
   verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
   - test/AOJ/0009.test.cpp
