@@ -32,21 +32,21 @@ data:
     \ != p){\n        factor.emplace_back(p,T(1));\n      }else{\n        ++factor.back().second;\n\
     \      }\n    }\n    return factor;\n  }\n};\n#line 7 \"test/AOJ/ALDS1_1_C.test.cpp\"\
     \n\nusing namespace std;\n\nint main(){\n  const int sz = 10000;\n  // max_a <=\
-    \ sz*sz\n  PrimeSieve sieve(sz);\n  int n;\n  cin >> n;\n  int ans = 0;\n  for(int\
-    \ i = 0; i < n; ++i){\n    int a;\n    cin >> a;\n    ans += sieve.is_prime(a);\n\
+    \ sz*sz\n  PrimeSieve<int> sieve(sz);\n  int n;\n  cin >> n;\n  int ans = 0;\n\
+    \  for(int i = 0; i < n; ++i){\n    int a;\n    cin >> a;\n    ans += sieve.is_prime(a);\n\
     \  }\n  cout << ans << endl;\n}\n"
   code: "#define PROBLEM \"http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_1_C&lang=ja\"\
     \n\n#include <iostream>\n#include <vector>\n\n#include \"Math/EratosthenesSieve.cpp\"\
     \n\nusing namespace std;\n\nint main(){\n  const int sz = 10000;\n  // max_a <=\
-    \ sz*sz\n  PrimeSieve sieve(sz);\n  int n;\n  cin >> n;\n  int ans = 0;\n  for(int\
-    \ i = 0; i < n; ++i){\n    int a;\n    cin >> a;\n    ans += sieve.is_prime(a);\n\
+    \ sz*sz\n  PrimeSieve<int> sieve(sz);\n  int n;\n  cin >> n;\n  int ans = 0;\n\
+    \  for(int i = 0; i < n; ++i){\n    int a;\n    cin >> a;\n    ans += sieve.is_prime(a);\n\
     \  }\n  cout << ans << endl;\n}\n"
   dependsOn:
   - Math/EratosthenesSieve.cpp
   isVerificationFile: true
   path: test/AOJ/ALDS1_1_C.test.cpp
   requiredBy: []
-  timestamp: '2020-10-23 17:45:07+09:00'
+  timestamp: '2020-10-23 18:00:45+09:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: test/AOJ/ALDS1_1_C.test.cpp
