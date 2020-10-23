@@ -5,8 +5,10 @@
 
 #include "Math/EratosthenesSieve.cpp"
 
+using namespace std;
+
 int main(){
-  const int sz = 1000;
+  const int sz = 10000;
   // max_a <= sz*sz
   PrimeSieve sieve(sz);
   int n;
