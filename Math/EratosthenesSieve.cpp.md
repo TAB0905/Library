@@ -6,6 +6,9 @@ data:
   - icon: ':x:'
     path: test/AOJ/0009.test.cpp
     title: test/AOJ/0009.test.cpp
+  - icon: ':x:'
+    path: test/AOJ/ALDS1_1_C.test.cpp
+    title: test/AOJ/ALDS1_1_C.test.cpp
   _pathExtension: cpp
   _verificationStatusIcon: ':x:'
   attributes:
@@ -50,6 +53,7 @@ data:
   timestamp: '2020-10-23 16:37:45+09:00'
   verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
+  - test/AOJ/ALDS1_1_C.test.cpp
   - test/AOJ/0009.test.cpp
 documentation_of: Math/EratosthenesSieve.cpp
 layout: document
