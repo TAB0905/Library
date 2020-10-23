@@ -52,7 +52,7 @@ data:
       title: Graph/SCCD.cpp
   - name: Math
     pages:
-    - icon: ':x:'
+    - icon: ':question:'
       path: Math/EratosthenesSieve.cpp
       title: Math/EratosthenesSieve.cpp
     - icon: ':warning:'
@@ -75,7 +75,7 @@ data:
     - icon: ':x:'
       path: test/AOJ/0009.test.cpp
       title: test/AOJ/0009.test.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/AOJ/ALDS1_1_C.test.cpp
       title: test/AOJ/ALDS1_1_C.test.cpp
     - icon: ':heavy_check_mark:'
