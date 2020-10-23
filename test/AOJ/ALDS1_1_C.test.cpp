@@ -3,7 +3,7 @@
 #include <iostream>
 #include <vector>
 
-#include "EratosthenesSieve.cpp"
+#include "Math/EratosthenesSieve.cpp"
 
 int main(){
   const int sz = 1000;
