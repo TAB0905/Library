@@ -75,6 +75,9 @@ data:
     - icon: ':x:'
       path: test/AOJ/0009.test.cpp
       title: test/AOJ/0009.test.cpp
+    - icon: ':x:'
+      path: test/AOJ/ALDS1_1_C.test.cpp
+      title: test/AOJ/ALDS1_1_C.test.cpp
     - icon: ':heavy_check_mark:'
       path: test/AOJ/DSL_1_A.test.cpp
       title: test/AOJ/DSL_1_A.test.cpp
