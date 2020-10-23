@@ -10,7 +10,7 @@ using namespace std;
 int main(){
   const int sz = 10000;
   // max_a <= sz*sz
-  PrimeSieve sieve(sz);
+  PrimeSieve<int> sieve(sz);
   int n;
   cin >> n;
   int ans = 0;
