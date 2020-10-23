@@ -24,7 +24,8 @@ public:
   
   constexpr bool is_prime(T x) const noexcept {
     if(x <= 1) return false;
-    if(x <= sz) min_div[x] < 0;
+    if(x <= sz) return min_div[x] < 0;
+    assert(x <= sz*sz);
     for(auto p : primes){
       if(x%p == 0) return false;
       if(p*p > x) break;
