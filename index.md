@@ -27,6 +27,14 @@ data:
     - icon: ':heavy_check_mark:'
       path: DataStructure/UnionFind.cpp
       title: DataStructure/UnionFind.cpp
+    - icon: ':warning:'
+      path: DataStructure/WeightedUnionFind.cpp
+      title: DataStructure/WeightedUnionFind.cpp
+  - name: Geometry
+    pages:
+    - icon: ':question:'
+      path: Geometry/geometry.cpp
+      title: Geometry/geometry.cpp
   - name: Graph
     pages:
     - icon: ':heavy_check_mark:'
@@ -52,12 +60,18 @@ data:
       title: Graph/SCCD.cpp
   - name: Math
     pages:
+    - icon: ':warning:'
+      path: Math/CRT.cpp
+      title: Math/CRT.cpp
     - icon: ':question:'
       path: Math/EratosthenesSieve.cpp
       title: Math/EratosthenesSieve.cpp
     - icon: ':warning:'
       path: Math/FFT.cpp
       title: Math/FFT.cpp
+    - icon: ':warning:'
+      path: Math/PrimitiveRoot.cpp
+      title: Math/PrimitiveRoot.cpp
     - icon: ':warning:'
       path: Math/fraction.cpp
       title: Math/fraction.cpp
@@ -66,6 +80,12 @@ data:
       title: Math/modint.cpp
   - name: String
     pages:
+    - icon: ':warning:'
+      path: String/RollingHash.cpp
+      title: String/RollingHash.cpp
+    - icon: ':warning:'
+      path: String/StringAlgorithms.cpp
+      title: String/StringAlgorithms.cpp
     - icon: ':heavy_check_mark:'
       path: String/SuffixArray.cpp
       title: String/SuffixArray.cpp
@@ -78,6 +98,72 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/AOJ/ALDS1_1_C.test.cpp
       title: test/AOJ/ALDS1_1_C.test.cpp
+    - icon: ':x:'
+      path: test/AOJ/CGL_1_A.test.cpp
+      title: test/AOJ/CGL_1_A.test.cpp
+    - icon: ':x:'
+      path: test/AOJ/CGL_1_B.test.cpp
+      title: test/AOJ/CGL_1_B.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/AOJ/CGL_1_C.test.cpp
+      title: test/AOJ/CGL_1_C.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/AOJ/CGL_2_A.test.cpp
+      title: test/AOJ/CGL_2_A.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/AOJ/CGL_2_B.test.cpp
+      title: test/AOJ/CGL_2_B.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/AOJ/CGL_2_C.test.cpp
+      title: test/AOJ/CGL_2_C.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/AOJ/CGL_2_D.test.cpp
+      title: test/AOJ/CGL_2_D.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/AOJ/CGL_3_A.test.cpp
+      title: test/AOJ/CGL_3_A.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/AOJ/CGL_3_B.test.cpp
+      title: test/AOJ/CGL_3_B.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/AOJ/CGL_3_C.test.cpp
+      title: test/AOJ/CGL_3_C.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/AOJ/CGL_4_A.test.cpp
+      title: test/AOJ/CGL_4_A.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/AOJ/CGL_4_B.test.cpp
+      title: test/AOJ/CGL_4_B.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/AOJ/CGL_4_C.test.cpp
+      title: test/AOJ/CGL_4_C.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/AOJ/CGL_7_A.test.cpp
+      title: test/AOJ/CGL_7_A.test.cpp
+    - icon: ':x:'
+      path: test/AOJ/CGL_7_B.test.cpp
+      title: test/AOJ/CGL_7_B.test.cpp
+    - icon: ':x:'
+      path: test/AOJ/CGL_7_C.test.cpp
+      title: test/AOJ/CGL_7_C.test.cpp
+    - icon: ':x:'
+      path: test/AOJ/CGL_7_D.test.cpp
+      title: test/AOJ/CGL_7_D.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/AOJ/CGL_7_E.test.cpp
+      title: test/AOJ/CGL_7_E.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/AOJ/CGL_7_F.test.cpp
+      title: test/AOJ/CGL_7_F.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/AOJ/CGL_7_G.test.cpp
+      title: test/AOJ/CGL_7_G.test.cpp
+    - icon: ':x:'
+      path: test/AOJ/CGL_7_H.test.cpp
+      title: test/AOJ/CGL_7_H.test.cpp
+    - icon: ':x:'
+      path: test/AOJ/CGL_7_I.test.cpp
+      title: test/AOJ/CGL_7_I.test.cpp
     - icon: ':heavy_check_mark:'
       path: test/AOJ/DSL_1_A.test.cpp
       title: test/AOJ/DSL_1_A.test.cpp
