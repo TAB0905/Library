@@ -9,7 +9,6 @@ data:
   _pathExtension: cpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links: []
   bundledCode: "#line 1 \"Graph/Dijkstra.cpp\"\n#include <algorithm>\n#include <queue>\n\
     #include <vector>\n\nusing ll = long long;\nconst ll INF = 1e18;\n\nstd::pair<std::vector<ll>,std::vector<int>>\

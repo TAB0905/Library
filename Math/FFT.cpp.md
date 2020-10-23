@@ -6,7 +6,6 @@ data:
   _pathExtension: cpp
   _verificationStatusIcon: ':warning:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links: []
   bundledCode: "#line 1 \"Math/FFT.cpp\"\n#include <vector>\n#include <iostream>\n\
     #include <complex>\n#include <cmath>\n\n// std::vector<std::complex<double>> fft(std::vector<std::complex<double>>\

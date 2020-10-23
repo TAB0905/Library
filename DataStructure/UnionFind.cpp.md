@@ -4,15 +4,14 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: test/LibraryChecker/unionfind.test.cpp
-    title: test/LibraryChecker/unionfind.test.cpp
-  - icon: ':heavy_check_mark:'
     path: test/AOJ/DSL_1_A.test.cpp
     title: test/AOJ/DSL_1_A.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/LibraryChecker/unionfind.test.cpp
+    title: test/LibraryChecker/unionfind.test.cpp
   _pathExtension: cpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links: []
   bundledCode: "#line 1 \"DataStructure/UnionFind.cpp\"\n#include <vector>\n\nstruct\
     \ UnionFind{\n  std::vector<int> data;\n  UnionFind(int n) : data(n, -1) {}\n\

@@ -9,7 +9,6 @@ data:
   _pathExtension: cpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links: []
   bundledCode: "#line 1 \"DataStructure/FoldableQueue.cpp\"\n#include <algorithm>\n\
     #include <vector>\n\ntemplate<typename T, typename F>\nstruct FoldableQueue {\n\

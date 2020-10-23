@@ -9,7 +9,6 @@ data:
   _pathExtension: cpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links: []
   bundledCode: "#line 1 \"Graph/SCCD.cpp\"\n#include <algorithm>\n#include <cassert>\n\
     #include <iostream>\n#include <vector>\n#include <set>\n\nstd::vector<int> scc_decompose(const\

@@ -4,15 +4,14 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: test/LibraryChecker/suffix_array.test.cpp
-    title: test/LibraryChecker/suffix_array.test.cpp
-  - icon: ':heavy_check_mark:'
     path: test/LibraryChecker/number_of_substrings.test.cpp
     title: test/LibraryChecker/number_of_substrings.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/LibraryChecker/suffix_array.test.cpp
+    title: test/LibraryChecker/suffix_array.test.cpp
   _pathExtension: cpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links: []
   bundledCode: "#line 1 \"String/SuffixArray.cpp\"\n#include <cassert>\n#include <iostream>\n\
     #include <vector>\n\n//\u69CB\u7BC9 : O(|S|log|S|)\nstruct SuffixArray {\nprivate:\n\
@@ -74,8 +73,8 @@ data:
   timestamp: '2020-05-23 18:04:07+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/LibraryChecker/suffix_array.test.cpp
   - test/LibraryChecker/number_of_substrings.test.cpp
+  - test/LibraryChecker/suffix_array.test.cpp
 documentation_of: String/SuffixArray.cpp
 layout: document
 redirect_from:

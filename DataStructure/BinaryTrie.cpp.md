@@ -9,7 +9,6 @@ data:
   _pathExtension: cpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links: []
   bundledCode: "#line 1 \"DataStructure/BinaryTrie.cpp\"\n#include <algorithm>\n#include\
     \ <cassert>\n\ntemplate<typename T, int len>\nclass BinaryTrie {\nprivate:\n \

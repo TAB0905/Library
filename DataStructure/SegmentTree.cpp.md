@@ -12,7 +12,6 @@ data:
   _pathExtension: cpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links: []
   bundledCode: "#line 1 \"DataStructure/SegmentTree.cpp\"\n#include <vector>\n#include\
     \ <iostream>\n#include <climits>\n#include <functional>\n\ntemplate <typename\
@@ -46,8 +45,8 @@ data:
   timestamp: '2020-05-09 14:30:34+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/AOJ/DSL_2_A.test.cpp
   - test/AOJ/DSL_2_B.test.cpp
+  - test/AOJ/DSL_2_A.test.cpp
 documentation_of: DataStructure/SegmentTree.cpp
 layout: document
 redirect_from:

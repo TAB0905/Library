@@ -9,7 +9,6 @@ data:
   _pathExtension: cpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links: []
   bundledCode: "#line 1 \"Graph/LCA.cpp\"\n#include <cassert>\n#include <vector>\n\
     \nstruct LCA {\nprivate:\n  std::vector<std::vector<int>> G;\n  size_t n, m;\n\

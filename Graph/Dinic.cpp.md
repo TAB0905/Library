@@ -9,7 +9,6 @@ data:
   _pathExtension: cpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links: []
   bundledCode: "#line 1 \"Graph/Dinic.cpp\"\n#include <iostream>\n#include <algorithm>\n\
     #include <queue>\n#include <vector>\n\ntemplate<typename T>\nstruct Dinic {\n\

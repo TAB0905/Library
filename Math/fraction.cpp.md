@@ -6,7 +6,6 @@ data:
   _pathExtension: cpp
   _verificationStatusIcon: ':warning:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links: []
   bundledCode: "#line 1 \"Math/fraction.cpp\"\n#include <numeric> \n#include <iostream>\n\
     \ntemplate<typename T>\nstruct Fraction{\nprivate:\n  T p, q;// p/q\n  \n  void\

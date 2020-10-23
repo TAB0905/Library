@@ -9,7 +9,6 @@ data:
   _pathExtension: cpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links: []
   bundledCode: "#line 1 \"DataStructure/CumulativeSum.cpp\"\n#include <vector>\n\n\
     template<typename T>\nstruct CumSum{\nprivate:\n  size_t size;\n  std::vector<T>\

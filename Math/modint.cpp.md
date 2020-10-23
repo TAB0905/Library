@@ -9,7 +9,6 @@ data:
   _pathExtension: cpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links: []
   bundledCode: "#line 1 \"Math/modint.cpp\"\n#include <iostream>\n\ntemplate<long\
     \ long mod>\nclass modint{\nprivate:\n  long long a;\npublic:\n  constexpr modint(const\

@@ -9,7 +9,6 @@ data:
   _pathExtension: cpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links: []
   bundledCode: "#line 1 \"Graph/FordFulkerson.cpp\"\n#include <algorithm>\n#include\
     \ <vector>\n\ntemplate<typename T>\nstruct FlowGraph {\nprivate:\n  struct edge\

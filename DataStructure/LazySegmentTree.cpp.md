@@ -4,9 +4,6 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: test/AOJ/DSL_2_G.test.cpp
-    title: test/AOJ/DSL_2_G.test.cpp
-  - icon: ':heavy_check_mark:'
     path: test/AOJ/DSL_2_D.test.cpp
     title: test/AOJ/DSL_2_D.test.cpp
   - icon: ':heavy_check_mark:'
@@ -15,10 +12,12 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/AOJ/DSL_2_F.test.cpp
     title: test/AOJ/DSL_2_F.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/AOJ/DSL_2_G.test.cpp
+    title: test/AOJ/DSL_2_G.test.cpp
   _pathExtension: cpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links: []
   bundledCode: "#line 1 \"DataStructure/LazySegmentTree.cpp\"\n#include <algorithm>\n\
     #include <iostream>\n#include <vector>\n#include <functional>\n#include <utility>\n\
@@ -82,10 +81,10 @@ data:
   timestamp: '2020-05-09 14:54:10+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/AOJ/DSL_2_G.test.cpp
-  - test/AOJ/DSL_2_D.test.cpp
-  - test/AOJ/DSL_2_E.test.cpp
   - test/AOJ/DSL_2_F.test.cpp
+  - test/AOJ/DSL_2_G.test.cpp
+  - test/AOJ/DSL_2_E.test.cpp
+  - test/AOJ/DSL_2_D.test.cpp
 documentation_of: DataStructure/LazySegmentTree.cpp
 layout: document
 redirect_from:

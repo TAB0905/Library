@@ -9,7 +9,6 @@ data:
   _pathExtension: cpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links: []
   bundledCode: "#line 1 \"Graph/MinCostFlow.cpp\"\n#include <cassert>\n#include <cstdio>\n\
     #include <vector>\n#include <queue>\n#include <utility>\n#include <tuple>\n#include\

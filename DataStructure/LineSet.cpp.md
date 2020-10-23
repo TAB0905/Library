@@ -9,7 +9,6 @@ data:
   _pathExtension: cpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links: []
   bundledCode: "#line 1 \"DataStructure/LineSet.cpp\"\n#include <cassert>\n#include\
     \ <iostream>\n#include <map>\n#include <vector>\n\ntemplate<typename T>\nclass\

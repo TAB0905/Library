@@ -9,7 +9,6 @@ data:
   _pathExtension: cpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
     links: []
   bundledCode: "#line 1 \"DataStructure/DualSegmentTree.cpp\"\n#include <cassert>\n\
     #include <numeric>\n#include <algorithm>\n#include <iostream>\n#include <vector>\n\
