@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: Geometry/geometry.cpp
     title: Geometry/geometry.cpp
   _extendedRequiredBy: []
@@ -10,25 +10,26 @@ data:
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
+    ERROR: '0.00000001'
     PROBLEM: https://onlinejudge.u-aizu.ac.jp/courses/library/4/CGL/1/CGL_2_D
     links:
     - https://onlinejudge.u-aizu.ac.jp/courses/library/4/CGL/1/CGL_2_D
   bundledCode: "#line 1 \"test/AOJ/CGL_2_D.test.cpp\"\n#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/courses/library/4/CGL/1/CGL_2_D\"\
-    \n\n#include <iostream>\n#include <iomanip>\n\n#line 1 \"Geometry/geometry.cpp\"\
-    \n#include <algorithm>\n#line 3 \"Geometry/geometry.cpp\"\n#include <complex>\n\
-    #include <cstdio>\n#include <cmath>\n#include <utility>\n#include <vector>\nusing\
-    \ namespace std;\nusing W = double;\nusing P = complex<W>;\nusing L = pair<P,P>;\n\
-    using C = pair<P,W>;\nusing Poly = vector<P>;\n#define X real()\n#define Y imag()\n\
-    const W EPS = (1e-10), pi = acos(-1);\n\nnamespace std{\n  bool operator < (const\
-    \ P& a, const P& b){\n    return a.X != b.X ? a.X < b.X : a.Y < b.Y;\n  }\n  bool\
-    \ cmp_y(const P &a, const P &b){\n    return a.Y != b.Y ? a.Y < b.Y : a.X < b.X;\n\
-    \  }\n  bool operator == (const P& a, const P& b){\n    return abs(a-b) < EPS;\n\
-    \  }\n}\n\ndouble dot(P a, P b){ return a.X * b.X + a.Y * b.Y;}\nW cross(P a,\
-    \ P b){ return a.X * b.Y - a.Y * b.X;}\nP projection(P a, P b){ return dot(a,\
-    \ b)/abs(b)/abs(b)*b;}\nP projection(P a, L l){ return l.first + projection(a-l.first,l.second-l.first);}\n\
-    \n//\u76F4\u7DDAa\u3068\u76F4\u7DDAb\u306E\u4EA4\u70B9\nP intersection(L a, L\
-    \ b){\n  P af = a.first, as = a.second, bf = b.first, bs = b.second;\n  return\
-    \ af + cross(bs-bf,af-bf)/(-cross(bs-bf,as-bf)+cross(bs-bf,af-bf))*(as-af);\n\
+    \n#define ERROR 0.00000001\n\n#include <iostream>\n#include <iomanip>\n\n#line\
+    \ 1 \"Geometry/geometry.cpp\"\n#include <algorithm>\n#line 3 \"Geometry/geometry.cpp\"\
+    \n#include <complex>\n#include <cstdio>\n#include <cmath>\n#include <utility>\n\
+    #include <vector>\nusing namespace std;\nusing W = double;\nusing P = complex<W>;\n\
+    using L = pair<P,P>;\nusing C = pair<P,W>;\nusing Poly = vector<P>;\n#define X\
+    \ real()\n#define Y imag()\nconst W EPS = (1e-10), pi = acos(-1);\n\nnamespace\
+    \ std{\n  bool operator < (const P& a, const P& b){\n    return a.X != b.X ? a.X\
+    \ < b.X : a.Y < b.Y;\n  }\n  bool cmp_y(const P &a, const P &b){\n    return a.Y\
+    \ != b.Y ? a.Y < b.Y : a.X < b.X;\n  }\n  bool operator == (const P& a, const\
+    \ P& b){\n    return abs(a-b) < EPS;\n  }\n}\n\ndouble dot(P a, P b){ return a.X\
+    \ * b.X + a.Y * b.Y;}\nW cross(P a, P b){ return a.X * b.Y - a.Y * b.X;}\nP projection(P\
+    \ a, P b){ return dot(a, b)/abs(b)/abs(b)*b;}\nP projection(P a, L l){ return\
+    \ l.first + projection(a-l.first,l.second-l.first);}\n\n//\u76F4\u7DDAa\u3068\u76F4\
+    \u7DDAb\u306E\u4EA4\u70B9\nP intersection(L a, L b){\n  P af = a.first, as = a.second,\
+    \ bf = b.first, bs = b.second;\n  return af + cross(bs-bf,af-bf)/(-cross(bs-bf,as-bf)+cross(bs-bf,af-bf))*(as-af);\n\
     }\n\n//c\u304Ca/b\u3068\u91CD\u306A\u3063\u3066\u308B\u6642\u306F0\u3092\u8FD4\
     \u3059\n//c\u304Ca/b\u3068\u91CD\u306A\u3063\u3066\u308B\u6642+-2\u3092\u8FD4\u3057\
     \u3066\u6B32\u3057\u3044\u306A\u3089+-2\u306E\u3068\u3053\u308D\u306EEPS\u306E\
@@ -144,24 +145,24 @@ data:
     ,\n  \u591A\u89D2\u5F62\u306E\u5185\u90E8\u306B\u3042\u308B\u683C\u5B50\u70B9\u306E\
     \u6570\u3092 i, \u8FBA\u4E0A\u306E\u683C\u5B50\u70B9\u306E\u6570\u3092 b \u3068\
     \u3059\u308B\u3068\n  S = i + b/2 - 1\n  \u304C\u6210\u308A\u7ACB\u3064\u3002\n\
-    */\n#line 7 \"test/AOJ/CGL_2_D.test.cpp\"\n\nusing namespace std;\n\nint main(){\n\
+    */\n#line 8 \"test/AOJ/CGL_2_D.test.cpp\"\n\nusing namespace std;\n\nint main(){\n\
     \  int q;\n  cin >> q;\n  while(q--){\n    double x1, y1, x2, y2;\n    cin >>\
     \ x1 >> y1 >> x2 >> y2;\n    L l1(P(x1,y1), P(x2,y2));\n    cin >> x1 >> y1 >>\
     \ x2 >> y2;\n    L l2(P(x1,y1), P(x2,y2));\n    double d = ss_dist(l1,l2);\n \
     \   cout << fixed << setprecision(10) << d << '\\n';\n  }\n}\n"
   code: "#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/courses/library/4/CGL/1/CGL_2_D\"\
-    \n\n#include <iostream>\n#include <iomanip>\n\n#include \"Geometry/geometry.cpp\"\
-    \n\nusing namespace std;\n\nint main(){\n  int q;\n  cin >> q;\n  while(q--){\n\
-    \    double x1, y1, x2, y2;\n    cin >> x1 >> y1 >> x2 >> y2;\n    L l1(P(x1,y1),\
-    \ P(x2,y2));\n    cin >> x1 >> y1 >> x2 >> y2;\n    L l2(P(x1,y1), P(x2,y2));\n\
-    \    double d = ss_dist(l1,l2);\n    cout << fixed << setprecision(10) << d <<\
-    \ '\\n';\n  }\n}\n"
+    \n#define ERROR 0.00000001\n\n#include <iostream>\n#include <iomanip>\n\n#include\
+    \ \"Geometry/geometry.cpp\"\n\nusing namespace std;\n\nint main(){\n  int q;\n\
+    \  cin >> q;\n  while(q--){\n    double x1, y1, x2, y2;\n    cin >> x1 >> y1 >>\
+    \ x2 >> y2;\n    L l1(P(x1,y1), P(x2,y2));\n    cin >> x1 >> y1 >> x2 >> y2;\n\
+    \    L l2(P(x1,y1), P(x2,y2));\n    double d = ss_dist(l1,l2);\n    cout << fixed\
+    \ << setprecision(10) << d << '\\n';\n  }\n}\n"
   dependsOn:
   - Geometry/geometry.cpp
   isVerificationFile: true
   path: test/AOJ/CGL_2_D.test.cpp
   requiredBy: []
-  timestamp: '2020-10-23 20:38:39+09:00'
+  timestamp: '2020-10-30 16:05:33+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/AOJ/CGL_2_D.test.cpp

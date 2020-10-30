@@ -32,7 +32,7 @@ data:
       title: DataStructure/WeightedUnionFind.cpp
   - name: Geometry
     pages:
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: Geometry/geometry.cpp
       title: Geometry/geometry.cpp
   - name: Graph
@@ -98,10 +98,10 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/AOJ/ALDS1_1_C.test.cpp
       title: test/AOJ/ALDS1_1_C.test.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/AOJ/CGL_1_A.test.cpp
       title: test/AOJ/CGL_1_A.test.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/AOJ/CGL_1_B.test.cpp
       title: test/AOJ/CGL_1_B.test.cpp
     - icon: ':heavy_check_mark:'
@@ -140,13 +140,13 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/AOJ/CGL_7_A.test.cpp
       title: test/AOJ/CGL_7_A.test.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/AOJ/CGL_7_B.test.cpp
       title: test/AOJ/CGL_7_B.test.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/AOJ/CGL_7_C.test.cpp
       title: test/AOJ/CGL_7_C.test.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/AOJ/CGL_7_D.test.cpp
       title: test/AOJ/CGL_7_D.test.cpp
     - icon: ':heavy_check_mark:'
@@ -158,10 +158,10 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/AOJ/CGL_7_G.test.cpp
       title: test/AOJ/CGL_7_G.test.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/AOJ/CGL_7_H.test.cpp
       title: test/AOJ/CGL_7_H.test.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/AOJ/CGL_7_I.test.cpp
       title: test/AOJ/CGL_7_I.test.cpp
     - icon: ':heavy_check_mark:'

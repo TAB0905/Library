@@ -3,10 +3,10 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/AOJ/CGL_1_A.test.cpp
     title: test/AOJ/CGL_1_A.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/AOJ/CGL_1_B.test.cpp
     title: test/AOJ/CGL_1_B.test.cpp
   - icon: ':heavy_check_mark:'
@@ -45,13 +45,13 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/AOJ/CGL_7_A.test.cpp
     title: test/AOJ/CGL_7_A.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/AOJ/CGL_7_B.test.cpp
     title: test/AOJ/CGL_7_B.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/AOJ/CGL_7_C.test.cpp
     title: test/AOJ/CGL_7_C.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/AOJ/CGL_7_D.test.cpp
     title: test/AOJ/CGL_7_D.test.cpp
   - icon: ':heavy_check_mark:'
@@ -63,14 +63,14 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/AOJ/CGL_7_G.test.cpp
     title: test/AOJ/CGL_7_G.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/AOJ/CGL_7_H.test.cpp
     title: test/AOJ/CGL_7_H.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/AOJ/CGL_7_I.test.cpp
     title: test/AOJ/CGL_7_I.test.cpp
   _pathExtension: cpp
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 1 \"Geometry/geometry.cpp\"\n#include <algorithm>\n#include\
@@ -338,7 +338,7 @@ data:
   path: Geometry/geometry.cpp
   requiredBy: []
   timestamp: '2020-10-23 20:38:39+09:00'
-  verificationStatus: LIBRARY_SOME_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/AOJ/CGL_4_A.test.cpp
   - test/AOJ/CGL_2_A.test.cpp
