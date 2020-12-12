@@ -1,4 +1,5 @@
 #define PROBLEM "https://onlinejudge.u-aizu.ac.jp/courses/library/4/CGL/1/CGL_2_D"
+#define ERROR 0.00000001
 
 #include <iostream>
 #include <iomanip>
