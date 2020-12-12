@@ -81,6 +81,9 @@ data:
   - name: String
     pages:
     - icon: ':warning:'
+      path: String/PalindromicTree.cpp
+      title: String/PalindromicTree.cpp
+    - icon: ':warning:'
       path: String/RollingHash.cpp
       title: String/RollingHash.cpp
     - icon: ':warning:'
