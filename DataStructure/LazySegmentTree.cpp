@@ -4,12 +4,12 @@
 #include <functional>
 #include <utility>
 
-template <typename T, typename E>
+template <typename T, typename E, typename F, typename G, typename H>
 struct LazySegmentTree{
 private:
-  using F = std::function<T(T,T)>;
-  using G = std::function<T(T,E)>;
-  using H = std::function<E(E,E)>;
+  // using F = std::function<T(T,T)>;
+  // using G = std::function<T(T,E)>;
+  // using H = std::function<E(E,E)>;
   int n, height;
   F f;
   G g;
@@ -43,7 +43,7 @@ private:
     }
   }
 public:
-  LazySegmentTree(F f,G g, H h, T ti, E ei) :
+  LazySegmentTree(F f, G g, H h, T ti, E ei) :
     f(f), g(g), h(h), ti(ti), ei(ei) {}
   void build(int n_){
     n = n_;
