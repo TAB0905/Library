@@ -9,14 +9,14 @@ int main(){
   using E = long long;
   T ti = (1LL<<31)-1;
   E ei = (1LL<<31)-1;
-  function<T(T,T)> f = [](T a, T b){return min(a,b);};
-  function<T(T,E)> g = [](T a, E b){return b;};
-  function<E(E,E)> h = [](E a, E b){return b;};
+  auto f = [](T a, T b){return min(a,b);};
+  auto g = [](T a, E b){return b;};
+  auto h = [](E a, E b){return b;};
 
   int n, q;
   cin >> n >> q;
 
-  LazySegmentTree<T,E> st(f,g,h,ti,ei);
+  LazySegmentTree st(f,g,h,ti,ei);
   st.build(n);
 
   while(q--){

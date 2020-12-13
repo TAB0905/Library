@@ -12,11 +12,11 @@ int main(){
   using E = int;
   T ti = 0;
   E ei = -1;
-  function<T(T,T)> f = [](T a, T b){ return max(a,b);};
-  function<T(T,E)> g = [](T a, E b){ return b;};
-  function<E(E,E)> h = [](E a, E b){ return b;};
+  auto f = [](T a, T b){ return max(a,b);};
+  auto g = [](T a, E b){ return b;};
+  auto h = [](E a, E b){ return b;};
   
-  LazySegmentTree<T,E> st(f,g,h,ti,ei);
+  LazySegmentTree st(f,g,h,ti,ei);
   
   int n, q;
   cin >> n >> q;
