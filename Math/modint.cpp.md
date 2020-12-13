@@ -10,52 +10,65 @@ data:
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
-  bundledCode: "#line 1 \"Math/modint.cpp\"\n#include <iostream>\n\ntemplate<long\
-    \ long mod>\nclass modint{\nprivate:\n  long long a;\npublic:\n  constexpr modint(const\
-    \ long long x = 0) noexcept : a((x%mod+mod)%mod) {}\n  constexpr long long& value()\
-    \ noexcept { return a; }\n  constexpr const long long& value() const noexcept\
-    \ { return a; }\n  constexpr modint operator+(const modint rhs) const noexcept\
-    \ {\n    return modint(*this) += rhs;\n  }\n  constexpr modint operator-(const\
-    \ modint rhs) const noexcept {\n    return modint(*this) -= rhs;\n  }\n  constexpr\
-    \ modint operator*(const modint rhs) const noexcept {\n    return modint(*this)\
-    \ *= rhs;\n  }\n  constexpr modint operator/(const modint rhs) const noexcept\
-    \ {\n    return modint(*this) /= rhs;\n  }\n  constexpr modint& operator+=(const\
-    \ modint rhs) noexcept {\n    a += rhs.a;\n    if(a >= mod) a -= mod;\n    return\
-    \ *this;\n  }\n  constexpr modint &operator-=(const modint rhs) noexcept {\n \
-    \   if(a < rhs.a) a += mod;\n    a -= rhs.a;\n    return *this;\n  }\n  constexpr\
-    \ modint& operator*=(const modint rhs) noexcept {\n    a = a*rhs.a%mod;\n    return\
-    \ *this;\n  }\n  constexpr modint& operator/=(modint rhs) noexcept {\n    long\
-    \ long k = mod-2;\n    while(k > 0){\n      if(k&1){\n        *this *= rhs;\n\
-    \      }\n      rhs *= rhs;\n      k /= 2;\n    }\n    return *this;\n  }\n  friend\
-    \ std::ostream& operator<<(std::ostream &os, const modint &X){\n    return os\
-    \ << X.a;\n  }\n  friend std::istream& operator>>(std::istream &is, modint &X){\n\
-    \    is >> X.a;\n    X.a %= mod;\n    if(X.a < 0) X.a += mod;\n    return is;\n\
-    \  }\n};\n"
-  code: "#include <iostream>\n\ntemplate<long long mod>\nclass modint{\nprivate:\n\
-    \  long long a;\npublic:\n  constexpr modint(const long long x = 0) noexcept :\
-    \ a((x%mod+mod)%mod) {}\n  constexpr long long& value() noexcept { return a; }\n\
-    \  constexpr const long long& value() const noexcept { return a; }\n  constexpr\
-    \ modint operator+(const modint rhs) const noexcept {\n    return modint(*this)\
-    \ += rhs;\n  }\n  constexpr modint operator-(const modint rhs) const noexcept\
-    \ {\n    return modint(*this) -= rhs;\n  }\n  constexpr modint operator*(const\
-    \ modint rhs) const noexcept {\n    return modint(*this) *= rhs;\n  }\n  constexpr\
-    \ modint operator/(const modint rhs) const noexcept {\n    return modint(*this)\
-    \ /= rhs;\n  }\n  constexpr modint& operator+=(const modint rhs) noexcept {\n\
-    \    a += rhs.a;\n    if(a >= mod) a -= mod;\n    return *this;\n  }\n  constexpr\
-    \ modint &operator-=(const modint rhs) noexcept {\n    if(a < rhs.a) a += mod;\n\
-    \    a -= rhs.a;\n    return *this;\n  }\n  constexpr modint& operator*=(const\
-    \ modint rhs) noexcept {\n    a = a*rhs.a%mod;\n    return *this;\n  }\n  constexpr\
-    \ modint& operator/=(modint rhs) noexcept {\n    long long k = mod-2;\n    while(k\
-    \ > 0){\n      if(k&1){\n        *this *= rhs;\n      }\n      rhs *= rhs;\n \
-    \     k /= 2;\n    }\n    return *this;\n  }\n  friend std::ostream& operator<<(std::ostream\
-    \ &os, const modint &X){\n    return os << X.a;\n  }\n  friend std::istream& operator>>(std::istream\
-    \ &is, modint &X){\n    is >> X.a;\n    X.a %= mod;\n    if(X.a < 0) X.a += mod;\n\
-    \    return is;\n  }\n};\n"
+  bundledCode: "#line 1 \"Math/modint.cpp\"\n#include <iostream>\n#include <cassert>\n\
+    \ntemplate<long long mod>\nclass modint{\nprivate:\n  using T = long long;\n \
+    \ T a;\npublic:\n  constexpr modint(const long long x = 0) noexcept : a((x%mod+mod)%mod)\
+    \ {}\n  constexpr T& value() noexcept { return a; }\n  constexpr const T& value()\
+    \ const noexcept { return a; }\n  constexpr modint operator-() const noexcept\
+    \ {\n    return modint(0) -= *this;\n  }\n  constexpr modint operator+(const modint&\
+    \ rhs) const noexcept {\n    return modint(*this) += rhs;\n  }\n  constexpr modint\
+    \ operator-(const modint& rhs) const noexcept {\n    return modint(*this) -= rhs;\n\
+    \  }\n  constexpr modint operator*(const modint& rhs) const noexcept {\n    return\
+    \ modint(*this) *= rhs;\n  }\n  constexpr modint operator/(const modint& rhs)\
+    \ const noexcept {\n    return modint(*this) /= rhs;\n  }\n  constexpr modint&\
+    \ operator+=(const modint& rhs) noexcept {\n    a += rhs.a;\n    if(a >= mod)\
+    \ a -= mod;\n    return *this;\n  }\n  constexpr modint &operator-=(const modint&\
+    \ rhs) noexcept {\n    if(a < rhs.a) a += mod;\n    a -= rhs.a;\n    return *this;\n\
+    \  }\n  constexpr modint& operator*=(const modint& rhs) noexcept {\n    a = a*rhs.a%mod;\n\
+    \    return *this;\n  }\n  constexpr modint& operator/=(const modint& rhs) noexcept\
+    \ {\n    return *this *= rhs.inv();\n  }\n  constexpr bool operator==(const modint&\
+    \ rhs) const noexcept {\n    return a == rhs.a;\n  }\n  constexpr bool operator!=(const\
+    \ modint& rhs) const noexcept {\n    return not (*this == rhs);\n  }\n  constexpr\
+    \ modint pow(long long k) const noexcept {\n    modint ret(1);\n    modint x =\
+    \ k > 0 ? *this : this->inv();\n    k = abs(k);\n    while(k > 0){\n      if(k&1)\
+    \ ret *= x;\n      x *= x;\n      k >>= 1;\n    }\n    return ret;\n  }\n  constexpr\
+    \ modint inv() const noexcept {\n    return pow(mod-2);\n  }\n  friend std::ostream&\
+    \ operator<<(std::ostream &os, const modint &X) noexcept {\n    return os << X.a;\n\
+    \  }\n  friend std::istream& operator>>(std::istream &is, modint &X) noexcept\
+    \ {\n    is >> X.a;\n    X.a %= mod;\n    if(X.a < 0) X.a += mod;\n    return\
+    \ is;\n  }\n};\n"
+  code: "#include <iostream>\n#include <cassert>\n\ntemplate<long long mod>\nclass\
+    \ modint{\nprivate:\n  using T = long long;\n  T a;\npublic:\n  constexpr modint(const\
+    \ long long x = 0) noexcept : a((x%mod+mod)%mod) {}\n  constexpr T& value() noexcept\
+    \ { return a; }\n  constexpr const T& value() const noexcept { return a; }\n \
+    \ constexpr modint operator-() const noexcept {\n    return modint(0) -= *this;\n\
+    \  }\n  constexpr modint operator+(const modint& rhs) const noexcept {\n    return\
+    \ modint(*this) += rhs;\n  }\n  constexpr modint operator-(const modint& rhs)\
+    \ const noexcept {\n    return modint(*this) -= rhs;\n  }\n  constexpr modint\
+    \ operator*(const modint& rhs) const noexcept {\n    return modint(*this) *= rhs;\n\
+    \  }\n  constexpr modint operator/(const modint& rhs) const noexcept {\n    return\
+    \ modint(*this) /= rhs;\n  }\n  constexpr modint& operator+=(const modint& rhs)\
+    \ noexcept {\n    a += rhs.a;\n    if(a >= mod) a -= mod;\n    return *this;\n\
+    \  }\n  constexpr modint &operator-=(const modint& rhs) noexcept {\n    if(a <\
+    \ rhs.a) a += mod;\n    a -= rhs.a;\n    return *this;\n  }\n  constexpr modint&\
+    \ operator*=(const modint& rhs) noexcept {\n    a = a*rhs.a%mod;\n    return *this;\n\
+    \  }\n  constexpr modint& operator/=(const modint& rhs) noexcept {\n    return\
+    \ *this *= rhs.inv();\n  }\n  constexpr bool operator==(const modint& rhs) const\
+    \ noexcept {\n    return a == rhs.a;\n  }\n  constexpr bool operator!=(const modint&\
+    \ rhs) const noexcept {\n    return not (*this == rhs);\n  }\n  constexpr modint\
+    \ pow(long long k) const noexcept {\n    modint ret(1);\n    modint x = k > 0\
+    \ ? *this : this->inv();\n    k = abs(k);\n    while(k > 0){\n      if(k&1) ret\
+    \ *= x;\n      x *= x;\n      k >>= 1;\n    }\n    return ret;\n  }\n  constexpr\
+    \ modint inv() const noexcept {\n    return pow(mod-2);\n  }\n  friend std::ostream&\
+    \ operator<<(std::ostream &os, const modint &X) noexcept {\n    return os << X.a;\n\
+    \  }\n  friend std::istream& operator>>(std::istream &is, modint &X) noexcept\
+    \ {\n    is >> X.a;\n    X.a %= mod;\n    if(X.a < 0) X.a += mod;\n    return\
+    \ is;\n  }\n};\n"
   dependsOn: []
   isVerificationFile: false
   path: Math/modint.cpp
   requiredBy: []
-  timestamp: '2020-07-05 20:33:01+09:00'
+  timestamp: '2020-12-13 16:53:44+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/LibraryChecker/queue_operate_all_composite.test.cpp
