@@ -15,13 +15,13 @@ data:
     - icon: ':heavy_check_mark:'
       path: DataStructure/FoldableQueue.cpp
       title: DataStructure/FoldableQueue.cpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: DataStructure/LazySegmentTree.cpp
       title: DataStructure/LazySegmentTree.cpp
     - icon: ':heavy_check_mark:'
       path: DataStructure/LineSet.cpp
       title: DataStructure/LineSet.cpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: DataStructure/SegmentTree.cpp
       title: DataStructure/SegmentTree.cpp
     - icon: ':heavy_check_mark:'
@@ -170,25 +170,25 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/AOJ/DSL_1_A.test.cpp
       title: test/AOJ/DSL_1_A.test.cpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: test/AOJ/DSL_2_A.test.cpp
       title: test/AOJ/DSL_2_A.test.cpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: test/AOJ/DSL_2_B.test.cpp
       title: test/AOJ/DSL_2_B.test.cpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: test/AOJ/DSL_2_D.test.cpp
       title: test/AOJ/DSL_2_D.test.cpp
     - icon: ':heavy_check_mark:'
       path: test/AOJ/DSL_2_D_DualSegmentTree.test.cpp
       title: test/AOJ/DSL_2_D_DualSegmentTree.test.cpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: test/AOJ/DSL_2_E.test.cpp
       title: test/AOJ/DSL_2_E.test.cpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: test/AOJ/DSL_2_F.test.cpp
       title: test/AOJ/DSL_2_F.test.cpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: test/AOJ/DSL_2_G.test.cpp
       title: test/AOJ/DSL_2_G.test.cpp
     - icon: ':heavy_check_mark:'
