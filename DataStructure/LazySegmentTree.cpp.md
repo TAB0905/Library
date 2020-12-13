@@ -3,20 +3,20 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/AOJ/DSL_2_D.test.cpp
     title: test/AOJ/DSL_2_D.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/AOJ/DSL_2_E.test.cpp
     title: test/AOJ/DSL_2_E.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/AOJ/DSL_2_F.test.cpp
     title: test/AOJ/DSL_2_F.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/AOJ/DSL_2_G.test.cpp
     title: test/AOJ/DSL_2_G.test.cpp
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 1 \"DataStructure/LazySegmentTree.cpp\"\n#include <algorithm>\n\
@@ -79,7 +79,7 @@ data:
   path: DataStructure/LazySegmentTree.cpp
   requiredBy: []
   timestamp: '2020-12-13 17:06:49+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/AOJ/DSL_2_G.test.cpp
   - test/AOJ/DSL_2_E.test.cpp

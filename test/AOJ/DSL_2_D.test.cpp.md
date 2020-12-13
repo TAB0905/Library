@@ -1,13 +1,13 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: DataStructure/LazySegmentTree.cpp
     title: DataStructure/LazySegmentTree.cpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/all/DSL_2_D
@@ -42,32 +42,32 @@ data:
     \ = ti;\n    for(; l < r; l >>= 1, r >>= 1){\n      if(l&1) vl = f(vl,reflect(l++));\n\
     \      if(r&1) vr = f(reflect(--r),vr);\n    }\n    return f(vl,vr);\n  }\n};\n\
     \n#line 7 \"test/AOJ/DSL_2_D.test.cpp\"\nusing namespace std;\n\nint main(){\n\
-    \n  using T = int;\n  using E = int;\n  T ti = 0;\n  E ei = -1;\n  function<T(T,T)>\
-    \ f = [](T a, T b){ return max(a,b);};\n  function<T(T,E)> g = [](T a, E b){ return\
-    \ b;};\n  function<E(E,E)> h = [](E a, E b){ return b;};\n  \n  LazySegmentTree<T,E>\
-    \ st(f,g,h,ti,ei);\n  \n  int n, q;\n  cin >> n >> q;\n  vector<int> init(n,(1LL<<31)-1);\n\
-    \  st.build(init);\n\n  cerr << n << \" \" << q << endl;\n  while(q--){\n    int\
-    \ t;\n    cin >> t;\n    if(t){\n      int i;\n      cin >> i;\n      cout <<\
-    \ st.query(i,i+1) << \"\\n\";\n    }else{\n      int l, r, x;\n      cin >> l\
-    \ >> r >> x;\n      ++r;\n      st.update(l,r,x);\n    }\n  }\n}\n"
+    \n  using T = int;\n  using E = int;\n  T ti = 0;\n  E ei = -1;\n  auto f = [](T\
+    \ a, T b){ return max(a,b);};\n  auto g = [](T a, E b){ return b;};\n  auto h\
+    \ = [](E a, E b){ return b;};\n  \n  LazySegmentTree st(f,g,h,ti,ei);\n  \n  int\
+    \ n, q;\n  cin >> n >> q;\n  vector<int> init(n,(1LL<<31)-1);\n  st.build(init);\n\
+    \n  cerr << n << \" \" << q << endl;\n  while(q--){\n    int t;\n    cin >> t;\n\
+    \    if(t){\n      int i;\n      cin >> i;\n      cout << st.query(i,i+1) << \"\
+    \\n\";\n    }else{\n      int l, r, x;\n      cin >> l >> r >> x;\n      ++r;\n\
+    \      st.update(l,r,x);\n    }\n  }\n}\n"
   code: "#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/all/DSL_2_D\"\
     \n\n#include <algorithm>\n#include <iostream>\n#include <vector>\n#include \"\
     DataStructure/LazySegmentTree.cpp\"\nusing namespace std;\n\nint main(){\n\n \
-    \ using T = int;\n  using E = int;\n  T ti = 0;\n  E ei = -1;\n  function<T(T,T)>\
-    \ f = [](T a, T b){ return max(a,b);};\n  function<T(T,E)> g = [](T a, E b){ return\
-    \ b;};\n  function<E(E,E)> h = [](E a, E b){ return b;};\n  \n  LazySegmentTree<T,E>\
-    \ st(f,g,h,ti,ei);\n  \n  int n, q;\n  cin >> n >> q;\n  vector<int> init(n,(1LL<<31)-1);\n\
-    \  st.build(init);\n\n  cerr << n << \" \" << q << endl;\n  while(q--){\n    int\
-    \ t;\n    cin >> t;\n    if(t){\n      int i;\n      cin >> i;\n      cout <<\
-    \ st.query(i,i+1) << \"\\n\";\n    }else{\n      int l, r, x;\n      cin >> l\
-    \ >> r >> x;\n      ++r;\n      st.update(l,r,x);\n    }\n  }\n}\n"
+    \ using T = int;\n  using E = int;\n  T ti = 0;\n  E ei = -1;\n  auto f = [](T\
+    \ a, T b){ return max(a,b);};\n  auto g = [](T a, E b){ return b;};\n  auto h\
+    \ = [](E a, E b){ return b;};\n  \n  LazySegmentTree st(f,g,h,ti,ei);\n  \n  int\
+    \ n, q;\n  cin >> n >> q;\n  vector<int> init(n,(1LL<<31)-1);\n  st.build(init);\n\
+    \n  cerr << n << \" \" << q << endl;\n  while(q--){\n    int t;\n    cin >> t;\n\
+    \    if(t){\n      int i;\n      cin >> i;\n      cout << st.query(i,i+1) << \"\
+    \\n\";\n    }else{\n      int l, r, x;\n      cin >> l >> r >> x;\n      ++r;\n\
+    \      st.update(l,r,x);\n    }\n  }\n}\n"
   dependsOn:
   - DataStructure/LazySegmentTree.cpp
   isVerificationFile: true
   path: test/AOJ/DSL_2_D.test.cpp
   requiredBy: []
-  timestamp: '2020-12-13 17:06:49+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2020-12-13 17:23:34+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/AOJ/DSL_2_D.test.cpp
 layout: document

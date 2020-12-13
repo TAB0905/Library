@@ -1,13 +1,13 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: DataStructure/LazySegmentTree.cpp
     title: DataStructure/LazySegmentTree.cpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/all/DSL_2_F
@@ -44,31 +44,30 @@ data:
     \      if(r&1) vr = f(reflect(--r),vr);\n    }\n    return f(vl,vr);\n  }\n};\n\
     \n#line 5 \"test/AOJ/DSL_2_F.test.cpp\"\nusing namespace std;\n\nint main(){\n\
     \  using T = long long;\n  using E = long long;\n  T ti = (1LL<<31)-1;\n  E ei\
-    \ = (1LL<<31)-1;\n  function<T(T,T)> f = [](T a, T b){return min(a,b);};\n  function<T(T,E)>\
-    \ g = [](T a, E b){return b;};\n  function<E(E,E)> h = [](E a, E b){return b;};\n\
-    \n  int n, q;\n  cin >> n >> q;\n\n  LazySegmentTree<T,E> st(f,g,h,ti,ei);\n \
-    \ st.build(n);\n\n  while(q--){\n    int t;\n    cin >> t;\n    if(t){\n     \
-    \ int s, t;\n      cin >> s >> t;\n      cout << st.query(s,t+1) << endl;\n  \
-    \  }else{\n      int s, t, x;\n      cin >> s >> t >> x;\n      st.update(s,t+1,x);\n\
-    \    }\n    // st.dump();\n  }\n}\n\n\n"
-  code: "#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/all/DSL_2_F\"\
-    \n\n#include <iostream>\n#include \"DataStructure/LazySegmentTree.cpp\"\nusing\
-    \ namespace std;\n\nint main(){\n  using T = long long;\n  using E = long long;\n\
-    \  T ti = (1LL<<31)-1;\n  E ei = (1LL<<31)-1;\n  function<T(T,T)> f = [](T a,\
-    \ T b){return min(a,b);};\n  function<T(T,E)> g = [](T a, E b){return b;};\n \
-    \ function<E(E,E)> h = [](E a, E b){return b;};\n\n  int n, q;\n  cin >> n >>\
-    \ q;\n\n  LazySegmentTree<T,E> st(f,g,h,ti,ei);\n  st.build(n);\n\n  while(q--){\n\
+    \ = (1LL<<31)-1;\n  auto f = [](T a, T b){return min(a,b);};\n  auto g = [](T\
+    \ a, E b){return b;};\n  auto h = [](E a, E b){return b;};\n\n  int n, q;\n  cin\
+    \ >> n >> q;\n\n  LazySegmentTree st(f,g,h,ti,ei);\n  st.build(n);\n\n  while(q--){\n\
     \    int t;\n    cin >> t;\n    if(t){\n      int s, t;\n      cin >> s >> t;\n\
     \      cout << st.query(s,t+1) << endl;\n    }else{\n      int s, t, x;\n    \
     \  cin >> s >> t >> x;\n      st.update(s,t+1,x);\n    }\n    // st.dump();\n\
     \  }\n}\n\n\n"
+  code: "#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/all/DSL_2_F\"\
+    \n\n#include <iostream>\n#include \"DataStructure/LazySegmentTree.cpp\"\nusing\
+    \ namespace std;\n\nint main(){\n  using T = long long;\n  using E = long long;\n\
+    \  T ti = (1LL<<31)-1;\n  E ei = (1LL<<31)-1;\n  auto f = [](T a, T b){return\
+    \ min(a,b);};\n  auto g = [](T a, E b){return b;};\n  auto h = [](E a, E b){return\
+    \ b;};\n\n  int n, q;\n  cin >> n >> q;\n\n  LazySegmentTree st(f,g,h,ti,ei);\n\
+    \  st.build(n);\n\n  while(q--){\n    int t;\n    cin >> t;\n    if(t){\n    \
+    \  int s, t;\n      cin >> s >> t;\n      cout << st.query(s,t+1) << endl;\n \
+    \   }else{\n      int s, t, x;\n      cin >> s >> t >> x;\n      st.update(s,t+1,x);\n\
+    \    }\n    // st.dump();\n  }\n}\n\n\n"
   dependsOn:
   - DataStructure/LazySegmentTree.cpp
   isVerificationFile: true
   path: test/AOJ/DSL_2_F.test.cpp
   requiredBy: []
-  timestamp: '2020-12-13 17:06:49+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2020-12-13 17:23:34+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/AOJ/DSL_2_F.test.cpp
 layout: document
