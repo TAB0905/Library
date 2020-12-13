@@ -20,6 +20,33 @@ private:
   vector<vector<edge>> G;
   int sz;
 
+  vector<T> calc_dag_potential(int from){
+    queue<int> Q;
+    Q.emplace(from);
+    vector<T> ret(sz,numeric_limits<T>::max());
+    ret[from] = 0;
+    vector<int> d_in(sz,0);
+    for(int i = 0; i < sz; ++i){
+      for(auto e : G[i]){
+        if(e.cap <= 0) continue;
+        ++d_in[e.to];
+      }
+    }
+    while(Q.size()){
+      auto v = Q.front();
+      Q.pop();
+      for(auto e : G[v]){
+        if(!e.cap) continue;
+        int v_ = e.to;
+        ret[v_] = min<T>(ret[v_],ret[v]+e.cost);
+        --d_in[v_];
+        if(!d_in[v_])
+          Q.emplace(v_);
+      }
+    }
+    return ret;
+  }
+
 public:
   MinCostFlowGraph(int n) : G(n), sz(n) {}
 

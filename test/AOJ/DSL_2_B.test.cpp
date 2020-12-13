@@ -8,7 +8,7 @@ int main(){
   int n, q;
   cin >> n >> q;
   using T = long long;
-  SegmentTree<T> rsq([](T a, T b){return a+b;},0LL);
+  SegmentTree rsq([](T a, T b){return a+b;},0LL);
   rsq.build(n);
   while(q--){
     int c, x, y;
