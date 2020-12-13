@@ -21,7 +21,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: DataStructure/LineSet.cpp
       title: DataStructure/LineSet.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: DataStructure/SegmentTree.cpp
       title: DataStructure/SegmentTree.cpp
     - icon: ':heavy_check_mark:'
@@ -52,7 +52,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: Graph/Lowlink.cpp
       title: Graph/Lowlink.cpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: Graph/MinCostFlow.cpp
       title: Graph/MinCostFlow.cpp
     - icon: ':heavy_check_mark:'
@@ -170,10 +170,10 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/AOJ/DSL_1_A.test.cpp
       title: test/AOJ/DSL_1_A.test.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/AOJ/DSL_2_A.test.cpp
       title: test/AOJ/DSL_2_A.test.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/AOJ/DSL_2_B.test.cpp
       title: test/AOJ/DSL_2_B.test.cpp
     - icon: ':heavy_check_mark:'
@@ -197,7 +197,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/AOJ/GRL_6_A_FordFulkerson.test.cpp
       title: test/AOJ/GRL_6_A_FordFulkerson.test.cpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: test/AOJ/GRL_6_B.test.cpp
       title: test/AOJ/GRL_6_B.test.cpp
   - name: test/LibraryChecker

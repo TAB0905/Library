@@ -1,13 +1,13 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: Graph/MinCostFlow.cpp
     title: Graph/MinCostFlow.cpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _pathExtension: cpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/all/GRL_6_B
@@ -20,9 +20,16 @@ data:
     \ {\nprivate:\n  using ll = long long;\n  struct edge {\n    int to;\n    ll cap,\
     \ cost;\n    int r_idx;\n    edge(int t, ll cap, ll cost, int r) :\n      to(t),\
     \ cap(cap), cost(cost), r_idx(r) {}\n  };\n  vector<vector<edge>> G;\n  int sz;\n\
-    \npublic:\n  MinCostFlowGraph(int n) : G(n), sz(n) {}\n\n  void add_edge(int from,\
-    \ int to, ll cap, ll cost){\n    int i = G[to].size(), i_ = G[from].size();\n\
-    \    G[from].emplace_back(to,cap,cost,i);\n    G[to].emplace_back(from,0,-cost,i_);\n\
+    \n  vector<T> calc_dag_potential(int from){\n    queue<int> Q;\n    Q.emplace(from);\n\
+    \    vector<T> ret(sz,numeric_limits<T>::max());\n    ret[from] = 0;\n    vector<int>\
+    \ d_in(sz,0);\n    for(int i = 0; i < sz; ++i){\n      for(auto e : G[i]){\n \
+    \       if(e.cap <= 0) continue;\n        ++d_in[e.to];\n      }\n    }\n    while(Q.size()){\n\
+    \      auto v = Q.front();\n      Q.pop();\n      for(auto e : G[v]){\n      \
+    \  if(!e.cap) continue;\n        int v_ = e.to;\n        ret[v_] = min<T>(ret[v_],ret[v]+e.cost);\n\
+    \        --d_in[v_];\n        if(!d_in[v_])\n          Q.emplace(v_);\n      }\n\
+    \    }\n    return ret;\n  }\n\npublic:\n  MinCostFlowGraph(int n) : G(n), sz(n)\
+    \ {}\n\n  void add_edge(int from, int to, ll cap, ll cost){\n    int i = G[to].size(),\
+    \ i_ = G[from].size();\n    G[from].emplace_back(to,cap,cost,i);\n    G[to].emplace_back(from,0,-cost,i_);\n\
     \  }\n  \n  ll min_cost_flow(int from, int to, ll f){\n    ll ans = 0;\n    const\
     \ ll INF = numeric_limits<ll>::max();\n    vector<ll> potential(sz);\n    while(f\
     \ > 0){\n      vector<ll> dist(sz,INF);\n      dist[from] = 0;\n      vector<int>\
@@ -57,8 +64,8 @@ data:
   isVerificationFile: true
   path: test/AOJ/GRL_6_B.test.cpp
   requiredBy: []
-  timestamp: '2020-09-24 21:15:33+09:00'
-  verificationStatus: TEST_ACCEPTED
+  timestamp: '2020-12-13 17:28:56+09:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: test/AOJ/GRL_6_B.test.cpp
 layout: document

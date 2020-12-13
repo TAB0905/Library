@@ -1,13 +1,13 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: DataStructure/SegmentTree.cpp
     title: DataStructure/SegmentTree.cpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/all/DSL_2_B
@@ -29,14 +29,14 @@ data:
     \ vl = f(vl, dat[l++]);\n      if(r&1) vr = f(dat[--r], vr);\n    }\n    return\
     \ f(vl, vr);\n  }\n};\n\n#line 5 \"test/AOJ/DSL_2_B.test.cpp\"\nusing namespace\
     \ std;\n\nint main(){\n  int n, q;\n  cin >> n >> q;\n  using T = long long;\n\
-    \  SegmentTree<T> rsq([](T a, T b){return a+b;},0LL);\n  rsq.build(n);\n  while(q--){\n\
+    \  SegmentTree rsq([](T a, T b){return a+b;},0LL);\n  rsq.build(n);\n  while(q--){\n\
     \    int c, x, y;\n    cin >> c >> x >> y;\n    if(c){\n      --x,--y;\n     \
     \ cout << rsq.query(x,y+1) << endl;\n    }else{\n      --x;\n      long long t\
     \ = rsq.query(x,x+1);\n      rsq.set_val(x,t+y);\n    }\n  }\n}\n"
   code: "#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/all/DSL_2_B\"\
     \n\n#include <iostream>\n#include \"DataStructure/SegmentTree.cpp\"\nusing namespace\
     \ std;\n\nint main(){\n  int n, q;\n  cin >> n >> q;\n  using T = long long;\n\
-    \  SegmentTree<T> rsq([](T a, T b){return a+b;},0LL);\n  rsq.build(n);\n  while(q--){\n\
+    \  SegmentTree rsq([](T a, T b){return a+b;},0LL);\n  rsq.build(n);\n  while(q--){\n\
     \    int c, x, y;\n    cin >> c >> x >> y;\n    if(c){\n      --x,--y;\n     \
     \ cout << rsq.query(x,y+1) << endl;\n    }else{\n      --x;\n      long long t\
     \ = rsq.query(x,x+1);\n      rsq.set_val(x,t+y);\n    }\n  }\n}\n"
@@ -45,8 +45,8 @@ data:
   isVerificationFile: true
   path: test/AOJ/DSL_2_B.test.cpp
   requiredBy: []
-  timestamp: '2020-12-13 17:06:49+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2020-12-13 17:28:56+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/AOJ/DSL_2_B.test.cpp
 layout: document
