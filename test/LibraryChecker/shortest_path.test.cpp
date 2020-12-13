@@ -1,13 +1,18 @@
 #define PROBLEM "https://judge.yosupo.jp/problem/shortest_path"
 
-#include "Graph/Dijkstra.cpp"
-
 #include <iostream>
+#include <iomanip>
 #include <vector>
 #include <utility>
+
+#include "Graph/Dijkstra.cpp"
+
 using namespace std;
 
 int main(){
+  cin.tie(nullptr);
+  ios::sync_with_stdio(false);
+  
   int N, M, s, t;
   cin >> N >> M >> s >> t;
   vector<vector<pair<ll,int>>> G(N);

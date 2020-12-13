@@ -1,10 +1,14 @@
 #define PROBLEM "https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/all/DSL_2_F"
 
 #include <iostream>
+#include <iomanip>
 #include "DataStructure/LazySegmentTree.cpp"
 using namespace std;
 
 int main(){
+  cin.tie(nullptr);
+  ios::sync_with_stdio(false);
+
   using T = long long;
   using E = long long;
   T ti = (1LL<<31)-1;
@@ -25,7 +29,7 @@ int main(){
     if(t){
       int s, t;
       cin >> s >> t;
-      cout << st.query(s,t+1) << endl;
+      cout << st.query(s,t+1) << '\n';
     }else{
       int s, t, x;
       cin >> s >> t >> x;

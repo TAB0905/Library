@@ -1,10 +1,14 @@
 #define PROBLEM "https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/all/GRL_6_B"
 
 #include <iostream>
+#include <iomanip>
 #include "Graph/MinCostFlow.cpp"
 using namespace std;
 
 int main(){
+  cin.tie(nullptr);
+  ios::sync_with_stdio(false);
+
   int n, m, f;
   cin >> n >> m >> f;
   MinCostFlowGraph<long long, long long> G(n);

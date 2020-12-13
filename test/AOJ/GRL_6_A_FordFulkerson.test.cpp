@@ -1,10 +1,14 @@
 #define PROBLEM "https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/all/GRL_6_A"
 
 #include <iostream>
+#include <iomanip>
 #include "Graph/FordFulkerson.cpp"
 using namespace std;
 
 int main(){
+  cin.tie(nullptr);
+  ios::sync_with_stdio(false);
+
   int V, E;
   cin >> V >> E;
   FlowGraph<long long> G(V);

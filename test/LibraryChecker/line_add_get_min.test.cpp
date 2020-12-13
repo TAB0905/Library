@@ -1,12 +1,16 @@
 #define PROBLEM "https://judge.yosupo.jp/problem/line_add_get_min"
 
 #include <iostream>
+#include <iomanip>
 #include "DataStructure/LineSet.cpp"
 
 using namespace std;
 
 int main(){
   using int128 = __int128_t;
+  cin.tie(nullptr);
+  ios::sync_with_stdio(false);
+  
   int N, Q;
   cin >> N >> Q;
   LineSet<int128> cht(1e18);

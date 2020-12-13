@@ -1,9 +1,8 @@
-# -*- mode: snippet -*-
-# name: WeightedUnionFind
-# key: WeightedUnionFind
-# --
+#include <vector>
+#include <utility>
+
 struct WeightedUnionFind{
-  vector< pair<int, long long> > data;
+  vector<pair<int, long long>> data;
   WeightedUnionFind(int n) : data(n, pair<int,long long>(-1,0LL)) {}
   bool unite(int x, int y, long long w){//weight(y)-weight(x) = w;
     int x_ = find(x), y_ = find(y);

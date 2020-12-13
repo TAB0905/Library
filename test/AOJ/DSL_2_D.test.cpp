@@ -2,11 +2,14 @@
 
 #include <algorithm>
 #include <iostream>
+#include <iomanip>
 #include <vector>
 #include "DataStructure/LazySegmentTree.cpp"
 using namespace std;
 
 int main(){
+  cin.tie(nullptr);
+  ios::sync_with_stdio(false);
 
   using T = int;
   using E = int;

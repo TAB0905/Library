@@ -1,12 +1,16 @@
 #define PROBLEM "https://judge.yosupo.jp/problem/scc"
 
 #include <iostream>
+#include <iomanip>
 #include <vector>
 
 #include "Graph/SCCD.cpp"
 using namespace std;
 
 int main(){
+  cin.tie(nullptr);
+  ios::sync_with_stdio(false);
+  
   int N, M;
   cin >> N >> M;
   vector<vector<int>> G(N);

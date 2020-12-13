@@ -9,6 +9,9 @@
 using namespace std;
 
 int main(){
+  cin.tie(nullptr);
+  ios::sync_with_stdio(false);
+  
   double x1, y1, x2, y2;
   cin >> x1 >> y1 >> x2 >> y2;
   L l(P(x1,y1), P(x2,y2));

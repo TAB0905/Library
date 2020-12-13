@@ -1,7 +1,5 @@
-# -*- mode: snippet -*-
-# name: RollingHash
-# key: RollingHash
-# --
+#include <array>
+#include <vector>
 
 struct RollingHash{
   int n;

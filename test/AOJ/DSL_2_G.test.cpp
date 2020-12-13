@@ -1,10 +1,14 @@
 #define PROBLEM "https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/all/DSL_2_G"
 
 #include <iostream>
+#include <iomanip>
 #include "DataStructure/LazySegmentTree.cpp"
 using namespace std;
 
 int main(){
+  cin.tie(nullptr);
+  ios::sync_with_stdio(false);
+
   using T = pair<long long, long long>;
   using E = long long;
   T ti(0,0);

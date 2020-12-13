@@ -10,6 +10,9 @@
 using namespace std;
 
 int main(){
+  cin.tie(nullptr);
+  ios::sync_with_stdio(false);
+
   double x, y, r;
   cin >> x >> y >> r;
   C c1(P(x,y),r);
