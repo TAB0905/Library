@@ -7,7 +7,7 @@ using namespace std;
 int main(){
   int n, m, f;
   cin >> n >> m >> f;
-  MinCostFlowGraph G(n);
+  MinCostFlowGraph<long long, long long> G(n);
   for(int i = 0; i < m; ++i){
     long long u, v, c, d;
     cin >> u >> v >> c >> d;
