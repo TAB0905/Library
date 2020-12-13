@@ -52,7 +52,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: Graph/Lowlink.cpp
       title: Graph/Lowlink.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: Graph/MinCostFlow.cpp
       title: Graph/MinCostFlow.cpp
     - icon: ':heavy_check_mark:'
@@ -197,7 +197,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/AOJ/GRL_6_A_FordFulkerson.test.cpp
       title: test/AOJ/GRL_6_A_FordFulkerson.test.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/AOJ/GRL_6_B.test.cpp
       title: test/AOJ/GRL_6_B.test.cpp
   - name: test/LibraryChecker
