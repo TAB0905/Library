@@ -14,13 +14,13 @@ data:
     links:
     - https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/all/GRL_6_B
   bundledCode: "#line 1 \"test/AOJ/GRL_6_B.test.cpp\"\n#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/all/GRL_6_B\"\
-    \n\n#include <iostream>\n#line 1 \"Graph/MinCostFlow.cpp\"\n#include <cassert>\n\
-    #include <cstdio>\n#include <vector>\n#include <queue>\n#include <utility>\n#include\
-    \ <tuple>\n#include <limits>\n\ntemplate<typename capacity_t, typename cost_t>\n\
-    struct MinCostFlowGraph {\n    \nprivate:\n\n  struct edge {\n    int to;\n  \
-    \  capacity_t cap;\n    cost_t cost;\n    int r_idx;\n    edge(int t, capacity_t\
-    \ cap, cost_t cost, int r) :\n      to(t), cap(cap), cost(cost), r_idx(r) {}\n\
-    \  };\n\n  std::vector<std::vector<edge>> G;\n  int sz;\n\n  std::vector<cost_t>\
+    \n\n#include <iostream>\n#include <iomanip>\n#line 1 \"Graph/MinCostFlow.cpp\"\
+    \n#include <cassert>\n#include <cstdio>\n#include <vector>\n#include <queue>\n\
+    #include <utility>\n#include <tuple>\n#include <limits>\n\ntemplate<typename capacity_t,\
+    \ typename cost_t>\nstruct MinCostFlowGraph {\n    \nprivate:\n\n  struct edge\
+    \ {\n    int to;\n    capacity_t cap;\n    cost_t cost;\n    int r_idx;\n    edge(int\
+    \ t, capacity_t cap, cost_t cost, int r) :\n      to(t), cap(cap), cost(cost),\
+    \ r_idx(r) {}\n  };\n\n  std::vector<std::vector<edge>> G;\n  int sz;\n\n  std::vector<cost_t>\
     \ calc_dag_potential(int from){\n    std::queue<int> Q;\n    Q.emplace(from);\n\
     \    std::vector<cost_t> ret(sz, std::numeric_limits<cost_t>::max()/2);\n    ret[from]\
     \ = 0;\n    std::vector<int> d_in(sz,0);\n    for(int i = 0; i < sz; ++i){\n \
@@ -51,23 +51,25 @@ data:
     \ to;\n      while(v != from){\n        int v_ = prev_v[v];\n        auto& e =\
     \ G[v_][prev_e[v]];\n        e.cap -= flow;\n        ans += flow*e.cost;\n   \
     \     G[v][e.r_idx].cap += flow;\n        v = v_;\n      }\n      f -= flow;\n\
-    \    }\n    return ans;\n  }\n};\n#line 5 \"test/AOJ/GRL_6_B.test.cpp\"\nusing\
-    \ namespace std;\n\nint main(){\n  int n, m, f;\n  cin >> n >> m >> f;\n  MinCostFlowGraph<long\
-    \ long, long long> G(n);\n  for(int i = 0; i < m; ++i){\n    long long u, v, c,\
-    \ d;\n    cin >> u >> v >> c >> d;\n    G.add_edge(u,v,c,d);\n  }\n  cout << G.min_cost_flow(0,n-1,f)\
+    \    }\n    return ans;\n  }\n};\n#line 6 \"test/AOJ/GRL_6_B.test.cpp\"\nusing\
+    \ namespace std;\n\nint main(){\n  cin.tie(nullptr);\n  ios::sync_with_stdio(false);\n\
+    \n  int n, m, f;\n  cin >> n >> m >> f;\n  MinCostFlowGraph<long long, long long>\
+    \ G(n);\n  for(int i = 0; i < m; ++i){\n    long long u, v, c, d;\n    cin >>\
+    \ u >> v >> c >> d;\n    G.add_edge(u,v,c,d);\n  }\n  cout << G.min_cost_flow(0,n-1,f)\
     \ << endl;\n}\n"
   code: "#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/all/GRL_6_B\"\
-    \n\n#include <iostream>\n#include \"Graph/MinCostFlow.cpp\"\nusing namespace std;\n\
-    \nint main(){\n  int n, m, f;\n  cin >> n >> m >> f;\n  MinCostFlowGraph<long\
-    \ long, long long> G(n);\n  for(int i = 0; i < m; ++i){\n    long long u, v, c,\
-    \ d;\n    cin >> u >> v >> c >> d;\n    G.add_edge(u,v,c,d);\n  }\n  cout << G.min_cost_flow(0,n-1,f)\
+    \n\n#include <iostream>\n#include <iomanip>\n#include \"Graph/MinCostFlow.cpp\"\
+    \nusing namespace std;\n\nint main(){\n  cin.tie(nullptr);\n  ios::sync_with_stdio(false);\n\
+    \n  int n, m, f;\n  cin >> n >> m >> f;\n  MinCostFlowGraph<long long, long long>\
+    \ G(n);\n  for(int i = 0; i < m; ++i){\n    long long u, v, c, d;\n    cin >>\
+    \ u >> v >> c >> d;\n    G.add_edge(u,v,c,d);\n  }\n  cout << G.min_cost_flow(0,n-1,f)\
     \ << endl;\n}\n"
   dependsOn:
   - Graph/MinCostFlow.cpp
   isVerificationFile: true
   path: test/AOJ/GRL_6_B.test.cpp
   requiredBy: []
-  timestamp: '2020-12-13 17:47:34+09:00'
+  timestamp: '2020-12-13 21:55:55+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/AOJ/GRL_6_B.test.cpp

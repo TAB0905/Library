@@ -146,21 +146,22 @@ data:
     \u6570\u3092 i, \u8FBA\u4E0A\u306E\u683C\u5B50\u70B9\u306E\u6570\u3092 b \u3068\
     \u3059\u308B\u3068\n  S = i + b/2 - 1\n  \u304C\u6210\u308A\u7ACB\u3064\u3002\n\
     */\n#line 9 \"test/AOJ/CGL_7_I.test.cpp\"\n\nusing namespace std;\n\nint main(){\n\
-    \  double x, y, r;\n  cin >> x >> y >> r;\n  C c1(P(x,y),r);\n  cin >> x >> y\
-    \ >> r;\n  C c2(P(x,y),r);\n  cout << fixed << setprecision(20) << common_area(c1,c2)\
-    \ << '\\n';\n}\n\n"
+    \  cin.tie(nullptr);\n  ios::sync_with_stdio(false);\n\n  double x, y, r;\n  cin\
+    \ >> x >> y >> r;\n  C c1(P(x,y),r);\n  cin >> x >> y >> r;\n  C c2(P(x,y),r);\n\
+    \  cout << fixed << setprecision(20) << common_area(c1,c2) << '\\n';\n}\n\n"
   code: "#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/courses/library/4/CGL/1/CGL_7_I\"\
     \n#define ERROR 0.000001\n\n#include <algorithm>\n#include <iostream>\n#include\
     \ <iomanip>\n\n#include \"Geometry/geometry.cpp\"\n\nusing namespace std;\n\n\
-    int main(){\n  double x, y, r;\n  cin >> x >> y >> r;\n  C c1(P(x,y),r);\n  cin\
-    \ >> x >> y >> r;\n  C c2(P(x,y),r);\n  cout << fixed << setprecision(20) << common_area(c1,c2)\
-    \ << '\\n';\n}\n\n"
+    int main(){\n  cin.tie(nullptr);\n  ios::sync_with_stdio(false);\n\n  double x,\
+    \ y, r;\n  cin >> x >> y >> r;\n  C c1(P(x,y),r);\n  cin >> x >> y >> r;\n  C\
+    \ c2(P(x,y),r);\n  cout << fixed << setprecision(20) << common_area(c1,c2) <<\
+    \ '\\n';\n}\n\n"
   dependsOn:
   - Geometry/geometry.cpp
   isVerificationFile: true
   path: test/AOJ/CGL_7_I.test.cpp
   requiredBy: []
-  timestamp: '2020-10-30 16:05:33+09:00'
+  timestamp: '2020-12-13 21:55:55+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/AOJ/CGL_7_I.test.cpp

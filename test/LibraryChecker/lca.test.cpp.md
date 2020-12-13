@@ -28,25 +28,25 @@ data:
     \ < D[v]) continue;\n      u = u_;\n    }\n\n    if(u == v) return u;\n    assert(D[u]\
     \ == D[v]);\n    for(size_t i = m-1; i < m; --i){\n      if(A[u][i] != A[v][i])\n\
     \        u = A[u][i], v = A[v][i];\n    }\n    return A[u][0];\n  }\n};\n#line\
-    \ 5 \"test/LibraryChecker/lca.test.cpp\"\n#include <iostream>\nusing namespace\
+    \ 5 \"test/LibraryChecker/lca.test.cpp\"\n#include <iostream>\n#include <iomanip>\n\
+    using namespace std;\n\nint main(){\n  cin.tie(nullptr);\n  ios::sync_with_stdio(false);\n\
+    \  \n  int N, Q;\n  cin >> N >> Q;\n  vector<vector<int>> G(N);\n  for(int i =\
+    \ 1; i < N; ++i){\n    int p;\n    cin >> p;\n    G[i].emplace_back(p);\n    G[p].emplace_back(i);\n\
+    \  }\n  LCA lca(G,0);\n  while(Q--){\n    int u, v;\n    cin >> u >> v;\n    cout\
+    \ << lca.query(u,v) << '\\n';\n  }\n}\n"
+  code: "#define PROBLEM \"https://judge.yosupo.jp/problem/lca\"\n\n#include \"Graph/LCA.cpp\"\
+    \n#include <vector>\n#include <iostream>\n#include <iomanip>\nusing namespace\
     \ std;\n\nint main(){\n  cin.tie(nullptr);\n  ios::sync_with_stdio(false);\n \
     \ \n  int N, Q;\n  cin >> N >> Q;\n  vector<vector<int>> G(N);\n  for(int i =\
     \ 1; i < N; ++i){\n    int p;\n    cin >> p;\n    G[i].emplace_back(p);\n    G[p].emplace_back(i);\n\
     \  }\n  LCA lca(G,0);\n  while(Q--){\n    int u, v;\n    cin >> u >> v;\n    cout\
     \ << lca.query(u,v) << '\\n';\n  }\n}\n"
-  code: "#define PROBLEM \"https://judge.yosupo.jp/problem/lca\"\n\n#include \"Graph/LCA.cpp\"\
-    \n#include <vector>\n#include <iostream>\nusing namespace std;\n\nint main(){\n\
-    \  cin.tie(nullptr);\n  ios::sync_with_stdio(false);\n  \n  int N, Q;\n  cin >>\
-    \ N >> Q;\n  vector<vector<int>> G(N);\n  for(int i = 1; i < N; ++i){\n    int\
-    \ p;\n    cin >> p;\n    G[i].emplace_back(p);\n    G[p].emplace_back(i);\n  }\n\
-    \  LCA lca(G,0);\n  while(Q--){\n    int u, v;\n    cin >> u >> v;\n    cout <<\
-    \ lca.query(u,v) << '\\n';\n  }\n}\n"
   dependsOn:
   - Graph/LCA.cpp
   isVerificationFile: true
   path: test/LibraryChecker/lca.test.cpp
   requiredBy: []
-  timestamp: '2020-09-24 22:06:58+09:00'
+  timestamp: '2020-12-13 21:55:55+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/LibraryChecker/lca.test.cpp

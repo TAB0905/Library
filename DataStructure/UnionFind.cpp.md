@@ -6,11 +6,11 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/AOJ/DSL_1_A.test.cpp
     title: test/AOJ/DSL_1_A.test.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: test/LibraryChecker/unionfind.test.cpp
     title: test/LibraryChecker/unionfind.test.cpp
   _pathExtension: cpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':question:'
   attributes:
     links: []
   bundledCode: "#line 1 \"DataStructure/UnionFind.cpp\"\n#include <vector>\n\nstruct\
@@ -33,7 +33,7 @@ data:
   path: DataStructure/UnionFind.cpp
   requiredBy: []
   timestamp: '2020-05-09 15:40:50+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
   - test/LibraryChecker/unionfind.test.cpp
   - test/AOJ/DSL_1_A.test.cpp

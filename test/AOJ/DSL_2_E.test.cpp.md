@@ -14,13 +14,13 @@ data:
     links:
     - https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/all/DSL_2_E
   bundledCode: "#line 1 \"test/AOJ/DSL_2_E.test.cpp\"\n#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/all/DSL_2_E\"\
-    \n\n#include <iostream>\n#line 1 \"DataStructure/LazySegmentTree.cpp\"\n#include\
-    \ <algorithm>\n#line 3 \"DataStructure/LazySegmentTree.cpp\"\n#include <vector>\n\
-    #include <functional>\n#include <utility>\n\ntemplate <typename T, typename E,\
-    \ typename F, typename G, typename H>\nstruct LazySegmentTree{\nprivate:\n  //\
-    \ using F = std::function<T(T,T)>;\n  // using G = std::function<T(T,E)>;\n  //\
-    \ using H = std::function<E(E,E)>;\n  int n, height;\n  F f;\n  G g;\n  H h;\n\
-    \  T ti;\n  E ei;\n  std::vector<T> dat;\n  std::vector<E> laz;\n  T reflect(int\
+    \n\n#include <iostream>\n#include <iomanip>\n#line 1 \"DataStructure/LazySegmentTree.cpp\"\
+    \n#include <algorithm>\n#line 3 \"DataStructure/LazySegmentTree.cpp\"\n#include\
+    \ <vector>\n#include <functional>\n#include <utility>\n\ntemplate <typename T,\
+    \ typename E, typename F, typename G, typename H>\nstruct LazySegmentTree{\nprivate:\n\
+    \  // using F = std::function<T(T,T)>;\n  // using G = std::function<T(T,E)>;\n\
+    \  // using H = std::function<E(E,E)>;\n  int n, height;\n  F f;\n  G g;\n  H\
+    \ h;\n  T ti;\n  E ei;\n  std::vector<T> dat;\n  std::vector<E> laz;\n  T reflect(int\
     \ k){\n    return laz[k] == ei ? dat[k] : g(dat[k],laz[k]);\n  }\n  void propagate(int\
     \ k){\n    if(laz[k] == ei) return;\n    if(k >= n){\n      dat[k] = reflect(k);\n\
     \      laz[k] = ei;\n      return;\n    }\n    laz[k<<1|0] = h(laz[k<<1|0],laz[k]);\n\
@@ -42,8 +42,20 @@ data:
     \    l += n;\n    r += n;\n    thrust(l);\n    thrust(r-1);\n    T vl = ti, vr\
     \ = ti;\n    for(; l < r; l >>= 1, r >>= 1){\n      if(l&1) vl = f(vl,reflect(l++));\n\
     \      if(r&1) vr = f(reflect(--r),vr);\n    }\n    return f(vl,vr);\n  }\n};\n\
-    \n#line 5 \"test/AOJ/DSL_2_E.test.cpp\"\nusing namespace std;\n\nint main(){\n\
-    \  using T = pair<long long, long long>;\n  using E = long long;\n  T ti(0,0);\n\
+    \n#line 6 \"test/AOJ/DSL_2_E.test.cpp\"\nusing namespace std;\n\nint main(){\n\
+    \  cin.tie(nullptr);\n  ios::sync_with_stdio(false);\n\n  using T = pair<long\
+    \ long, long long>;\n  using E = long long;\n  T ti(0,0);\n  E ei = 0;\n  auto\
+    \ f = [](T a, T b) -> T { return {a.first+b.first,a.second+b.second};};\n  auto\
+    \ g = [](T a, E b) -> T { return {a.first+b*a.second,a.second};};\n  auto h =\
+    \ [](E a, E b) -> E { return a+b;};\n  LazySegmentTree st(f,g,h,ti,ei);\n  int\
+    \ n, q;\n  cin >> n >> q;\n  vector<T> v(n,T(0,1));\n  st.build(v);\n  while(q--){\n\
+    \    int t;\n    cin >> t;\n    if(t){\n      int i;\n      cin >> i;\n      cout\
+    \ << st.query(i-1,i).first << \"\\n\";\n    }else{\n      int s, t, x;\n     \
+    \ cin >> s >> t >> x;\n      st.update(s-1,t,x);\n    }\n  }\n}\n\n"
+  code: "#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/all/DSL_2_E\"\
+    \n\n#include <iostream>\n#include <iomanip>\n#include \"DataStructure/LazySegmentTree.cpp\"\
+    \nusing namespace std;\n\nint main(){\n  cin.tie(nullptr);\n  ios::sync_with_stdio(false);\n\
+    \n  using T = pair<long long, long long>;\n  using E = long long;\n  T ti(0,0);\n\
     \  E ei = 0;\n  auto f = [](T a, T b) -> T { return {a.first+b.first,a.second+b.second};};\n\
     \  auto g = [](T a, E b) -> T { return {a.first+b*a.second,a.second};};\n  auto\
     \ h = [](E a, E b) -> E { return a+b;};\n  LazySegmentTree st(f,g,h,ti,ei);\n\
@@ -51,23 +63,12 @@ data:
     \    int t;\n    cin >> t;\n    if(t){\n      int i;\n      cin >> i;\n      cout\
     \ << st.query(i-1,i).first << \"\\n\";\n    }else{\n      int s, t, x;\n     \
     \ cin >> s >> t >> x;\n      st.update(s-1,t,x);\n    }\n  }\n}\n\n"
-  code: "#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/all/DSL_2_E\"\
-    \n\n#include <iostream>\n#include \"DataStructure/LazySegmentTree.cpp\"\nusing\
-    \ namespace std;\n\nint main(){\n  using T = pair<long long, long long>;\n  using\
-    \ E = long long;\n  T ti(0,0);\n  E ei = 0;\n  auto f = [](T a, T b) -> T { return\
-    \ {a.first+b.first,a.second+b.second};};\n  auto g = [](T a, E b) -> T { return\
-    \ {a.first+b*a.second,a.second};};\n  auto h = [](E a, E b) -> E { return a+b;};\n\
-    \  LazySegmentTree st(f,g,h,ti,ei);\n  int n, q;\n  cin >> n >> q;\n  vector<T>\
-    \ v(n,T(0,1));\n  st.build(v);\n  while(q--){\n    int t;\n    cin >> t;\n   \
-    \ if(t){\n      int i;\n      cin >> i;\n      cout << st.query(i-1,i).first <<\
-    \ \"\\n\";\n    }else{\n      int s, t, x;\n      cin >> s >> t >> x;\n      st.update(s-1,t,x);\n\
-    \    }\n  }\n}\n\n"
   dependsOn:
   - DataStructure/LazySegmentTree.cpp
   isVerificationFile: true
   path: test/AOJ/DSL_2_E.test.cpp
   requiredBy: []
-  timestamp: '2020-12-13 17:23:34+09:00'
+  timestamp: '2020-12-13 21:55:55+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/AOJ/DSL_2_E.test.cpp

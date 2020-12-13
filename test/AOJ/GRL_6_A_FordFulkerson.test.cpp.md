@@ -15,10 +15,10 @@ data:
     - https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/all/GRL_6_A
   bundledCode: "#line 1 \"test/AOJ/GRL_6_A_FordFulkerson.test.cpp\"\n#define PROBLEM\
     \ \"https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/all/GRL_6_A\"\n\n#include\
-    \ <iostream>\n#line 1 \"Graph/FordFulkerson.cpp\"\n#include <algorithm>\n#include\
-    \ <vector>\n\ntemplate<typename T>\nstruct FlowGraph {\nprivate:\n  struct edge\
-    \ {\n    const int to;\n    T cap;\n    const int r_idx;\n    edge(int t, T c,\
-    \ int i) :\n      to(t), cap(c), r_idx(i) {}\n  };\n\n  std::vector<std::vector<edge>>\
+    \ <iostream>\n#include <iomanip>\n#line 1 \"Graph/FordFulkerson.cpp\"\n#include\
+    \ <algorithm>\n#include <vector>\n\ntemplate<typename T>\nstruct FlowGraph {\n\
+    private:\n  struct edge {\n    const int to;\n    T cap;\n    const int r_idx;\n\
+    \    edge(int t, T c, int i) :\n      to(t), cap(c), r_idx(i) {}\n  };\n\n  std::vector<std::vector<edge>>\
     \ G;\n\n  T dfs(int v, int sink, T min_cap, std::vector<bool>& visited){\n   \
     \ visited[v] = true;\n    if(v == sink) return min_cap;\n    for(auto& e : G[v]){\n\
     \      if(e.cap == T()) continue;\n      if(visited[e.to]) continue;\n      T\
@@ -30,22 +30,23 @@ data:
     \    G[to].emplace_back(from,T(),i_);\n  }\n  T max_flow(int from, int to){\n\
     \    T ret = 0, INF = 1e9;\n    while(true){\n      std::vector<bool> visited(G.size());\n\
     \      T f = dfs(from,to,INF,visited);\n      if(f == T()) break;\n      ret +=\
-    \ f;\n    }\n    return ret;\n  }\n};\n#line 5 \"test/AOJ/GRL_6_A_FordFulkerson.test.cpp\"\
-    \nusing namespace std;\n\nint main(){\n  int V, E;\n  cin >> V >> E;\n  FlowGraph<long\
-    \ long> G(V);\n  for(int i = 0; i < E; ++i){\n    int u, v, c;\n    cin >> u >>\
-    \ v >> c;\n    G.add_edge(u,v,c);\n  }\n  cout << G.max_flow(0,V-1) << endl;\n\
-    }\n"
+    \ f;\n    }\n    return ret;\n  }\n};\n#line 6 \"test/AOJ/GRL_6_A_FordFulkerson.test.cpp\"\
+    \nusing namespace std;\n\nint main(){\n  cin.tie(nullptr);\n  ios::sync_with_stdio(false);\n\
+    \n  int V, E;\n  cin >> V >> E;\n  FlowGraph<long long> G(V);\n  for(int i = 0;\
+    \ i < E; ++i){\n    int u, v, c;\n    cin >> u >> v >> c;\n    G.add_edge(u,v,c);\n\
+    \  }\n  cout << G.max_flow(0,V-1) << endl;\n}\n"
   code: "#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/all/GRL_6_A\"\
-    \n\n#include <iostream>\n#include \"Graph/FordFulkerson.cpp\"\nusing namespace\
-    \ std;\n\nint main(){\n  int V, E;\n  cin >> V >> E;\n  FlowGraph<long long> G(V);\n\
-    \  for(int i = 0; i < E; ++i){\n    int u, v, c;\n    cin >> u >> v >> c;\n  \
-    \  G.add_edge(u,v,c);\n  }\n  cout << G.max_flow(0,V-1) << endl;\n}\n"
+    \n\n#include <iostream>\n#include <iomanip>\n#include \"Graph/FordFulkerson.cpp\"\
+    \nusing namespace std;\n\nint main(){\n  cin.tie(nullptr);\n  ios::sync_with_stdio(false);\n\
+    \n  int V, E;\n  cin >> V >> E;\n  FlowGraph<long long> G(V);\n  for(int i = 0;\
+    \ i < E; ++i){\n    int u, v, c;\n    cin >> u >> v >> c;\n    G.add_edge(u,v,c);\n\
+    \  }\n  cout << G.max_flow(0,V-1) << endl;\n}\n"
   dependsOn:
   - Graph/FordFulkerson.cpp
   isVerificationFile: true
   path: test/AOJ/GRL_6_A_FordFulkerson.test.cpp
   requiredBy: []
-  timestamp: '2020-09-24 21:15:33+09:00'
+  timestamp: '2020-12-13 21:55:55+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/AOJ/GRL_6_A_FordFulkerson.test.cpp

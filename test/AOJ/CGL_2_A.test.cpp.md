@@ -145,26 +145,28 @@ data:
     \u6570\u3092 i, \u8FBA\u4E0A\u306E\u683C\u5B50\u70B9\u306E\u6570\u3092 b \u3068\
     \u3059\u308B\u3068\n  S = i + b/2 - 1\n  \u304C\u6210\u308A\u7ACB\u3064\u3002\n\
     */\n#line 7 \"test/AOJ/CGL_2_A.test.cpp\"\n\nusing namespace std;\n\nint main(){\n\
-    \  int q;\n  cin >> q;\n  while(q--){\n    double x1, y1, x2, y2;\n    cin >>\
-    \ x1 >> y1 >> x2 >> y2;\n    L l1(P(x1,y1), P(x2,y2));\n    cin >> x1 >> y1 >>\
-    \ x2 >> y2;\n    L l2(P(x1,y1), P(x2,y2));\n    \n    P d1 = l1.second-l1.first,\
+    \  cin.tie(nullptr);\n  ios::sync_with_stdio(false);\n  \n  int q;\n  cin >> q;\n\
+    \  while(q--){\n    double x1, y1, x2, y2;\n    cin >> x1 >> y1 >> x2 >> y2;\n\
+    \    L l1(P(x1,y1), P(x2,y2));\n    cin >> x1 >> y1 >> x2 >> y2;\n    L l2(P(x1,y1),\
+    \ P(x2,y2));\n    \n    P d1 = l1.second-l1.first, d2 = l2.second-l2.first;\n\
+    \    int ans = 0;\n    if(abs(dot(d1,d2)) <= EPS){\n      ans = 1;\n    }\n  \
+    \  if(abs(cross(d1,d2)) <= EPS){\n      ans = 2;\n    }\n    cout << ans << \"\
+    \\n\";\n  }\n}\n"
+  code: "#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/courses/library/4/CGL/1/CGL_2_A\"\
+    \n\n#include <iostream>\n#include <iomanip>\n\n#include \"Geometry/geometry.cpp\"\
+    \n\nusing namespace std;\n\nint main(){\n  cin.tie(nullptr);\n  ios::sync_with_stdio(false);\n\
+    \  \n  int q;\n  cin >> q;\n  while(q--){\n    double x1, y1, x2, y2;\n    cin\
+    \ >> x1 >> y1 >> x2 >> y2;\n    L l1(P(x1,y1), P(x2,y2));\n    cin >> x1 >> y1\
+    \ >> x2 >> y2;\n    L l2(P(x1,y1), P(x2,y2));\n    \n    P d1 = l1.second-l1.first,\
     \ d2 = l2.second-l2.first;\n    int ans = 0;\n    if(abs(dot(d1,d2)) <= EPS){\n\
     \      ans = 1;\n    }\n    if(abs(cross(d1,d2)) <= EPS){\n      ans = 2;\n  \
     \  }\n    cout << ans << \"\\n\";\n  }\n}\n"
-  code: "#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/courses/library/4/CGL/1/CGL_2_A\"\
-    \n\n#include <iostream>\n#include <iomanip>\n\n#include \"Geometry/geometry.cpp\"\
-    \n\nusing namespace std;\n\nint main(){\n  int q;\n  cin >> q;\n  while(q--){\n\
-    \    double x1, y1, x2, y2;\n    cin >> x1 >> y1 >> x2 >> y2;\n    L l1(P(x1,y1),\
-    \ P(x2,y2));\n    cin >> x1 >> y1 >> x2 >> y2;\n    L l2(P(x1,y1), P(x2,y2));\n\
-    \    \n    P d1 = l1.second-l1.first, d2 = l2.second-l2.first;\n    int ans =\
-    \ 0;\n    if(abs(dot(d1,d2)) <= EPS){\n      ans = 1;\n    }\n    if(abs(cross(d1,d2))\
-    \ <= EPS){\n      ans = 2;\n    }\n    cout << ans << \"\\n\";\n  }\n}\n"
   dependsOn:
   - Geometry/geometry.cpp
   isVerificationFile: true
   path: test/AOJ/CGL_2_A.test.cpp
   requiredBy: []
-  timestamp: '2020-10-23 20:38:39+09:00'
+  timestamp: '2020-12-13 21:55:55+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/AOJ/CGL_2_A.test.cpp

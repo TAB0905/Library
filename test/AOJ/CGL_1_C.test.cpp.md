@@ -145,26 +145,28 @@ data:
     \u6570\u3092 i, \u8FBA\u4E0A\u306E\u683C\u5B50\u70B9\u306E\u6570\u3092 b \u3068\
     \u3059\u308B\u3068\n  S = i + b/2 - 1\n  \u304C\u6210\u308A\u7ACB\u3064\u3002\n\
     */\n#line 8 \"test/AOJ/CGL_1_C.test.cpp\"\n\nusing namespace std;\n\nint main(){\n\
-    \  double x1, y1, x2, y2;\n  cin >> x1 >> y1 >> x2 >> y2;\n  L l(P(x1,y1), P(x2,y2));\n\
-    \  int q;\n  cin >> q;\n  \n  const map<int,string> state{\n    {0,\"ON_SEGMENT\"\
-    },\n    {-1,\"CLOCKWISE\"},\n    {1,\"COUNTER_CLOCKWISE\"},\n    {-2,\"ONLINE_FRONT\"\
+    \  cin.tie(nullptr);\n  ios::sync_with_stdio(false);\n  \n  double x1, y1, x2,\
+    \ y2;\n  cin >> x1 >> y1 >> x2 >> y2;\n  L l(P(x1,y1), P(x2,y2));\n  int q;\n\
+    \  cin >> q;\n  \n  const map<int,string> state{\n    {0,\"ON_SEGMENT\"},\n  \
+    \  {-1,\"CLOCKWISE\"},\n    {1,\"COUNTER_CLOCKWISE\"},\n    {-2,\"ONLINE_FRONT\"\
     },\n    {2,\"ONLINE_BACK\"}\n  };\n\n  while(q--){\n    double x, y;\n    cin\
     \ >> x >> y;\n    int ans = ccw(l.first,l.second,P(x,y));\n    cout << state.at(ans)\
     \ << endl;\n  }\n}\n"
   code: "#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/courses/library/4/CGL/1/CGL_1_C\"\
     \n\n#include <iostream>\n#include <iomanip>\n#include <map>\n\n#include \"Geometry/geometry.cpp\"\
-    \n\nusing namespace std;\n\nint main(){\n  double x1, y1, x2, y2;\n  cin >> x1\
-    \ >> y1 >> x2 >> y2;\n  L l(P(x1,y1), P(x2,y2));\n  int q;\n  cin >> q;\n  \n\
-    \  const map<int,string> state{\n    {0,\"ON_SEGMENT\"},\n    {-1,\"CLOCKWISE\"\
-    },\n    {1,\"COUNTER_CLOCKWISE\"},\n    {-2,\"ONLINE_FRONT\"},\n    {2,\"ONLINE_BACK\"\
-    }\n  };\n\n  while(q--){\n    double x, y;\n    cin >> x >> y;\n    int ans =\
-    \ ccw(l.first,l.second,P(x,y));\n    cout << state.at(ans) << endl;\n  }\n}\n"
+    \n\nusing namespace std;\n\nint main(){\n  cin.tie(nullptr);\n  ios::sync_with_stdio(false);\n\
+    \  \n  double x1, y1, x2, y2;\n  cin >> x1 >> y1 >> x2 >> y2;\n  L l(P(x1,y1),\
+    \ P(x2,y2));\n  int q;\n  cin >> q;\n  \n  const map<int,string> state{\n    {0,\"\
+    ON_SEGMENT\"},\n    {-1,\"CLOCKWISE\"},\n    {1,\"COUNTER_CLOCKWISE\"},\n    {-2,\"\
+    ONLINE_FRONT\"},\n    {2,\"ONLINE_BACK\"}\n  };\n\n  while(q--){\n    double x,\
+    \ y;\n    cin >> x >> y;\n    int ans = ccw(l.first,l.second,P(x,y));\n    cout\
+    \ << state.at(ans) << endl;\n  }\n}\n"
   dependsOn:
   - Geometry/geometry.cpp
   isVerificationFile: true
   path: test/AOJ/CGL_1_C.test.cpp
   requiredBy: []
-  timestamp: '2020-10-23 20:38:39+09:00'
+  timestamp: '2020-12-13 21:55:55+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/AOJ/CGL_1_C.test.cpp
