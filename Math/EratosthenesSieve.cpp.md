@@ -53,8 +53,8 @@ data:
   timestamp: '2020-10-23 18:05:35+09:00'
   verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
-  - test/AOJ/ALDS1_1_C.test.cpp
   - test/AOJ/0009.test.cpp
+  - test/AOJ/ALDS1_1_C.test.cpp
 documentation_of: Math/EratosthenesSieve.cpp
 layout: document
 redirect_from:

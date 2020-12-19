@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: DataStructure/UnionFind.cpp
     title: DataStructure/UnionFind.cpp
   _extendedRequiredBy: []

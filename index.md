@@ -24,7 +24,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: DataStructure/SegmentTree.cpp
       title: DataStructure/SegmentTree.cpp
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: DataStructure/UnionFind.cpp
       title: DataStructure/UnionFind.cpp
     - icon: ':warning:'
@@ -92,6 +92,50 @@ data:
     - icon: ':heavy_check_mark:'
       path: String/SuffixArray.cpp
       title: String/SuffixArray.cpp
+  - name: snippets/c++-mode
+    pages:
+    - icon: ':warning:'
+      path: snippets/c++-mode/Combination.cpp
+      title: snippets/c++-mode/Combination.cpp
+    - icon: ':warning:'
+      path: snippets/c++-mode/CumSum.cpp
+      title: snippets/c++-mode/CumSum.cpp
+    - icon: ':warning:'
+      path: snippets/c++-mode/Fraction.cpp
+      title: snippets/c++-mode/Fraction.cpp
+    - icon: ':warning:'
+      path: snippets/c++-mode/LCA.cpp
+      title: snippets/c++-mode/LCA.cpp
+    - icon: ':warning:'
+      path: snippets/c++-mode/LazySegmentTree.cpp
+      title: snippets/c++-mode/LazySegmentTree.cpp
+    - icon: ':warning:'
+      path: snippets/c++-mode/RMaxQ.cpp
+      title: snippets/c++-mode/RMaxQ.cpp
+    - icon: ':warning:'
+      path: snippets/c++-mode/RMinQ.cpp
+      title: snippets/c++-mode/RMinQ.cpp
+    - icon: ':warning:'
+      path: snippets/c++-mode/SegmentTree.cpp
+      title: snippets/c++-mode/SegmentTree.cpp
+    - icon: ':warning:'
+      path: snippets/c++-mode/bisect.cpp
+      title: snippets/c++-mode/bisect.cpp
+    - icon: ':warning:'
+      path: snippets/c++-mode/chmax.cpp
+      title: snippets/c++-mode/chmax.cpp
+    - icon: ':warning:'
+      path: snippets/c++-mode/chmin.cpp
+      title: snippets/c++-mode/chmin.cpp
+    - icon: ':warning:'
+      path: snippets/c++-mode/dxdy.cpp
+      title: snippets/c++-mode/dxdy.cpp
+    - icon: ':warning:'
+      path: snippets/c++-mode/modint.cpp
+      title: snippets/c++-mode/modint.cpp
+    - icon: ':warning:'
+      path: snippets/c++-mode/power.cpp
+      title: snippets/c++-mode/power.cpp
   verificationCategories:
   - name: test/AOJ
     pages:
@@ -232,7 +276,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/LibraryChecker/two_edge_connected_components.test.cpp
       title: test/LibraryChecker/two_edge_connected_components.test.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/LibraryChecker/unionfind.test.cpp
       title: test/LibraryChecker/unionfind.test.cpp
 layout: toppage
