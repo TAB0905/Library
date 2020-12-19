@@ -1,0 +1,32 @@
+# -*- mode: snippet -*-
+# name: geometry
+# key: geometry
+# --
+#include <iostream>
+#include <complex>
+#include <cstdio>
+#include <utility>
+#include <vector>
+using namespace std;
+typedef complex<double> P;
+typedef pair<P,P> L;
+typedef pair<P,double> C;
+typedef vector<P> Poly;
+#define X real()
+#define Y imag()
+const double EPS = (1e-10), INF = (1e15);
+
+namespace std{
+  bool operator < (const P& a, const P& b){
+    return a.X != b.X ? a.X < b.X : a.Y < b.Y;
+  }
+  bool cmp_y(const P &a, const P &b){
+    return a.Y != b.Y ? a.Y < b.Y : a.X < b.X;
+      }
+  bool operator == (const P& a, const P& b){
+    return abs(a-b) < EPS;
+  }
+}
+
+double dot(P a, P b){ return a.X * b.X + a.Y * b.Y; }
+double cross(P a, P b){ return a.X * b.Y - a.Y * b.X; }

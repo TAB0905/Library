@@ -1,0 +1,13 @@
+# -*- mode: snippet -*-
+# name: mod_inv
+# key: mod_inv
+# --
+long long mod_inv(long long x){
+  long long k = mod - 2, ret = 1;
+  while(k){
+    if(k&1) ret *= x, ret %= mod;
+    x *= x, x %= mod;
+    k >>= 1;
+  }
+  return ret;
+}

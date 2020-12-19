@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: intersection
+# key: intersection
+# --
+P intersection(L a, L b){
+  //直線aと直線bの交点
+  return a.first + cross(b.second-b.first,a.first-b.first)/(-cross(b.second-b.first,a.second-b.first)+cross(b.second-b.first,a.first-b.first))*(a.second-a.first);
+}

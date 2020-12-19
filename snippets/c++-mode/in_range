@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: in_range
+# key: in_range
+# --
+bool in_range(int a, int b){
+  return a >= 0 && a < b;
+}
