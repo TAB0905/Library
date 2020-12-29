@@ -8,8 +8,8 @@ struct UnionFind{
     y = find(y);
     if(x != y){
       if(data[y] < data[x]) std::swap(x,y);
-      data[x] += data[y];//高さを更新
-      data[y] = x;//親を更新
+      data[x] += data[y];
+      data[y] = x;
     }
     return x != y;
   }
