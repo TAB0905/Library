@@ -67,11 +67,14 @@ public:
     reduce();
     return *this;
   }
-  constexpr bool operator<(const Fraction &rhs) const {
+  constexpr bool operator==(const Fraction &rhs) const noexcept {
+    return p*rhs.q == q*rhs.p;
+  }
+  constexpr bool operator<(const Fraction &rhs) const noexcept {
     assert(rhs.p != 0 or rhs.q != 0);
     return p*rhs.q < q*rhs.p;
   }
-  constexpr bool operator>(const Fraction &rhs) const {
+  constexpr bool operator>(const Fraction &rhs) const noexcept {
     assert(rhs.p != 0 or rhs.q != 0);
     return rhs < *this;
   }
