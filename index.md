@@ -78,6 +78,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: Math/modint.cpp
       title: Math/modint.cpp
+    - icon: ':heavy_check_mark:'
+      path: Math/prime_list.cpp
+      title: Math/prime_list.cpp
   - name: String
     pages:
     - icon: ':warning:'
@@ -246,6 +249,9 @@ data:
       title: test/AOJ/GRL_6_B.test.cpp
   - name: test/LibraryChecker
     pages:
+    - icon: ':heavy_check_mark:'
+      path: test/LibraryChecker/enumerate_primes.test.cpp
+      title: test/LibraryChecker/enumerate_primes.test.cpp
     - icon: ':heavy_check_mark:'
       path: test/LibraryChecker/lca.test.cpp
       title: test/LibraryChecker/lca.test.cpp
