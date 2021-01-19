@@ -6,7 +6,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: DataStructure/BinaryTrie.cpp
       title: DataStructure/BinaryTrie.cpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: DataStructure/CumulativeSum.cpp
       title: DataStructure/CumulativeSum.cpp
     - icon: ':heavy_check_mark:'
@@ -27,7 +27,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: DataStructure/UnionFind.cpp
       title: DataStructure/UnionFind.cpp
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: DataStructure/WeightedUnionFind.cpp
       title: DataStructure/WeightedUnionFind.cpp
   - name: Geometry
@@ -145,6 +145,9 @@ data:
     - icon: ':x:'
       path: test/AOJ/0009.test.cpp
       title: test/AOJ/0009.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/AOJ/1330.test.cpp
+      title: test/AOJ/1330.test.cpp
     - icon: ':heavy_check_mark:'
       path: test/AOJ/ALDS1_1_C.test.cpp
       title: test/AOJ/ALDS1_1_C.test.cpp
@@ -273,7 +276,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/LibraryChecker/shortest_path.test.cpp
       title: test/LibraryChecker/shortest_path.test.cpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: test/LibraryChecker/static_range_sum.test.cpp
       title: test/LibraryChecker/static_range_sum.test.cpp
     - icon: ':heavy_check_mark:'
