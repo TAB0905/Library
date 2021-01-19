@@ -18,7 +18,7 @@ data:
     #include <vector>\n#line 2 \"DataStructure/CumulativeSum.cpp\"\n#include <numeric>\n\
     \ntemplate<typename T>\nstruct CumSum{\nprivate:\n  const size_t size;\n  std::vector<T>\
     \ data;\npublic:\n  CumSum(const std::vector<T>& dat) : size(dat.size()), data(dat)\
-    \ {\n    data.emplace_back(0);\n    exclusive_scan(data.begin(),data.end(),data.begin(),static_cast<T>(0));\n\
+    \ {\n    data.emplace_back(0);\n    std::exclusive_scan(data.begin(),data.end(),data.begin(),static_cast<T>(0));\n\
     \  }\n  T getsum(size_t l, size_t r) const noexcept {//0-indexed, [l,r)\n    return\
     \ data[r] - data[l];\n  }\n  T getsum(size_t r) const noexcept {//0-indexed, [0,r)\n\
     \    return data[r];\n  }\n};\n#line 6 \"test/LibraryChecker/static_range_sum.test.cpp\"\
@@ -39,7 +39,7 @@ data:
   isVerificationFile: true
   path: test/LibraryChecker/static_range_sum.test.cpp
   requiredBy: []
-  timestamp: '2021-01-19 15:33:43+09:00'
+  timestamp: '2021-01-19 16:18:00+09:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: test/LibraryChecker/static_range_sum.test.cpp
