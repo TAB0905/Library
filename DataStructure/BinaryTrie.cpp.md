@@ -6,6 +6,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/LibraryChecker/set_xor_min.test.cpp
     title: test/LibraryChecker/set_xor_min.test.cpp
+  _isVerificationFailed: false
   _pathExtension: cpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:

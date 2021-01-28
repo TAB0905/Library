@@ -6,6 +6,7 @@ data:
   - icon: ':x:'
     path: test/LibraryChecker/static_range_sum.test.cpp
     title: test/LibraryChecker/static_range_sum.test.cpp
+  _isVerificationFailed: true
   _pathExtension: cpp
   _verificationStatusIcon: ':x:'
   attributes:

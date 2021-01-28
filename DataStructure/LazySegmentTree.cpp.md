@@ -15,6 +15,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/AOJ/DSL_2_G.test.cpp
     title: test/AOJ/DSL_2_G.test.cpp
+  _isVerificationFailed: false
   _pathExtension: cpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
@@ -81,10 +82,10 @@ data:
   timestamp: '2020-12-13 17:06:49+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/AOJ/DSL_2_G.test.cpp
-  - test/AOJ/DSL_2_D.test.cpp
   - test/AOJ/DSL_2_E.test.cpp
   - test/AOJ/DSL_2_F.test.cpp
+  - test/AOJ/DSL_2_G.test.cpp
+  - test/AOJ/DSL_2_D.test.cpp
 documentation_of: DataStructure/LazySegmentTree.cpp
 layout: document
 redirect_from:

@@ -6,6 +6,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/LibraryChecker/enumerate_primes.test.cpp
     title: test/LibraryChecker/enumerate_primes.test.cpp
+  _isVerificationFailed: false
   _pathExtension: cpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:

@@ -6,6 +6,7 @@ data:
     title: DataStructure/CumulativeSum.cpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
+  _isVerificationFailed: true
   _pathExtension: cpp
   _verificationStatusIcon: ':x:'
   attributes:

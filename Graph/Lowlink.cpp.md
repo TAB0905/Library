@@ -6,6 +6,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/LibraryChecker/two_edge_connected_components.test.cpp
     title: test/LibraryChecker/two_edge_connected_components.test.cpp
+  _isVerificationFailed: false
   _pathExtension: cpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
