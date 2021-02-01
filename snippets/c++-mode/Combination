@@ -20,5 +20,10 @@ public:
     if(n < 0 or k > n) return (T)0;
     return F[n]*F_[k]*F_[n-k];
   }
+  T P(int n, int k){
+    assert(n <= sz);
+    if(n < 0 or k > n) return (T)0;
+    return F[n]*F_[n-k];
+  }
 };
 
