@@ -3,34 +3,32 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/LibraryChecker/static_range_sum.test.cpp
     title: test/LibraryChecker/static_range_sum.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
-  bundledCode: "#line 1 \"DataStructure/CumulativeSum.cpp\"\n#include <vector>\n#include\
-    \ <numeric>\n\ntemplate<typename T>\nstruct CumSum{\nprivate:\n  const size_t\
-    \ size;\n  std::vector<T> data;\npublic:\n  CumSum(const std::vector<T>& dat)\
-    \ : size(dat.size()), data(dat) {\n    data.emplace_back(0);\n    std::exclusive_scan(data.begin(),data.end(),data.begin(),static_cast<T>(0));\n\
-    \  }\n  T getsum(size_t l, size_t r) const noexcept {//0-indexed, [l,r)\n    return\
-    \ data[r] - data[l];\n  }\n  T getsum(size_t r) const noexcept {//0-indexed, [0,r)\n\
-    \    return data[r];\n  }\n};\n"
-  code: "#include <vector>\n#include <numeric>\n\ntemplate<typename T>\nstruct CumSum{\n\
-    private:\n  const size_t size;\n  std::vector<T> data;\npublic:\n  CumSum(const\
-    \ std::vector<T>& dat) : size(dat.size()), data(dat) {\n    data.emplace_back(0);\n\
-    \    std::exclusive_scan(data.begin(),data.end(),data.begin(),static_cast<T>(0));\n\
-    \  }\n  T getsum(size_t l, size_t r) const noexcept {//0-indexed, [l,r)\n    return\
-    \ data[r] - data[l];\n  }\n  T getsum(size_t r) const noexcept {//0-indexed, [0,r)\n\
-    \    return data[r];\n  }\n};\n"
+  bundledCode: "#line 1 \"DataStructure/CumulativeSum.cpp\"\n#include <vector>\n\n\
+    template<typename T>\nstruct CumSum{\nprivate:\n  size_t size;\n  std::vector<T>\
+    \ data;\npublic:\n  CumSum(std::vector<T> dat){\n    size = dat.size();\n    data.resize(size+1,0);\n\
+    \    for(size_t i = 0; i < size; ++i)\n      data[i+1] = data[i] + dat[i];\n \
+    \ }\n  T getsum(size_t l, size_t r){//0-indexed, [l,r)\n    return data[r] - data[l];\n\
+    \  }\n  T getsum(size_t r){//0-indexed, [0,r)\n    return data[r];\n  }\n};\n"
+  code: "#include <vector>\n\ntemplate<typename T>\nstruct CumSum{\nprivate:\n  size_t\
+    \ size;\n  std::vector<T> data;\npublic:\n  CumSum(std::vector<T> dat){\n    size\
+    \ = dat.size();\n    data.resize(size+1,0);\n    for(size_t i = 0; i < size; ++i)\n\
+    \      data[i+1] = data[i] + dat[i];\n  }\n  T getsum(size_t l, size_t r){//0-indexed,\
+    \ [l,r)\n    return data[r] - data[l];\n  }\n  T getsum(size_t r){//0-indexed,\
+    \ [0,r)\n    return data[r];\n  }\n};\n"
   dependsOn: []
   isVerificationFile: false
   path: DataStructure/CumulativeSum.cpp
   requiredBy: []
-  timestamp: '2021-01-19 16:18:00+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  timestamp: '2021-02-08 02:49:09+09:00'
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/LibraryChecker/static_range_sum.test.cpp
 documentation_of: DataStructure/CumulativeSum.cpp

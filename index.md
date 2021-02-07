@@ -6,7 +6,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: DataStructure/BinaryTrie.cpp
       title: DataStructure/BinaryTrie.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: DataStructure/CumulativeSum.cpp
       title: DataStructure/CumulativeSum.cpp
     - icon: ':heavy_check_mark:'
@@ -232,7 +232,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/LibraryChecker/shortest_path.test.cpp
       title: test/LibraryChecker/shortest_path.test.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/LibraryChecker/static_range_sum.test.cpp
       title: test/LibraryChecker/static_range_sum.test.cpp
     - icon: ':heavy_check_mark:'

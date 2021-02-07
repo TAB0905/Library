@@ -17,7 +17,7 @@ data:
   bundledCode: "#line 1 \"test/LibraryChecker/shortest_path.test.cpp\"\n#define PROBLEM\
     \ \"https://judge.yosupo.jp/problem/shortest_path\"\n\n#include <iostream>\n#include\
     \ <iomanip>\n#include <vector>\n#include <utility>\n\n#line 1 \"Graph/Dijkstra.cpp\"\
-    \n#include <algorithm>\n#include <queue>\n#line 4 \"Graph/Dijkstra.cpp\"\n\nusing\
+    \n#include <algorithm>\n#include <queue>\n#line 5 \"Graph/Dijkstra.cpp\"\n\nusing\
     \ ll = long long;\nconst ll INF = 1e18;\n\nstd::pair<std::vector<ll>,std::vector<int>>\
     \ dijkstra(const std::vector<std::vector<std::pair<ll,int>>>& G, int s){\n  const\
     \ int n = G.size();\n  std::vector<ll> D(n,INF);\n  D[s] = 0;\n  std::vector<int>\
@@ -52,7 +52,7 @@ data:
   isVerificationFile: true
   path: test/LibraryChecker/shortest_path.test.cpp
   requiredBy: []
-  timestamp: '2020-12-13 21:55:55+09:00'
+  timestamp: '2021-02-08 02:49:09+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/LibraryChecker/shortest_path.test.cpp
