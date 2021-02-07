@@ -1,20 +1,21 @@
 #include <vector>
-#include <numeric>
 
 template<typename T>
 struct CumSum{
 private:
-  const size_t size;
+  size_t size;
   std::vector<T> data;
 public:
-  CumSum(const std::vector<T>& dat) : size(dat.size()), data(dat) {
-    data.emplace_back(0);
-    std::exclusive_scan(data.begin(),data.end(),data.begin(),static_cast<T>(0));
+  CumSum(std::vector<T> dat){
+    size = dat.size();
+    data.resize(size+1,0);
+    for(size_t i = 0; i < size; ++i)
+      data[i+1] = data[i] + dat[i];
   }
-  T getsum(size_t l, size_t r) const noexcept {//0-indexed, [l,r)
+  T getsum(size_t l, size_t r){//0-indexed, [l,r)
     return data[r] - data[l];
   }
-  T getsum(size_t r) const noexcept {//0-indexed, [0,r)
+  T getsum(size_t r){//0-indexed, [0,r)
     return data[r];
   }
 };
