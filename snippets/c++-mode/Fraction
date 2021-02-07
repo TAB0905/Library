@@ -1,23 +1,23 @@
-#include <numeric> 
-#include <iostream>
-
+# -*- mode: snippet -*-
+# name: Fraction
+# key: Fraction
+# --
 template<typename T>
 struct Fraction{
 private:
-  T p, q;// p/q
-  
   void reduce(){
-    T g = std::gcd(p,q);
+    T g = __gcd(p,q);
     p /= g;
     q /= g;
     if(q < 0) p *= -1, q *= -1;
   }
 public:
-  Fraction(T p, T q) : p(p), q(q) {
+  T p, q;// p/q
+  Fraction(T P, T Q){
+    p = P;
+    q = Q;
     reduce();
   }
-  Fraction(T x) : p(x), q(1) {}
-
   constexpr Fraction inv(){
     return Fraction(q,p);
   }
@@ -67,18 +67,15 @@ public:
     reduce();
     return *this;
   }
-  constexpr bool operator==(const Fraction &rhs) const noexcept {
-    return p*rhs.q == q*rhs.p;
-  }
-  constexpr bool operator<(const Fraction &rhs) const noexcept {
+  constexpr bool operator<(const Fraction &rhs) const {
     assert(rhs.p != 0 or rhs.q != 0);
     return p*rhs.q < q*rhs.p;
   }
-  constexpr bool operator>(const Fraction &rhs) const noexcept {
+  constexpr bool operator>(const Fraction &rhs) const {
     assert(rhs.p != 0 or rhs.q != 0);
     return rhs < *this;
   }
-  friend std::ostream& operator<<(std::ostream& os, const Fraction f){
+  friend ostream& operator<<(ostream& os, const Fraction f){
     os << "(" << f.p << "/" << f.q << ")";
     return os;
   }

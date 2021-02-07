@@ -1,0 +1,33 @@
+# -*- mode: snippet -*-
+# name: BIT
+# key: BIT
+# --
+template<typename T>
+struct BIT{//0-indexed
+private:
+  vector<T> data;
+  const int n;
+public:
+  BIT(int sz) : data(sz+1,0), n(sz) {}
+  BIT(vector<T> t) : data(t), n((int)t.size()) {}
+  T sum(size_t i){//sum[0,i)
+    //++i;
+    T s = 0;
+    while(i > 0){
+      s += data[i];
+      i -= i&(-i);
+    }
+    return s;
+  }
+
+  T sum(size_t i, size_t j){ return sum(j) - sum(i); }//sum[i,j)
+
+  void add(int i, T x){
+    ++i;
+    assert(i > 0);
+    while(i <= n){
+      data[i] += x;
+      i += i&(-i);
+    }
+  }
+};

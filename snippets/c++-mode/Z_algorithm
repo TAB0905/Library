@@ -1,0 +1,21 @@
+# -*- mode: snippet -*-
+# name: Z_algorithm
+# key: Z_algorithm
+# --
+vector<int> Z_algorithm(string S){
+  int c = 0, n = S.length();
+  vector<int> Z(n,0);
+  for(int i = 1; i < n; ++i){
+    int l = i - c;
+    if(i + Z[l] < c + Z[c]){
+      Z[i] = Z[l];
+    }else{
+      int j = max(0, c + Z[c] - i);
+      while(i + j < n && S[j] == S[i+j]) ++j;
+      Z[i] = j;
+      c = i;
+    }
+  }
+  Z[0] = n;
+  return Z;
+}

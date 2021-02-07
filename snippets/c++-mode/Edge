@@ -1,0 +1,13 @@
+# -*- mode: snippet -*-
+# name: Edge
+# key: Edge
+# --
+struct Edge{
+  int cost, from, to;
+  Edge(int cost, int from, int to):
+    cost(cost), from(from), to(to) {}
+};
+
+bool operator<(const Edge& a, const Edge& b){
+  return a.cost != b.cost ? a.cost < b.cost : a.from != b.from ? a.from < b.from : a.to < b.to;
+}

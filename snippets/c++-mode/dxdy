@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# name: dxdy
+# key: dxdy
+# --
+
+const int dx[] = {1,0,-1,0}, dy[] = {0,1,0,-1};
+for(int dd = 0; dd < 4; ++dd){
+  int x_ = $1 + dx[dd], y_ = $2 + dy[dd];
+  if(x_ < 0 or x_ >= $3) continue;
+  if(y_ < 0 or y_ >= $4) continue;
+  $5
+}
