@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: priority_queue
+# key: priority_queue
+# --
+
+priority_queue<$1,vector<$1>,greater<>> $3;
