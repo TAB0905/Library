@@ -58,11 +58,17 @@ data:
     - icon: ':heavy_check_mark:'
       path: Graph/SCCD.cpp
       title: Graph/SCCD.cpp
+    - icon: ':warning:'
+      path: Graph/TopologicalSort.cpp
+      title: Graph/TopologicalSort.cpp
   - name: Math
     pages:
     - icon: ':warning:'
       path: Math/CRT.cpp
       title: Math/CRT.cpp
+    - icon: ':warning:'
+      path: Math/Combination.cpp
+      title: Math/Combination.cpp
     - icon: ':question:'
       path: Math/EratosthenesSieve.cpp
       title: Math/EratosthenesSieve.cpp
@@ -95,6 +101,11 @@ data:
     - icon: ':heavy_check_mark:'
       path: String/SuffixArray.cpp
       title: String/SuffixArray.cpp
+  - name: test/AOJ
+    pages:
+    - icon: ':warning:'
+      path: test/AOJ/GRL_4_B.cpp
+      title: test/AOJ/GRL_4_B.cpp
   verificationCategories:
   - name: test/AOJ
     pages:
