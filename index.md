@@ -22,6 +22,9 @@ data:
       path: DataStructure/LineSet.cpp
       title: DataStructure/LineSet.cpp
     - icon: ':heavy_check_mark:'
+      path: DataStructure/RangeTree.cpp
+      title: DataStructure/RangeTree.cpp
+    - icon: ':heavy_check_mark:'
       path: DataStructure/SegmentTree.cpp
       title: DataStructure/SegmentTree.cpp
     - icon: ':heavy_check_mark:'
@@ -240,6 +243,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/LibraryChecker/queue_operate_all_composite.test.cpp
       title: test/LibraryChecker/queue_operate_all_composite.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/LibraryChecker/range_kth_smallest.test.cpp
+      title: test/LibraryChecker/range_kth_smallest.test.cpp
     - icon: ':heavy_check_mark:'
       path: test/LibraryChecker/scc.test.cpp
       title: test/LibraryChecker/scc.test.cpp
