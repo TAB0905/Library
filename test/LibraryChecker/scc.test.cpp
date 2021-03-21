@@ -19,16 +19,11 @@ int main(){
     cin >> a >> b;
     G[a].emplace_back(b);
   }
-  vector<int> C = scc_decompose(G);
-  int n = *max_element(C.begin(), C.end()) + 1;
-  vector<vector<int>> V(n);
-  for(int i = 0; i < N; ++i){
-    V[C[i]].emplace_back(i);
-  }
-  cout << n << '\n';
-  for(auto v : V){
-    cout << v.size();
-    for(auto e : v)
+  auto ret = scc_decompose(G);
+  cout << ret.scc.size() << '\n';
+  for(auto &scc : ret.scc){
+    cout << scc.size();
+    for(auto e : scc)
       cout << ' ' << e;
     cout << '\n';
   }
