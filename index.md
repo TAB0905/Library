@@ -52,6 +52,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: Graph/Lowlink.cpp
       title: Graph/Lowlink.cpp
+    - icon: ':x:'
+      path: Graph/MaximumIndependentSet.cpp
+      title: Graph/MaximumIndependentSet.cpp
     - icon: ':heavy_check_mark:'
       path: Graph/MinCostFlow.cpp
       title: Graph/MinCostFlow.cpp
@@ -219,6 +222,9 @@ data:
       title: test/AOJ/GRL_6_B.test.cpp
   - name: test/LibraryChecker
     pages:
+    - icon: ':x:'
+      path: test/LibraryChecker/MaximumIndependentSet.test.cpp
+      title: test/LibraryChecker/MaximumIndependentSet.test.cpp
     - icon: ':heavy_check_mark:'
       path: test/LibraryChecker/enumerate_primes.test.cpp
       title: test/LibraryChecker/enumerate_primes.test.cpp
