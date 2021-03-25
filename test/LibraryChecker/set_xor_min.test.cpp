@@ -7,7 +7,7 @@ using namespace std;
 int main(){
   cin.tie(nullptr);
   ios::sync_with_stdio(false);
-  BinaryTrie<int,31> binTrie;
+  BinaryTrie<int,30> binTrie;
   int Q;
   cin >> Q;
   while(Q--){
