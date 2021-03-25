@@ -241,6 +241,9 @@ data:
       path: test/LibraryChecker/number_of_substrings.test.cpp
       title: test/LibraryChecker/number_of_substrings.test.cpp
     - icon: ':heavy_check_mark:'
+      path: test/LibraryChecker/predecessor_problem.test.cpp
+      title: test/LibraryChecker/predecessor_problem.test.cpp
+    - icon: ':heavy_check_mark:'
       path: test/LibraryChecker/queue_operate_all_composite.test.cpp
       title: test/LibraryChecker/queue_operate_all_composite.test.cpp
     - icon: ':heavy_check_mark:'

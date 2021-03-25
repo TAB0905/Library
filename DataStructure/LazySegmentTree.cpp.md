@@ -82,8 +82,8 @@ data:
   timestamp: '2020-12-13 17:06:49+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/AOJ/DSL_2_D.test.cpp
   - test/AOJ/DSL_2_F.test.cpp
+  - test/AOJ/DSL_2_D.test.cpp
   - test/AOJ/DSL_2_E.test.cpp
   - test/AOJ/DSL_2_G.test.cpp
 documentation_of: DataStructure/LazySegmentTree.cpp
