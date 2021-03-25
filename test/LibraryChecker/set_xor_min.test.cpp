@@ -73,7 +73,7 @@ int main(){
 //   long long ans = 0;
 //   for(int i = 0; i <= N; ++i){
 //     binTrie.xor_all(A[i]);
-//     ans += binTrie.count_leq(K);
+//     ans += binTrie.count_geq(K);
 //     binTrie.xor_all(A[i]);
 //     binTrie.insert(A[i]);
 //   }

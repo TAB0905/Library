@@ -11,7 +11,7 @@ private:
     Node() : size(0), parent(nullptr), children{nullptr,nullptr} {}
   };
   
-  Node* root;
+  Node* const root;
   T xor_value;
 public:
   BinaryTrie() : root(new Node), xor_value(0) {}
@@ -84,6 +84,21 @@ public:
     for(int i = len-1; i >= 0; --i){
       int b = ((xor_value^x)>>i)&1;
       int t = (x>>i)&1;
+      if(t and v->children[b^1] != nullptr)
+        ret += v->children[b^1]->size;
+      if(v->children[b] == nullptr){
+        return ret;
+      }
+      v = v->children[b];
+    }
+    return ret+v->size;
+  }
+  constexpr T count_geq(T x) const noexcept {
+    Node* v = root;
+    T ret = 0;
+    for(int i = len-1; i >= 0; --i){
+      int b = ((xor_value^x)>>i)&1;
+      int t = (x>>i)&1;
       if((!t) and v->children[b^1] != nullptr)
         ret += v->children[b^1]->size;
       if(v->children[b] == nullptr){
@@ -95,5 +110,8 @@ public:
   }
   constexpr void xor_all(T x) noexcept {
     xor_value ^= x;
+  }
+  constexpr T size() const noexcept {
+    return root->size;
   }
 };
