@@ -56,7 +56,7 @@ data:
     \    xor_value ^= x;\n  }\n  constexpr T size() const noexcept {\n    return root->size;\n\
     \  }\n};\n#line 5 \"test/LibraryChecker/set_xor_min.test.cpp\"\nusing namespace\
     \ std;\n\nint main(){\n  cin.tie(nullptr);\n  ios::sync_with_stdio(false);\n \
-    \ BinaryTrie<int,31> binTrie;\n  int Q;\n  cin >> Q;\n  while(Q--){\n    int t,\
+    \ BinaryTrie<int,30> binTrie;\n  int Q;\n  cin >> Q;\n  while(Q--){\n    int t,\
     \ x;\n    cin >> t >> x;\n    if(t == 0){\n      if(binTrie.count(x)) continue;\n\
     \      binTrie.insert(x);\n    }\n    if(t == 1){\n      binTrie.erase(x);\n \
     \   }\n    if(t == 2){\n      binTrie.xor_all(x);\n      cout << binTrie.kth_element(1)\
@@ -76,7 +76,7 @@ data:
     \ << ans << endl;\n// }\n"
   code: "#define PROBLEM \"https://judge.yosupo.jp/problem/set_xor_min\"\n\n#include\
     \ <iostream>\n#include \"DataStructure/BinaryTrie.cpp\"\nusing namespace std;\n\
-    \nint main(){\n  cin.tie(nullptr);\n  ios::sync_with_stdio(false);\n  BinaryTrie<int,31>\
+    \nint main(){\n  cin.tie(nullptr);\n  ios::sync_with_stdio(false);\n  BinaryTrie<int,30>\
     \ binTrie;\n  int Q;\n  cin >> Q;\n  while(Q--){\n    int t, x;\n    cin >> t\
     \ >> x;\n    if(t == 0){\n      if(binTrie.count(x)) continue;\n      binTrie.insert(x);\n\
     \    }\n    if(t == 1){\n      binTrie.erase(x);\n    }\n    if(t == 2){\n   \
@@ -100,7 +100,7 @@ data:
   isVerificationFile: true
   path: test/LibraryChecker/set_xor_min.test.cpp
   requiredBy: []
-  timestamp: '2021-03-25 17:24:53+09:00'
+  timestamp: '2021-03-25 17:39:36+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/LibraryChecker/set_xor_min.test.cpp
