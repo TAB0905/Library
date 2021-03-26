@@ -262,6 +262,9 @@ data:
       path: test/LibraryChecker/static_range_sum.test.cpp
       title: test/LibraryChecker/static_range_sum.test.cpp
     - icon: ':heavy_check_mark:'
+      path: test/LibraryChecker/static_rmq.test.cpp
+      title: test/LibraryChecker/static_rmq.test.cpp
+    - icon: ':heavy_check_mark:'
       path: test/LibraryChecker/suffix_array.test.cpp
       title: test/LibraryChecker/suffix_array.test.cpp
     - icon: ':heavy_check_mark:'

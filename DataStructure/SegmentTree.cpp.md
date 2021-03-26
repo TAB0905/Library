@@ -9,6 +9,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/AOJ/DSL_2_B.test.cpp
     title: test/AOJ/DSL_2_B.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/LibraryChecker/static_rmq.test.cpp
+    title: test/LibraryChecker/static_rmq.test.cpp
   _isVerificationFailed: false
   _pathExtension: cpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -49,6 +52,7 @@ data:
   verifiedWith:
   - test/AOJ/DSL_2_B.test.cpp
   - test/AOJ/DSL_2_A.test.cpp
+  - test/LibraryChecker/static_rmq.test.cpp
 documentation_of: DataStructure/SegmentTree.cpp
 layout: document
 redirect_from:
