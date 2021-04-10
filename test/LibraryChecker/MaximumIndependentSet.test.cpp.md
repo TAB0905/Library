@@ -12,7 +12,6 @@ data:
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     IGNORE: ''
-    IGNORE_IF_CLANG: ''
     IGNORE_IF_GCC: ''
     links:
     - https://old.yosupo.jp/problem/maximum_independent_set
