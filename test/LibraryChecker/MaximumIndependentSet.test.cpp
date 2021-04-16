@@ -1,5 +1,4 @@
-#define IGNORE
-#define PROBLEM "https://old.yosupo.jp/problem/maximum_independent_set"
+#define PROBLEM "https://judge.yosupo.jp/problem/maximum_independent_set"
 
 #include <vector>
 #include "Graph/MaximumIndependentSet.cpp"
