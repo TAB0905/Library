@@ -3,12 +3,12 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/LibraryChecker/MaximumIndependentSet.test.cpp
     title: test/LibraryChecker/MaximumIndependentSet.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 1 \"Graph/MaximumIndependentSet.cpp\"\n#include <utility>\n\
@@ -33,7 +33,7 @@ data:
   path: Graph/MaximumIndependentSet.cpp
   requiredBy: []
   timestamp: '2021-03-21 18:52:40+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/LibraryChecker/MaximumIndependentSet.test.cpp
 documentation_of: Graph/MaximumIndependentSet.cpp

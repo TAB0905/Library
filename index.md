@@ -55,7 +55,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: Graph/Lowlink.cpp
       title: Graph/Lowlink.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: Graph/MaximumIndependentSet.cpp
       title: Graph/MaximumIndependentSet.cpp
     - icon: ':heavy_check_mark:'
@@ -225,7 +225,7 @@ data:
       title: test/AOJ/GRL_6_B.test.cpp
   - name: test/LibraryChecker
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/LibraryChecker/MaximumIndependentSet.test.cpp
       title: test/LibraryChecker/MaximumIndependentSet.test.cpp
     - icon: ':heavy_check_mark:'
