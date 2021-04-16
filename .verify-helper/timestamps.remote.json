@@ -34,6 +34,7 @@
 "test/AOJ/GRL_6_A_Dinic.test.cpp": "2020-12-13 21:55:55 +0900",
 "test/AOJ/GRL_6_A_FordFulkerson.test.cpp": "2020-12-13 21:55:55 +0900",
 "test/AOJ/GRL_6_B.test.cpp": "2020-12-13 21:55:55 +0900",
+"test/LibraryChecker/MaximumIndependentSet.test.cpp": "2021-04-16 16:37:59 +0900",
 "test/LibraryChecker/enumerate_primes.test.cpp": "2021-01-05 00:20:20 +0900",
 "test/LibraryChecker/lca.test.cpp": "2020-12-13 21:55:55 +0900",
 "test/LibraryChecker/line_add_get_min.test.cpp": "2020-12-13 21:55:55 +0900",
