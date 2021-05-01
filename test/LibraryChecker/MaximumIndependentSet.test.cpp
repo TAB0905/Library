@@ -1,5 +1,4 @@
-#define IGNORE
-#define PROBLEM "https://old.yosupo.jp/problem/maximum_independent_set"
+#define PROBLEM "https://judge.yosupo.jp/problem/maximum_independent_set"
 
 #include <vector>
 #include "Graph/MaximumIndependentSet.cpp"
@@ -15,7 +14,7 @@ int main(){
     G[a] |= 1LL<<b;
     G[b] |= 1LL<<a;
   }
-  long long ans = solve(G,0,0);
+  long long ans = maximum_independent_set_size(G,0,0);
   int a = __builtin_popcountll(ans);
   cout << a << endl;
   for(int i = 0; i < n; ++i){
