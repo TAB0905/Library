@@ -74,8 +74,8 @@ data:
   timestamp: '2020-05-23 18:04:07+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/LibraryChecker/suffix_array.test.cpp
   - test/LibraryChecker/number_of_substrings.test.cpp
+  - test/LibraryChecker/suffix_array.test.cpp
 documentation_of: String/SuffixArray.cpp
 layout: document
 redirect_from:

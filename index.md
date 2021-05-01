@@ -64,7 +64,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: Graph/SCCD.cpp
       title: Graph/SCCD.cpp
-    - icon: ':warning:'
+    - icon: ':x:'
       path: Graph/TopologicalSort.cpp
       title: Graph/TopologicalSort.cpp
   - name: Math
@@ -82,8 +82,14 @@ data:
       path: Math/FFT.cpp
       title: Math/FFT.cpp
     - icon: ':warning:'
+      path: Math/Matrix.cpp
+      title: Math/Matrix.cpp
+    - icon: ':warning:'
       path: Math/PrimitiveRoot.cpp
       title: Math/PrimitiveRoot.cpp
+    - icon: ':warning:'
+      path: Math/determinant.cpp
+      title: Math/determinant.cpp
     - icon: ':warning:'
       path: Math/fraction.cpp
       title: Math/fraction.cpp
@@ -107,11 +113,6 @@ data:
     - icon: ':heavy_check_mark:'
       path: String/SuffixArray.cpp
       title: String/SuffixArray.cpp
-  - name: test/AOJ
-    pages:
-    - icon: ':warning:'
-      path: test/AOJ/GRL_4_B.cpp
-      title: test/AOJ/GRL_4_B.cpp
   verificationCategories:
   - name: test/AOJ
     pages:
@@ -214,6 +215,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/AOJ/DSL_2_G.test.cpp
       title: test/AOJ/DSL_2_G.test.cpp
+    - icon: ':x:'
+      path: test/AOJ/GRL_4_B.test.cpp
+      title: test/AOJ/GRL_4_B.test.cpp
     - icon: ':heavy_check_mark:'
       path: test/AOJ/GRL_6_A_Dinic.test.cpp
       title: test/AOJ/GRL_6_A_Dinic.test.cpp
@@ -225,6 +229,9 @@ data:
       title: test/AOJ/GRL_6_B.test.cpp
   - name: test/LibraryChecker
     pages:
+    - icon: ':x:'
+      path: test/LibraryChecker/DiscreteLogarithm.test.cpp
+      title: test/LibraryChecker/DiscreteLogarithm.test.cpp
     - icon: ':heavy_check_mark:'
       path: test/LibraryChecker/MaximumIndependentSet.test.cpp
       title: test/LibraryChecker/MaximumIndependentSet.test.cpp

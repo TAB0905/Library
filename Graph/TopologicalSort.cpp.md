@@ -1,14 +1,14 @@
 ---
 data:
   _extendedDependsOn: []
-  _extendedRequiredBy:
-  - icon: ':warning:'
-    path: test/AOJ/GRL_4_B.cpp
-    title: test/AOJ/GRL_4_B.cpp
-  _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _extendedRequiredBy: []
+  _extendedVerifiedWith:
+  - icon: ':x:'
+    path: test/AOJ/GRL_4_B.test.cpp
+    title: test/AOJ/GRL_4_B.test.cpp
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':x:'
   attributes:
     links: []
   bundledCode: "#line 1 \"Graph/TopologicalSort.cpp\"\n#include <iostream>\n#include\
@@ -32,11 +32,11 @@ data:
   dependsOn: []
   isVerificationFile: false
   path: Graph/TopologicalSort.cpp
-  requiredBy:
-  - test/AOJ/GRL_4_B.cpp
+  requiredBy: []
   timestamp: '2021-03-11 05:53:40+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_WA
+  verifiedWith:
+  - test/AOJ/GRL_4_B.test.cpp
 documentation_of: Graph/TopologicalSort.cpp
 layout: document
 redirect_from:
