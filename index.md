@@ -81,7 +81,7 @@ data:
     - icon: ':warning:'
       path: Math/FFT.cpp
       title: Math/FFT.cpp
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: Math/Matrix.cpp
       title: Math/Matrix.cpp
     - icon: ':warning:'
@@ -241,6 +241,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/LibraryChecker/line_add_get_min.test.cpp
       title: test/LibraryChecker/line_add_get_min.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/LibraryChecker/matrix_product.test.cpp
+      title: test/LibraryChecker/matrix_product.test.cpp
     - icon: ':heavy_check_mark:'
       path: test/LibraryChecker/number_of_substrings.test.cpp
       title: test/LibraryChecker/number_of_substrings.test.cpp

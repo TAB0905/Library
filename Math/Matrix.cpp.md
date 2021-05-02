@@ -2,10 +2,13 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: test/LibraryChecker/matrix_product.test.cpp
+    title: test/LibraryChecker/matrix_product.test.cpp
   _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 1 \"Math/Matrix.cpp\"\n#include <vector>\n#include <cassert>\n\
@@ -54,8 +57,9 @@ data:
   path: Math/Matrix.cpp
   requiredBy: []
   timestamp: '2021-05-01 20:44:16+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - test/LibraryChecker/matrix_product.test.cpp
 documentation_of: Math/Matrix.cpp
 layout: document
 redirect_from:
