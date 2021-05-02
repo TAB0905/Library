@@ -104,7 +104,7 @@ data:
       title: Math/prime_list.cpp
   - name: String
     pages:
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: String/PalindromicTree.cpp
       title: String/PalindromicTree.cpp
     - icon: ':warning:'
@@ -125,6 +125,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/AOJ/1330.test.cpp
       title: test/AOJ/1330.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/AOJ/2292.test.cpp
+      title: test/AOJ/2292.test.cpp
     - icon: ':heavy_check_mark:'
       path: test/AOJ/ALDS1_1_C.test.cpp
       title: test/AOJ/ALDS1_1_C.test.cpp

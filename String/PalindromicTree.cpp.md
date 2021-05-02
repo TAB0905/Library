@@ -2,10 +2,13 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: test/AOJ/2292.test.cpp
+    title: test/AOJ/2292.test.cpp
   _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 1 \"String/PalindromicTree.cpp\"\n#include <cassert>\n#include\
@@ -36,26 +39,7 @@ data:
     \ = 1;\n    \n    v_idx = nodes.size();\n    nodes[parent_idx].ch[c-min_element]\
     \ = v_idx;\n    nodes.emplace_back(suffix_link,nodes[parent_idx].len+2);\n   \
     \ A.emplace_back(v_idx);\n    \n    return true;\n  }\n\n  size_t num_unique_palindrome()\
-    \ const noexcept {\n    return nodes.size()-2;\n  }\n};\n\n#line 85 \"String/PalindromicTree.cpp\"\
-    \nusing namespace std;\n\nvoid solve(){\n  string s, t;\n  cin >> s >> t;\n  const\
-    \ int alphabet_size = 26;\n  PalindromicTree<char,alphabet_size,'A'> S, T;\n\n\
-    \  for(auto c : s)\n    S.push_back(c);\n  for(auto c : t)\n    T.push_back(c);\n\
-    \  \n  for(int i = S.nodes.size()-1; i >= 0; --i){\n    int sl = S.nodes[i].suffix_link;\n\
-    \    if(sl < 0) continue;\n    S.nodes[sl].cnt += S.nodes[i].cnt;\n  }\n  for(int\
-    \ i = T.nodes.size()-1; i >= 0; --i){\n    int sl = T.nodes[i].suffix_link;\n\
-    \    if(sl < 0) continue;\n    T.nodes[sl].cnt += T.nodes[i].cnt;\n  }\n  \n \
-    \ auto solve = [&](auto&& solve, const int& vs, const int& vt) -> long long {\n\
-    \    long long ret = 0;\n    if(S.nodes[vs].len > 0){\n      long long cnt = (long\
-    \ long)(S.nodes[vs].cnt)*T.nodes[vt].cnt;\n      ret += cnt;\n    }\n    for(int\
-    \ i = 0; i < alphabet_size; ++i){\n      int us = S.nodes[vs].ch[i], ut = T.nodes[vt].ch[i];\n\
-    \      if(us < 0 or ut < 0)\n        continue;\n      ret += solve(solve,us,ut);\n\
-    \    }\n    return ret;\n  };\n\n  long long ans = solve(solve,0,0) + solve(solve,1,1);\n\
-    \  cout << ans << endl;\n}\n\n// void debug(){\n//   string s;\n//   cin >> s;\n\
-    //   const int alphabet_size = 26;\n//   PalindromicTree<char,alphabet_size,'a'>\
-    \ eerTree;\n//   for(auto c : s){\n//     eerTree.push_back(c);\n//   }\n//  \
-    \ for(size_t i = 0; i < eerTree.nodes.size(); ++i){\n//     cerr << \"Node \"\
-    \ << i << \"\\n\";\n//     eerTree.nodes[i].dump();\n//   }\n//   cout << eerTree.num_unique_palindrome()\
-    \ << endl;\n// }\n\nint main(){\n  solve();\n  // debug();\n}\n"
+    \ const noexcept {\n    return nodes.size()-2;\n  }\n};\n\n"
   code: "#include <cassert>\n#include <vector>\n#include <array>\n#include <iostream>\n\
     \ntemplate<typename T, int alphabetSize, T min_element>\nclass PalindromicTree\
     \ {\n\n  struct Node {\n    const int suffix_link;\n    std::array<int,alphabetSize>\
@@ -83,33 +67,15 @@ data:
     \ = 1;\n    \n    v_idx = nodes.size();\n    nodes[parent_idx].ch[c-min_element]\
     \ = v_idx;\n    nodes.emplace_back(suffix_link,nodes[parent_idx].len+2);\n   \
     \ A.emplace_back(v_idx);\n    \n    return true;\n  }\n\n  size_t num_unique_palindrome()\
-    \ const noexcept {\n    return nodes.size()-2;\n  }\n};\n\n#include <iostream>\n\
-    using namespace std;\n\nvoid solve(){\n  string s, t;\n  cin >> s >> t;\n  const\
-    \ int alphabet_size = 26;\n  PalindromicTree<char,alphabet_size,'A'> S, T;\n\n\
-    \  for(auto c : s)\n    S.push_back(c);\n  for(auto c : t)\n    T.push_back(c);\n\
-    \  \n  for(int i = S.nodes.size()-1; i >= 0; --i){\n    int sl = S.nodes[i].suffix_link;\n\
-    \    if(sl < 0) continue;\n    S.nodes[sl].cnt += S.nodes[i].cnt;\n  }\n  for(int\
-    \ i = T.nodes.size()-1; i >= 0; --i){\n    int sl = T.nodes[i].suffix_link;\n\
-    \    if(sl < 0) continue;\n    T.nodes[sl].cnt += T.nodes[i].cnt;\n  }\n  \n \
-    \ auto solve = [&](auto&& solve, const int& vs, const int& vt) -> long long {\n\
-    \    long long ret = 0;\n    if(S.nodes[vs].len > 0){\n      long long cnt = (long\
-    \ long)(S.nodes[vs].cnt)*T.nodes[vt].cnt;\n      ret += cnt;\n    }\n    for(int\
-    \ i = 0; i < alphabet_size; ++i){\n      int us = S.nodes[vs].ch[i], ut = T.nodes[vt].ch[i];\n\
-    \      if(us < 0 or ut < 0)\n        continue;\n      ret += solve(solve,us,ut);\n\
-    \    }\n    return ret;\n  };\n\n  long long ans = solve(solve,0,0) + solve(solve,1,1);\n\
-    \  cout << ans << endl;\n}\n\n// void debug(){\n//   string s;\n//   cin >> s;\n\
-    //   const int alphabet_size = 26;\n//   PalindromicTree<char,alphabet_size,'a'>\
-    \ eerTree;\n//   for(auto c : s){\n//     eerTree.push_back(c);\n//   }\n//  \
-    \ for(size_t i = 0; i < eerTree.nodes.size(); ++i){\n//     cerr << \"Node \"\
-    \ << i << \"\\n\";\n//     eerTree.nodes[i].dump();\n//   }\n//   cout << eerTree.num_unique_palindrome()\
-    \ << endl;\n// }\n\nint main(){\n  solve();\n  // debug();\n}\n"
+    \ const noexcept {\n    return nodes.size()-2;\n  }\n};\n\n"
   dependsOn: []
   isVerificationFile: false
   path: String/PalindromicTree.cpp
   requiredBy: []
-  timestamp: '2020-12-13 02:05:37+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  timestamp: '2021-05-02 23:06:24+09:00'
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - test/AOJ/2292.test.cpp
 documentation_of: String/PalindromicTree.cpp
 layout: document
 redirect_from:
