@@ -1,3 +1,4 @@
+#define IGNORE
 #define PROBLEM "https://judge.yosupo.jp/problem/discrete_logarithm_mod"
 
 #include <iostream>
