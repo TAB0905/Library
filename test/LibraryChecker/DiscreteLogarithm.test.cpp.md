@@ -16,7 +16,7 @@ data:
     , line 260, in _resolve\n    raise BundleErrorAt(path, -1, \"no such header\"\
     )\nonlinejudge_verify.languages.cplusplus_bundle.BundleErrorAt: Math/DiscreteLog.cpp:\
     \ line -1: no such header\n"
-  code: "#define PROBLEM \"https://judge.yosupo.jp/problem/discrete_logarithm_mod\"\
+  code: "#define IGNORE\n#define PROBLEM \"https://judge.yosupo.jp/problem/discrete_logarithm_mod\"\
     \n\n#include <iostream>\n#include <iomanip>\n\n#include \"Math/DiscreteLog.cpp\"\
     \nusing namespace std;\n\nint main(){\n  ios::sync_with_stdio(false);\n  cin.tie(nullptr);\n\
     \  \n  int t;\n  cin >> t;\n  while(t--){\n    long long x, y, m;\n    cin >>\
