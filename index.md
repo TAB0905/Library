@@ -4,6 +4,9 @@ data:
   - name: DataStructure
     pages:
     - icon: ':heavy_check_mark:'
+      path: DataStructure/BIT.cpp
+      title: DataStructure/BIT.cpp
+    - icon: ':heavy_check_mark:'
       path: DataStructure/BinaryTrie.cpp
       title: DataStructure/BinaryTrie.cpp
     - icon: ':heavy_check_mark:'
@@ -229,9 +232,9 @@ data:
       title: test/AOJ/GRL_6_B.test.cpp
   - name: test/LibraryChecker
     pages:
-    - icon: ':heavy_check_mark:'
-      path: test/LibraryChecker/MaximumIndependentSet.test.cpp
-      title: test/LibraryChecker/MaximumIndependentSet.test.cpp
+    - icon: ':x:'
+      path: test/LibraryChecker/DiscreteLogarithm.test.cpp
+      title: test/LibraryChecker/DiscreteLogarithm.test.cpp
     - icon: ':heavy_check_mark:'
       path: test/LibraryChecker/enumerate_primes.test.cpp
       title: test/LibraryChecker/enumerate_primes.test.cpp
@@ -245,14 +248,26 @@ data:
       path: test/LibraryChecker/matrix_product.test.cpp
       title: test/LibraryChecker/matrix_product.test.cpp
     - icon: ':heavy_check_mark:'
+      path: test/LibraryChecker/maximum_independent_set.test.cpp
+      title: test/LibraryChecker/maximum_independent_set.test.cpp
+    - icon: ':heavy_check_mark:'
       path: test/LibraryChecker/number_of_substrings.test.cpp
       title: test/LibraryChecker/number_of_substrings.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/LibraryChecker/point_add_range_sum.test.cpp
+      title: test/LibraryChecker/point_add_range_sum.test.cpp
+    - icon: ':x:'
+      path: test/LibraryChecker/point_set_range_composite.test.cpp
+      title: test/LibraryChecker/point_set_range_composite.test.cpp
     - icon: ':heavy_check_mark:'
       path: test/LibraryChecker/predecessor_problem.test.cpp
       title: test/LibraryChecker/predecessor_problem.test.cpp
     - icon: ':heavy_check_mark:'
       path: test/LibraryChecker/queue_operate_all_composite.test.cpp
       title: test/LibraryChecker/queue_operate_all_composite.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/LibraryChecker/range_affine_range_sum.test.cpp
+      title: test/LibraryChecker/range_affine_range_sum.test.cpp
     - icon: ':heavy_check_mark:'
       path: test/LibraryChecker/range_kth_smallest.test.cpp
       title: test/LibraryChecker/range_kth_smallest.test.cpp

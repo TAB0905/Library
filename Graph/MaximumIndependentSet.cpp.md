@@ -4,8 +4,8 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: test/LibraryChecker/MaximumIndependentSet.test.cpp
-    title: test/LibraryChecker/MaximumIndependentSet.test.cpp
+    path: test/LibraryChecker/maximum_independent_set.test.cpp
+    title: test/LibraryChecker/maximum_independent_set.test.cpp
   _isVerificationFailed: false
   _pathExtension: cpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -41,7 +41,7 @@ data:
   timestamp: '2021-04-16 16:45:48+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/LibraryChecker/MaximumIndependentSet.test.cpp
+  - test/LibraryChecker/maximum_independent_set.test.cpp
 documentation_of: Graph/MaximumIndependentSet.cpp
 layout: document
 redirect_from:

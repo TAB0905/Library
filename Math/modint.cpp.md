@@ -9,6 +9,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/LibraryChecker/queue_operate_all_composite.test.cpp
     title: test/LibraryChecker/queue_operate_all_composite.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/LibraryChecker/range_affine_range_sum.test.cpp
+    title: test/LibraryChecker/range_affine_range_sum.test.cpp
   _isVerificationFailed: false
   _pathExtension: cpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -76,6 +79,7 @@ data:
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/LibraryChecker/matrix_product.test.cpp
+  - test/LibraryChecker/range_affine_range_sum.test.cpp
   - test/LibraryChecker/queue_operate_all_composite.test.cpp
 documentation_of: Math/modint.cpp
 layout: document
