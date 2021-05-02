@@ -70,6 +70,9 @@ data:
     - icon: ':x:'
       path: Graph/TopologicalSort.cpp
       title: Graph/TopologicalSort.cpp
+    - icon: ':heavy_check_mark:'
+      path: Graph/TreeDiameter.cpp
+      title: Graph/TreeDiameter.cpp
   - name: Math
     pages:
     - icon: ':warning:'
@@ -289,6 +292,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/LibraryChecker/suffix_array.test.cpp
       title: test/LibraryChecker/suffix_array.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/LibraryChecker/tree_diameter.test.cpp
+      title: test/LibraryChecker/tree_diameter.test.cpp
     - icon: ':heavy_check_mark:'
       path: test/LibraryChecker/two_edge_connected_components.test.cpp
       title: test/LibraryChecker/two_edge_connected_components.test.cpp
