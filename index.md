@@ -232,9 +232,6 @@ data:
       title: test/AOJ/GRL_6_B.test.cpp
   - name: test/LibraryChecker
     pages:
-    - icon: ':x:'
-      path: test/LibraryChecker/DiscreteLogarithm.test.cpp
-      title: test/LibraryChecker/DiscreteLogarithm.test.cpp
     - icon: ':heavy_check_mark:'
       path: test/LibraryChecker/enumerate_primes.test.cpp
       title: test/LibraryChecker/enumerate_primes.test.cpp
