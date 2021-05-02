@@ -90,12 +90,12 @@ data:
     - icon: ':heavy_check_mark:'
       path: Math/Matrix.cpp
       title: Math/Matrix.cpp
+    - icon: ':heavy_check_mark:'
+      path: Math/MatrixDeterminant.cpp
+      title: Math/MatrixDeterminant.cpp
     - icon: ':warning:'
       path: Math/PrimitiveRoot.cpp
       title: Math/PrimitiveRoot.cpp
-    - icon: ':warning:'
-      path: Math/determinant.cpp
-      title: Math/determinant.cpp
     - icon: ':warning:'
       path: Math/fraction.cpp
       title: Math/fraction.cpp
@@ -247,6 +247,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/LibraryChecker/line_add_get_min.test.cpp
       title: test/LibraryChecker/line_add_get_min.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/LibraryChecker/matrix_det.test.cpp
+      title: test/LibraryChecker/matrix_det.test.cpp
     - icon: ':heavy_check_mark:'
       path: test/LibraryChecker/matrix_product.test.cpp
       title: test/LibraryChecker/matrix_product.test.cpp

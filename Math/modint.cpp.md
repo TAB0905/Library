@@ -4,6 +4,9 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
+    path: test/LibraryChecker/matrix_det.test.cpp
+    title: test/LibraryChecker/matrix_det.test.cpp
+  - icon: ':heavy_check_mark:'
     path: test/LibraryChecker/matrix_product.test.cpp
     title: test/LibraryChecker/matrix_product.test.cpp
   - icon: ':heavy_check_mark:'
@@ -85,6 +88,7 @@ data:
   - test/LibraryChecker/matrix_product.test.cpp
   - test/LibraryChecker/range_affine_range_sum.test.cpp
   - test/LibraryChecker/queue_operate_all_composite.test.cpp
+  - test/LibraryChecker/matrix_det.test.cpp
 documentation_of: Math/modint.cpp
 layout: document
 redirect_from:
