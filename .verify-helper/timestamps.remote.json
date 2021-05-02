@@ -38,6 +38,7 @@
 "test/LibraryChecker/enumerate_primes.test.cpp": "2021-01-05 00:20:20 +0900",
 "test/LibraryChecker/lca.test.cpp": "2020-12-13 21:55:55 +0900",
 "test/LibraryChecker/line_add_get_min.test.cpp": "2020-12-13 21:55:55 +0900",
+"test/LibraryChecker/matrix_det.test.cpp": "2021-05-02 23:57:06 +0900",
 "test/LibraryChecker/matrix_product.test.cpp": "2021-05-02 20:20:52 +0900",
 "test/LibraryChecker/maximum_independent_set.test.cpp": "2021-05-02 20:29:46 +0900",
 "test/LibraryChecker/number_of_substrings.test.cpp": "2020-09-27 01:04:25 +0900",
