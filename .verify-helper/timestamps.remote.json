@@ -41,6 +41,7 @@
 "test/LibraryChecker/maximum_independent_set.test.cpp": "2021-05-02 20:29:46 +0900",
 "test/LibraryChecker/number_of_substrings.test.cpp": "2020-09-27 01:04:25 +0900",
 "test/LibraryChecker/point_add_range_sum.test.cpp": "2021-05-02 22:46:33 +0900",
+"test/LibraryChecker/point_set_range_composite.test.cpp": "2021-05-02 22:56:37 +0900",
 "test/LibraryChecker/predecessor_problem.test.cpp": "2021-03-25 17:24:53 +0900",
 "test/LibraryChecker/queue_operate_all_composite.test.cpp": "2020-12-13 16:53:44 +0900",
 "test/LibraryChecker/range_affine_range_sum.test.cpp": "2021-05-02 22:46:33 +0900",
