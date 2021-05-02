@@ -10,6 +10,9 @@ data:
     path: test/AOJ/DSL_2_B.test.cpp
     title: test/AOJ/DSL_2_B.test.cpp
   - icon: ':heavy_check_mark:'
+    path: test/LibraryChecker/point_set_range_composite.test.cpp
+    title: test/LibraryChecker/point_set_range_composite.test.cpp
+  - icon: ':heavy_check_mark:'
     path: test/LibraryChecker/static_rmq.test.cpp
     title: test/LibraryChecker/static_rmq.test.cpp
   _isVerificationFailed: false
@@ -52,6 +55,7 @@ data:
   verifiedWith:
   - test/AOJ/DSL_2_A.test.cpp
   - test/AOJ/DSL_2_B.test.cpp
+  - test/LibraryChecker/point_set_range_composite.test.cpp
   - test/LibraryChecker/static_rmq.test.cpp
 documentation_of: DataStructure/SegmentTree.cpp
 layout: document

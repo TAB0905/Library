@@ -7,6 +7,9 @@ data:
     path: test/LibraryChecker/matrix_product.test.cpp
     title: test/LibraryChecker/matrix_product.test.cpp
   - icon: ':heavy_check_mark:'
+    path: test/LibraryChecker/point_set_range_composite.test.cpp
+    title: test/LibraryChecker/point_set_range_composite.test.cpp
+  - icon: ':heavy_check_mark:'
     path: test/LibraryChecker/queue_operate_all_composite.test.cpp
     title: test/LibraryChecker/queue_operate_all_composite.test.cpp
   - icon: ':heavy_check_mark:'
@@ -78,6 +81,7 @@ data:
   timestamp: '2020-12-13 16:53:44+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
+  - test/LibraryChecker/point_set_range_composite.test.cpp
   - test/LibraryChecker/matrix_product.test.cpp
   - test/LibraryChecker/range_affine_range_sum.test.cpp
   - test/LibraryChecker/queue_operate_all_composite.test.cpp
