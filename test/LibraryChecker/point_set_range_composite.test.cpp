@@ -3,7 +3,7 @@
 #include <iostream>
 #include <iomanip>
 #include <utility>
-#include "DataStructure/Segmenttree.cpp"
+#include "DataStructure/SegmentTree.cpp"
 #include "Math/modint.cpp"
 
 using namespace std;
