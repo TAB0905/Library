@@ -44,6 +44,9 @@ data:
   - name: Graph
     pages:
     - icon: ':heavy_check_mark:'
+      path: Graph/CartesianTree.cpp
+      title: Graph/CartesianTree.cpp
+    - icon: ':heavy_check_mark:'
       path: Graph/Dijkstra.cpp
       title: Graph/Dijkstra.cpp
     - icon: ':heavy_check_mark:'
@@ -238,6 +241,9 @@ data:
       title: test/AOJ/GRL_6_B.test.cpp
   - name: test/LibraryChecker
     pages:
+    - icon: ':heavy_check_mark:'
+      path: test/LibraryChecker/cartesian_tree.test.cpp
+      title: test/LibraryChecker/cartesian_tree.test.cpp
     - icon: ':heavy_check_mark:'
       path: test/LibraryChecker/enumerate_primes.test.cpp
       title: test/LibraryChecker/enumerate_primes.test.cpp

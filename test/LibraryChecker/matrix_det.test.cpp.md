@@ -40,7 +40,7 @@ data:
     \ *= rhs;\n  }\n  constexpr modint operator/(const modint& rhs) const noexcept\
     \ {\n    return modint(*this) /= rhs;\n  }\n  constexpr modint& operator+=(const\
     \ modint& rhs) noexcept {\n    a += rhs.a;\n    if(a >= mod) a -= mod;\n    return\
-    \ *this;\n  }\n  constexpr modint &operator-=(const modint& rhs) noexcept {\n\
+    \ *this;\n  }\n  constexpr modint& operator-=(const modint& rhs) noexcept {\n\
     \    if(a < rhs.a) a += mod;\n    a -= rhs.a;\n    return *this;\n  }\n  constexpr\
     \ modint& operator*=(const modint& rhs) noexcept {\n    a = a*rhs.a%mod;\n   \
     \ return *this;\n  }\n  constexpr modint& operator/=(const modint& rhs) noexcept\
@@ -71,7 +71,7 @@ data:
   isVerificationFile: true
   path: test/LibraryChecker/matrix_det.test.cpp
   requiredBy: []
-  timestamp: '2021-05-02 23:57:06+09:00'
+  timestamp: '2021-10-15 01:32:12+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/LibraryChecker/matrix_det.test.cpp

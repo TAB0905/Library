@@ -35,7 +35,7 @@ data:
     \ modint(*this) *= rhs;\n  }\n  constexpr modint operator/(const modint& rhs)\
     \ const noexcept {\n    return modint(*this) /= rhs;\n  }\n  constexpr modint&\
     \ operator+=(const modint& rhs) noexcept {\n    a += rhs.a;\n    if(a >= mod)\
-    \ a -= mod;\n    return *this;\n  }\n  constexpr modint &operator-=(const modint&\
+    \ a -= mod;\n    return *this;\n  }\n  constexpr modint& operator-=(const modint&\
     \ rhs) noexcept {\n    if(a < rhs.a) a += mod;\n    a -= rhs.a;\n    return *this;\n\
     \  }\n  constexpr modint& operator*=(const modint& rhs) noexcept {\n    a = a*rhs.a%mod;\n\
     \    return *this;\n  }\n  constexpr modint& operator/=(const modint& rhs) noexcept\
@@ -62,7 +62,7 @@ data:
     \  }\n  constexpr modint operator/(const modint& rhs) const noexcept {\n    return\
     \ modint(*this) /= rhs;\n  }\n  constexpr modint& operator+=(const modint& rhs)\
     \ noexcept {\n    a += rhs.a;\n    if(a >= mod) a -= mod;\n    return *this;\n\
-    \  }\n  constexpr modint &operator-=(const modint& rhs) noexcept {\n    if(a <\
+    \  }\n  constexpr modint& operator-=(const modint& rhs) noexcept {\n    if(a <\
     \ rhs.a) a += mod;\n    a -= rhs.a;\n    return *this;\n  }\n  constexpr modint&\
     \ operator*=(const modint& rhs) noexcept {\n    a = a*rhs.a%mod;\n    return *this;\n\
     \  }\n  constexpr modint& operator/=(const modint& rhs) noexcept {\n    return\
@@ -81,14 +81,14 @@ data:
   isVerificationFile: false
   path: Math/modint.cpp
   requiredBy: []
-  timestamp: '2020-12-13 16:53:44+09:00'
+  timestamp: '2021-10-15 01:32:12+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/LibraryChecker/point_set_range_composite.test.cpp
-  - test/LibraryChecker/matrix_product.test.cpp
-  - test/LibraryChecker/range_affine_range_sum.test.cpp
   - test/LibraryChecker/queue_operate_all_composite.test.cpp
   - test/LibraryChecker/matrix_det.test.cpp
+  - test/LibraryChecker/matrix_product.test.cpp
+  - test/LibraryChecker/point_set_range_composite.test.cpp
+  - test/LibraryChecker/range_affine_range_sum.test.cpp
 documentation_of: Math/modint.cpp
 layout: document
 redirect_from:
