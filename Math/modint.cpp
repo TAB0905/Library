@@ -30,7 +30,7 @@ public:
     if(a >= mod) a -= mod;
     return *this;
   }
-  constexpr modint &operator-=(const modint& rhs) noexcept {
+  constexpr modint& operator-=(const modint& rhs) noexcept {
     if(a < rhs.a) a += mod;
     a -= rhs.a;
     return *this;
