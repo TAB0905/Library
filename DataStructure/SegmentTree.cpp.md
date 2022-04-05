@@ -53,10 +53,10 @@ data:
   timestamp: '2020-12-13 17:06:49+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/LibraryChecker/point_set_range_composite.test.cpp
-  - test/LibraryChecker/static_rmq.test.cpp
-  - test/AOJ/DSL_2_A.test.cpp
   - test/AOJ/DSL_2_B.test.cpp
+  - test/AOJ/DSL_2_A.test.cpp
+  - test/LibraryChecker/static_rmq.test.cpp
+  - test/LibraryChecker/point_set_range_composite.test.cpp
 documentation_of: DataStructure/SegmentTree.cpp
 layout: document
 redirect_from:

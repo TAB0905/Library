@@ -11,11 +11,11 @@ data:
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
-    PROBLEM: https://old.yosupo.jp/problem/range_kth_smallest
+    PROBLEM: https://judge.yosupo.jp/problem/range_kth_smallest
     links:
-    - https://old.yosupo.jp/problem/range_kth_smallest
+    - https://judge.yosupo.jp/problem/range_kth_smallest
   bundledCode: "#line 1 \"test/LibraryChecker/range_kth_smallest.test.cpp\"\n#define\
-    \ PROBLEM \"https://old.yosupo.jp/problem/range_kth_smallest\"\n\n#include <algorithm>\n\
+    \ PROBLEM \"https://judge.yosupo.jp/problem/range_kth_smallest\"\n\n#include <algorithm>\n\
     #include <iostream>\n#include <vector>\n#line 3 \"DataStructure/RangeTree.cpp\"\
     \n#include <climits>\n#include <functional>\n\ntemplate <typename data_type, typename\
     \ ans_type, typename query_type, typename F, typename G, typename H>\nstruct RangeTree{\n\
@@ -42,7 +42,7 @@ data:
     \  while(abs(ok-ng) > 1){\n      int mid = (ok+ng)/2;\n      if(rt.query(l,r,mid)\
     \ >= k) ok = mid;\n      else ng = mid;\n    }\n    cout << ok << '\\n';\n  }\n\
     }\n"
-  code: "#define PROBLEM \"https://old.yosupo.jp/problem/range_kth_smallest\"\n\n\
+  code: "#define PROBLEM \"https://judge.yosupo.jp/problem/range_kth_smallest\"\n\n\
     #include <algorithm>\n#include <iostream>\n#include <vector>\n#include \"DataStructure/RangeTree.cpp\"\
     \n\nusing namespace std;\n\nint main(){\n  int n, q;\n  cin >> n >> q;\n  vector<vector<int>>\
     \ A(n,vector<int>(1));\n  for(int i = 0; i < n; ++i)\n    cin >> A[i][0];\n  auto\
@@ -61,7 +61,7 @@ data:
   isVerificationFile: true
   path: test/LibraryChecker/range_kth_smallest.test.cpp
   requiredBy: []
-  timestamp: '2021-03-22 00:01:56+09:00'
+  timestamp: '2022-04-05 15:05:18+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/LibraryChecker/range_kth_smallest.test.cpp
