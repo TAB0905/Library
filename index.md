@@ -24,6 +24,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: DataStructure/LineSet.cpp
       title: DataStructure/LineSet.cpp
+    - icon: ':warning:'
+      path: DataStructure/PartiallyPersistentUnionFind.cpp
+      title: DataStructure/PartiallyPersistentUnionFind.cpp
     - icon: ':heavy_check_mark:'
       path: DataStructure/RangeTree.cpp
       title: DataStructure/RangeTree.cpp
@@ -122,6 +125,11 @@ data:
     - icon: ':heavy_check_mark:'
       path: String/SuffixArray.cpp
       title: String/SuffixArray.cpp
+  - name: test/AtCoder
+    pages:
+    - icon: ':warning:'
+      path: test/AtCoder/AGC002D.cpp
+      title: test/AtCoder/AGC002D.cpp
   verificationCategories:
   - name: test/AOJ
     pages:
