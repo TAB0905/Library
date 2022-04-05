@@ -21,6 +21,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: DataStructure/LazySegmentTree.cpp
       title: DataStructure/LazySegmentTree.cpp
+    - icon: ':warning:'
+      path: DataStructure/LeftistHeap.cpp
+      title: DataStructure/LeftistHeap.cpp
     - icon: ':heavy_check_mark:'
       path: DataStructure/LineSet.cpp
       title: DataStructure/LineSet.cpp
