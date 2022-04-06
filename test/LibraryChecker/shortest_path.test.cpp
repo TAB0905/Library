@@ -12,7 +12,7 @@ using namespace std;
 int main(){
   cin.tie(nullptr);
   ios::sync_with_stdio(false);
-  
+  using ll = long long;
   int N, M, s, t;
   cin >> N >> M >> s >> t;
   vector<vector<pair<ll,int>>> G(N);
@@ -22,7 +22,8 @@ int main(){
     cin >> a >> b >> c;
     G[a].emplace_back(c,b);
   }
-  auto [D, pre] = dijkstra(G,s);
+  const ll INF = 1e18;
+  auto [D, pre] = dijkstra(G,s,INF);
   if(D[t] >= INF){
     cout << -1 << endl;
     return 0;
