@@ -6,9 +6,7 @@ private:
   size_t size;
   std::vector<T> data;
 public:
-  CumSum(std::vector<T> dat){
-    size = dat.size();
-    data.resize(size+1,0);
+  CumSum(std::vector<T> dat) : size(dat.size()), data(size+1) {
     for(size_t i = 0; i < size; ++i)
       data[i+1] = data[i] + dat[i];
   }

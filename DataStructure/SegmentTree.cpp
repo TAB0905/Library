@@ -32,7 +32,7 @@ public:
       dat[k] = f(dat[2*k+0], dat[2*k+1]);
     }
   }
-  T query(int a, int b){
+  T query(int a, int b){ // [l,r)
     if(a == b) return ti;
     T vl = ti, vr = ti;
     for(int l = a+n, r = b+n; l < r; l >>= 1, r >>= 1){
