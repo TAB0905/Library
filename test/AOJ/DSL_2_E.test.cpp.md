@@ -34,22 +34,22 @@ data:
     \    dat.assign(2*n,ti);\n    laz.assign(2*n,ei);\n  }\n  void build(const std::vector<T>\
     \ &v){\n    int n_ = v.size();\n    build(n_);\n    for(int i = 0; i < n; ++i)\
     \ dat[n+i]=v[i];\n    for(int i = n-1; i >= 0; --i)\n      dat[i]=f(dat[i<<1|0],dat[i<<1|1]);\n\
-    \  }\n  void update(int l_, int r_, E x){\n    if(l_ >= r_) return;\n    l_ +=\
-    \ n, r_ += n;\n    thrust(l_);\n    thrust(r_-1);\n    for(int l = l_, r = r_;l\
-    \ < r; l >>= 1, r >>= 1){\n      if(l&1) laz[l] = h(laz[l],x), ++l;\n      if(r&1)\
-    \ --r, laz[r] = h(laz[r],x);\n    }\n    recalc(l_);\n    recalc(r_-1);\n  }\n\
-    \  void set_val(int a, T x){\n    thrust(a+=n);\n    dat[a] = x;\n    laz[a] =\
-    \ ei;\n    recalc(a);\n  }\n  T query(int l, int r){\n    if(l >= r) return ti;\n\
-    \    l += n;\n    r += n;\n    thrust(l);\n    thrust(r-1);\n    T vl = ti, vr\
-    \ = ti;\n    for(; l < r; l >>= 1, r >>= 1){\n      if(l&1) vl = f(vl,reflect(l++));\n\
-    \      if(r&1) vr = f(reflect(--r),vr);\n    }\n    return f(vl,vr);\n  }\n};\n\
-    \n#line 6 \"test/AOJ/DSL_2_E.test.cpp\"\nusing namespace std;\n\nint main(){\n\
-    \  cin.tie(nullptr);\n  ios::sync_with_stdio(false);\n\n  using T = pair<long\
-    \ long, long long>;\n  using E = long long;\n  T ti(0,0);\n  E ei = 0;\n  auto\
-    \ f = [](T a, T b) -> T { return {a.first+b.first,a.second+b.second};};\n  auto\
-    \ g = [](T a, E b) -> T { return {a.first+b*a.second,a.second};};\n  auto h =\
-    \ [](E a, E b) -> E { return a+b;};\n  LazySegmentTree st(f,g,h,ti,ei);\n  int\
-    \ n, q;\n  cin >> n >> q;\n  vector<T> v(n,T(0,1));\n  st.build(v);\n  while(q--){\n\
+    \  }\n  void update(int l_, int r_, E x){ // [l,r)\n    if(l_ >= r_) return;\n\
+    \    l_ += n, r_ += n;\n    thrust(l_);\n    thrust(r_-1);\n    for(int l = l_,\
+    \ r = r_;l < r; l >>= 1, r >>= 1){\n      if(l&1) laz[l] = h(laz[l],x), ++l;\n\
+    \      if(r&1) --r, laz[r] = h(laz[r],x);\n    }\n    recalc(l_);\n    recalc(r_-1);\n\
+    \  }\n  void set_val(int a, T x){\n    thrust(a+=n);\n    dat[a] = x;\n    laz[a]\
+    \ = ei;\n    recalc(a);\n  }\n  T query(int l, int r){ // [l,r)\n    if(l >= r)\
+    \ return ti;\n    l += n;\n    r += n;\n    thrust(l);\n    thrust(r-1);\n   \
+    \ T vl = ti, vr = ti;\n    for(; l < r; l >>= 1, r >>= 1){\n      if(l&1) vl =\
+    \ f(vl,reflect(l++));\n      if(r&1) vr = f(reflect(--r),vr);\n    }\n    return\
+    \ f(vl,vr);\n  }\n};\n\n#line 6 \"test/AOJ/DSL_2_E.test.cpp\"\nusing namespace\
+    \ std;\n\nint main(){\n  cin.tie(nullptr);\n  ios::sync_with_stdio(false);\n\n\
+    \  using T = pair<long long, long long>;\n  using E = long long;\n  T ti(0,0);\n\
+    \  E ei = 0;\n  auto f = [](T a, T b) -> T { return {a.first+b.first,a.second+b.second};};\n\
+    \  auto g = [](T a, E b) -> T { return {a.first+b*a.second,a.second};};\n  auto\
+    \ h = [](E a, E b) -> E { return a+b;};\n  LazySegmentTree st(f,g,h,ti,ei);\n\
+    \  int n, q;\n  cin >> n >> q;\n  vector<T> v(n,T(0,1));\n  st.build(v);\n  while(q--){\n\
     \    int t;\n    cin >> t;\n    if(t){\n      int i;\n      cin >> i;\n      cout\
     \ << st.query(i-1,i).first << \"\\n\";\n    }else{\n      int s, t, x;\n     \
     \ cin >> s >> t >> x;\n      st.update(s-1,t,x);\n    }\n  }\n}\n\n"
@@ -69,7 +69,7 @@ data:
   isVerificationFile: true
   path: test/AOJ/DSL_2_E.test.cpp
   requiredBy: []
-  timestamp: '2020-12-13 21:55:55+09:00'
+  timestamp: '2022-04-08 13:37:01+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/AOJ/DSL_2_E.test.cpp

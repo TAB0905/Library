@@ -29,10 +29,10 @@ data:
     \    for(int i = 0; i < n; ++i) dat[n+i] = v[i];\n    for(int i = n-1; i >= 0;\
     \ --i)\n      dat[i] = f(dat[2*i+0], dat[2*i+1]);\n  }\n  void set_val(int k,\
     \ T x){\n    dat[k+=n] = x;\n    while(k > 0){\n      k = k/2;\n      dat[k] =\
-    \ f(dat[2*k+0], dat[2*k+1]);\n    }\n  }\n  T query(int a, int b){\n    if(a ==\
-    \ b) return ti;\n    T vl = ti, vr = ti;\n    for(int l = a+n, r = b+n; l < r;\
-    \ l >>= 1, r >>= 1){\n      if(l&1) vl = f(vl, dat[l++]);\n      if(r&1) vr =\
-    \ f(dat[--r], vr);\n    }\n    return f(vl, vr);\n  }\n};\n\n#line 2 \"Math/modint.cpp\"\
+    \ f(dat[2*k+0], dat[2*k+1]);\n    }\n  }\n  T query(int a, int b){ // [l,r)\n\
+    \    if(a == b) return ti;\n    T vl = ti, vr = ti;\n    for(int l = a+n, r =\
+    \ b+n; l < r; l >>= 1, r >>= 1){\n      if(l&1) vl = f(vl, dat[l++]);\n      if(r&1)\
+    \ vr = f(dat[--r], vr);\n    }\n    return f(vl, vr);\n  }\n};\n\n#line 2 \"Math/modint.cpp\"\
     \n#include <cassert>\n\ntemplate<long long mod>\nclass modint{\nprivate:\n  using\
     \ T = long long;\n  T a;\npublic:\n  constexpr modint(const long long x = 0) noexcept\
     \ : a((x%mod+mod)%mod) {}\n  constexpr T& value() noexcept { return a; }\n  constexpr\
@@ -87,7 +87,7 @@ data:
   isVerificationFile: true
   path: test/LibraryChecker/point_set_range_composite.test.cpp
   requiredBy: []
-  timestamp: '2021-10-15 01:32:12+09:00'
+  timestamp: '2022-04-08 13:37:01+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/LibraryChecker/point_set_range_composite.test.cpp

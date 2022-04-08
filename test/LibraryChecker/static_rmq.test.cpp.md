@@ -25,11 +25,11 @@ data:
     \ 0; i < n; ++i) dat[n+i] = v[i];\n    for(int i = n-1; i >= 0; --i)\n      dat[i]\
     \ = f(dat[2*i+0], dat[2*i+1]);\n  }\n  void set_val(int k, T x){\n    dat[k+=n]\
     \ = x;\n    while(k > 0){\n      k = k/2;\n      dat[k] = f(dat[2*k+0], dat[2*k+1]);\n\
-    \    }\n  }\n  T query(int a, int b){\n    if(a == b) return ti;\n    T vl = ti,\
-    \ vr = ti;\n    for(int l = a+n, r = b+n; l < r; l >>= 1, r >>= 1){\n      if(l&1)\
-    \ vl = f(vl, dat[l++]);\n      if(r&1) vr = f(dat[--r], vr);\n    }\n    return\
-    \ f(vl, vr);\n  }\n};\n\n#line 6 \"test/LibraryChecker/static_rmq.test.cpp\"\n\
-    using namespace std;\n\nint main(){\n  cin.tie(nullptr);\n  ios::sync_with_stdio(false);\n\
+    \    }\n  }\n  T query(int a, int b){ // [l,r)\n    if(a == b) return ti;\n  \
+    \  T vl = ti, vr = ti;\n    for(int l = a+n, r = b+n; l < r; l >>= 1, r >>= 1){\n\
+    \      if(l&1) vl = f(vl, dat[l++]);\n      if(r&1) vr = f(dat[--r], vr);\n  \
+    \  }\n    return f(vl, vr);\n  }\n};\n\n#line 6 \"test/LibraryChecker/static_rmq.test.cpp\"\
+    \nusing namespace std;\n\nint main(){\n  cin.tie(nullptr);\n  ios::sync_with_stdio(false);\n\
     \  \n  int N, Q;\n  cin >> N >> Q;\n  vector<int> A(N);\n  for(int i = 0; i <\
     \ N; ++i){\n    cin >> A[i];\n  }\n  const int INF = 1e9;\n  SegmentTree rmq([](int\
     \ a, int b){return min(a,b);},INF);\n  rmq.build(A);\n  while(Q--){\n    int l,\
@@ -46,7 +46,7 @@ data:
   isVerificationFile: true
   path: test/LibraryChecker/static_rmq.test.cpp
   requiredBy: []
-  timestamp: '2021-03-26 19:22:04+09:00'
+  timestamp: '2022-04-08 13:37:01+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/LibraryChecker/static_rmq.test.cpp

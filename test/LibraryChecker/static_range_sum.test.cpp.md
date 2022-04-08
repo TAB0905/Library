@@ -18,15 +18,15 @@ data:
     \ PROBLEM \"https://judge.yosupo.jp/problem/static_range_sum\"\n\n#include <iostream>\n\
     #include <vector>\n#line 2 \"DataStructure/CumulativeSum.cpp\"\n\ntemplate<typename\
     \ T>\nstruct CumSum{\nprivate:\n  size_t size;\n  std::vector<T> data;\npublic:\n\
-    \  CumSum(std::vector<T> dat){\n    size = dat.size();\n    data.resize(size+1,0);\n\
-    \    for(size_t i = 0; i < size; ++i)\n      data[i+1] = data[i] + dat[i];\n \
-    \ }\n  T getsum(size_t l, size_t r){//0-indexed, [l,r)\n    return data[r] - data[l];\n\
-    \  }\n  T getsum(size_t r){//0-indexed, [0,r)\n    return data[r];\n  }\n};\n\
-    #line 6 \"test/LibraryChecker/static_range_sum.test.cpp\"\nusing namespace std;\n\
-    \nint main(){\n  cin.tie(nullptr);\n  ios::sync_with_stdio(false);\n  \n  int\
-    \ N, Q;\n  cin >> N >> Q;\n  vector<long long> A(N);\n  for(int i = 0; i < N;\
-    \ ++i){\n    cin >> A[i];\n  }\n  CumSum cumSum(A);\n  while(Q--){\n    int l,\
-    \ r;\n    cin >> l >> r;\n    cout << cumSum.getsum(l,r) << '\\n';\n  }\n}\n"
+    \  CumSum(std::vector<T> dat) : size(dat.size()), data(size+1) {\n    for(size_t\
+    \ i = 0; i < size; ++i)\n      data[i+1] = data[i] + dat[i];\n  }\n  T getsum(size_t\
+    \ l, size_t r){//0-indexed, [l,r)\n    return data[r] - data[l];\n  }\n  T getsum(size_t\
+    \ r){//0-indexed, [0,r)\n    return data[r];\n  }\n};\n#line 6 \"test/LibraryChecker/static_range_sum.test.cpp\"\
+    \nusing namespace std;\n\nint main(){\n  cin.tie(nullptr);\n  ios::sync_with_stdio(false);\n\
+    \  \n  int N, Q;\n  cin >> N >> Q;\n  vector<long long> A(N);\n  for(int i = 0;\
+    \ i < N; ++i){\n    cin >> A[i];\n  }\n  CumSum cumSum(A);\n  while(Q--){\n  \
+    \  int l, r;\n    cin >> l >> r;\n    cout << cumSum.getsum(l,r) << '\\n';\n \
+    \ }\n}\n"
   code: "#define PROBLEM \"https://judge.yosupo.jp/problem/static_range_sum\"\n\n\
     #include <iostream>\n#include <vector>\n#include \"DataStructure/CumulativeSum.cpp\"\
     \nusing namespace std;\n\nint main(){\n  cin.tie(nullptr);\n  ios::sync_with_stdio(false);\n\
@@ -39,7 +39,7 @@ data:
   isVerificationFile: true
   path: test/LibraryChecker/static_range_sum.test.cpp
   requiredBy: []
-  timestamp: '2021-02-08 02:49:09+09:00'
+  timestamp: '2022-04-08 13:37:01+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/LibraryChecker/static_range_sum.test.cpp

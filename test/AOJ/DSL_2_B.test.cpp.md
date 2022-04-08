@@ -25,10 +25,10 @@ data:
     \    for(int i = 0; i < n; ++i) dat[n+i] = v[i];\n    for(int i = n-1; i >= 0;\
     \ --i)\n      dat[i] = f(dat[2*i+0], dat[2*i+1]);\n  }\n  void set_val(int k,\
     \ T x){\n    dat[k+=n] = x;\n    while(k > 0){\n      k = k/2;\n      dat[k] =\
-    \ f(dat[2*k+0], dat[2*k+1]);\n    }\n  }\n  T query(int a, int b){\n    if(a ==\
-    \ b) return ti;\n    T vl = ti, vr = ti;\n    for(int l = a+n, r = b+n; l < r;\
-    \ l >>= 1, r >>= 1){\n      if(l&1) vl = f(vl, dat[l++]);\n      if(r&1) vr =\
-    \ f(dat[--r], vr);\n    }\n    return f(vl, vr);\n  }\n};\n\n#line 6 \"test/AOJ/DSL_2_B.test.cpp\"\
+    \ f(dat[2*k+0], dat[2*k+1]);\n    }\n  }\n  T query(int a, int b){ // [l,r)\n\
+    \    if(a == b) return ti;\n    T vl = ti, vr = ti;\n    for(int l = a+n, r =\
+    \ b+n; l < r; l >>= 1, r >>= 1){\n      if(l&1) vl = f(vl, dat[l++]);\n      if(r&1)\
+    \ vr = f(dat[--r], vr);\n    }\n    return f(vl, vr);\n  }\n};\n\n#line 6 \"test/AOJ/DSL_2_B.test.cpp\"\
     \nusing namespace std;\n\nint main(){\n  cin.tie(nullptr);\n  ios::sync_with_stdio(false);\n\
     \  \n  int n, q;\n  cin >> n >> q;\n  using T = long long;\n  SegmentTree rsq([](T\
     \ a, T b){return a+b;},0LL);\n  rsq.build(n);\n  while(q--){\n    int c, x, y;\n\
@@ -48,7 +48,7 @@ data:
   isVerificationFile: true
   path: test/AOJ/DSL_2_B.test.cpp
   requiredBy: []
-  timestamp: '2020-12-13 21:55:55+09:00'
+  timestamp: '2022-04-08 13:37:01+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/AOJ/DSL_2_B.test.cpp

@@ -30,9 +30,10 @@ data:
     \    for(int i = n-1; i >= 0; --i)\n      dat[i] = f(dat[2*i+0], dat[2*i+1]);\n\
     \  }\n  void set_val(int k, T x){\n    dat[k+=n] = x;\n    while(k > 0){\n   \
     \   k = k/2;\n      dat[k] = f(dat[2*k+0], dat[2*k+1]);\n    }\n  }\n  T query(int\
-    \ a, int b){\n    if(a == b) return ti;\n    T vl = ti, vr = ti;\n    for(int\
-    \ l = a+n, r = b+n; l < r; l >>= 1, r >>= 1){\n      if(l&1) vl = f(vl, dat[l++]);\n\
-    \      if(r&1) vr = f(dat[--r], vr);\n    }\n    return f(vl, vr);\n  }\n};\n\n"
+    \ a, int b){ // [l,r)\n    if(a == b) return ti;\n    T vl = ti, vr = ti;\n  \
+    \  for(int l = a+n, r = b+n; l < r; l >>= 1, r >>= 1){\n      if(l&1) vl = f(vl,\
+    \ dat[l++]);\n      if(r&1) vr = f(dat[--r], vr);\n    }\n    return f(vl, vr);\n\
+    \  }\n};\n\n"
   code: "#include <vector>\n#include <iostream>\n#include <climits>\n#include <functional>\n\
     \ntemplate <typename T, typename F>\nstruct SegmentTree{\nprivate:\n  // using\
     \ F = std::function<T(T,T)>;\n  int n;\n  F f;\n  T ti;\n  std::vector<T> dat;\n\
@@ -42,21 +43,21 @@ data:
     \ 0; i < n; ++i) dat[n+i] = v[i];\n    for(int i = n-1; i >= 0; --i)\n      dat[i]\
     \ = f(dat[2*i+0], dat[2*i+1]);\n  }\n  void set_val(int k, T x){\n    dat[k+=n]\
     \ = x;\n    while(k > 0){\n      k = k/2;\n      dat[k] = f(dat[2*k+0], dat[2*k+1]);\n\
-    \    }\n  }\n  T query(int a, int b){\n    if(a == b) return ti;\n    T vl = ti,\
-    \ vr = ti;\n    for(int l = a+n, r = b+n; l < r; l >>= 1, r >>= 1){\n      if(l&1)\
-    \ vl = f(vl, dat[l++]);\n      if(r&1) vr = f(dat[--r], vr);\n    }\n    return\
-    \ f(vl, vr);\n  }\n};\n\n"
+    \    }\n  }\n  T query(int a, int b){ // [l,r)\n    if(a == b) return ti;\n  \
+    \  T vl = ti, vr = ti;\n    for(int l = a+n, r = b+n; l < r; l >>= 1, r >>= 1){\n\
+    \      if(l&1) vl = f(vl, dat[l++]);\n      if(r&1) vr = f(dat[--r], vr);\n  \
+    \  }\n    return f(vl, vr);\n  }\n};\n\n"
   dependsOn: []
   isVerificationFile: false
   path: DataStructure/SegmentTree.cpp
   requiredBy: []
-  timestamp: '2020-12-13 17:06:49+09:00'
+  timestamp: '2022-04-08 13:37:01+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/AOJ/DSL_2_B.test.cpp
   - test/AOJ/DSL_2_A.test.cpp
-  - test/LibraryChecker/static_rmq.test.cpp
   - test/LibraryChecker/point_set_range_composite.test.cpp
+  - test/LibraryChecker/static_rmq.test.cpp
 documentation_of: DataStructure/SegmentTree.cpp
 layout: document
 redirect_from:

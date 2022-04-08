@@ -38,31 +38,31 @@ data:
     \    dat.assign(2*n,ti);\n    laz.assign(2*n,ei);\n  }\n  void build(const std::vector<T>\
     \ &v){\n    int n_ = v.size();\n    build(n_);\n    for(int i = 0; i < n; ++i)\
     \ dat[n+i]=v[i];\n    for(int i = n-1; i >= 0; --i)\n      dat[i]=f(dat[i<<1|0],dat[i<<1|1]);\n\
-    \  }\n  void update(int l_, int r_, E x){\n    if(l_ >= r_) return;\n    l_ +=\
-    \ n, r_ += n;\n    thrust(l_);\n    thrust(r_-1);\n    for(int l = l_, r = r_;l\
-    \ < r; l >>= 1, r >>= 1){\n      if(l&1) laz[l] = h(laz[l],x), ++l;\n      if(r&1)\
-    \ --r, laz[r] = h(laz[r],x);\n    }\n    recalc(l_);\n    recalc(r_-1);\n  }\n\
-    \  void set_val(int a, T x){\n    thrust(a+=n);\n    dat[a] = x;\n    laz[a] =\
-    \ ei;\n    recalc(a);\n  }\n  T query(int l, int r){\n    if(l >= r) return ti;\n\
-    \    l += n;\n    r += n;\n    thrust(l);\n    thrust(r-1);\n    T vl = ti, vr\
-    \ = ti;\n    for(; l < r; l >>= 1, r >>= 1){\n      if(l&1) vl = f(vl,reflect(l++));\n\
-    \      if(r&1) vr = f(reflect(--r),vr);\n    }\n    return f(vl,vr);\n  }\n};\n\
-    \n#line 2 \"Math/modint.cpp\"\n#include <cassert>\n\ntemplate<long long mod>\n\
-    class modint{\nprivate:\n  using T = long long;\n  T a;\npublic:\n  constexpr\
-    \ modint(const long long x = 0) noexcept : a((x%mod+mod)%mod) {}\n  constexpr\
-    \ T& value() noexcept { return a; }\n  constexpr const T& value() const noexcept\
-    \ { return a; }\n  constexpr modint operator-() const noexcept {\n    return modint(0)\
-    \ -= *this;\n  }\n  constexpr modint operator+(const modint& rhs) const noexcept\
-    \ {\n    return modint(*this) += rhs;\n  }\n  constexpr modint operator-(const\
-    \ modint& rhs) const noexcept {\n    return modint(*this) -= rhs;\n  }\n  constexpr\
-    \ modint operator*(const modint& rhs) const noexcept {\n    return modint(*this)\
-    \ *= rhs;\n  }\n  constexpr modint operator/(const modint& rhs) const noexcept\
-    \ {\n    return modint(*this) /= rhs;\n  }\n  constexpr modint& operator+=(const\
-    \ modint& rhs) noexcept {\n    a += rhs.a;\n    if(a >= mod) a -= mod;\n    return\
-    \ *this;\n  }\n  constexpr modint& operator-=(const modint& rhs) noexcept {\n\
-    \    if(a < rhs.a) a += mod;\n    a -= rhs.a;\n    return *this;\n  }\n  constexpr\
-    \ modint& operator*=(const modint& rhs) noexcept {\n    a = a*rhs.a%mod;\n   \
-    \ return *this;\n  }\n  constexpr modint& operator/=(const modint& rhs) noexcept\
+    \  }\n  void update(int l_, int r_, E x){ // [l,r)\n    if(l_ >= r_) return;\n\
+    \    l_ += n, r_ += n;\n    thrust(l_);\n    thrust(r_-1);\n    for(int l = l_,\
+    \ r = r_;l < r; l >>= 1, r >>= 1){\n      if(l&1) laz[l] = h(laz[l],x), ++l;\n\
+    \      if(r&1) --r, laz[r] = h(laz[r],x);\n    }\n    recalc(l_);\n    recalc(r_-1);\n\
+    \  }\n  void set_val(int a, T x){\n    thrust(a+=n);\n    dat[a] = x;\n    laz[a]\
+    \ = ei;\n    recalc(a);\n  }\n  T query(int l, int r){ // [l,r)\n    if(l >= r)\
+    \ return ti;\n    l += n;\n    r += n;\n    thrust(l);\n    thrust(r-1);\n   \
+    \ T vl = ti, vr = ti;\n    for(; l < r; l >>= 1, r >>= 1){\n      if(l&1) vl =\
+    \ f(vl,reflect(l++));\n      if(r&1) vr = f(reflect(--r),vr);\n    }\n    return\
+    \ f(vl,vr);\n  }\n};\n\n#line 2 \"Math/modint.cpp\"\n#include <cassert>\n\ntemplate<long\
+    \ long mod>\nclass modint{\nprivate:\n  using T = long long;\n  T a;\npublic:\n\
+    \  constexpr modint(const long long x = 0) noexcept : a((x%mod+mod)%mod) {}\n\
+    \  constexpr T& value() noexcept { return a; }\n  constexpr const T& value() const\
+    \ noexcept { return a; }\n  constexpr modint operator-() const noexcept {\n  \
+    \  return modint(0) -= *this;\n  }\n  constexpr modint operator+(const modint&\
+    \ rhs) const noexcept {\n    return modint(*this) += rhs;\n  }\n  constexpr modint\
+    \ operator-(const modint& rhs) const noexcept {\n    return modint(*this) -= rhs;\n\
+    \  }\n  constexpr modint operator*(const modint& rhs) const noexcept {\n    return\
+    \ modint(*this) *= rhs;\n  }\n  constexpr modint operator/(const modint& rhs)\
+    \ const noexcept {\n    return modint(*this) /= rhs;\n  }\n  constexpr modint&\
+    \ operator+=(const modint& rhs) noexcept {\n    a += rhs.a;\n    if(a >= mod)\
+    \ a -= mod;\n    return *this;\n  }\n  constexpr modint& operator-=(const modint&\
+    \ rhs) noexcept {\n    if(a < rhs.a) a += mod;\n    a -= rhs.a;\n    return *this;\n\
+    \  }\n  constexpr modint& operator*=(const modint& rhs) noexcept {\n    a = a*rhs.a%mod;\n\
+    \    return *this;\n  }\n  constexpr modint& operator/=(const modint& rhs) noexcept\
     \ {\n    return *this *= rhs.inv();\n  }\n  constexpr bool operator==(const modint&\
     \ rhs) const noexcept {\n    return a == rhs.a;\n  }\n  constexpr bool operator!=(const\
     \ modint& rhs) const noexcept {\n    return not (*this == rhs);\n  }\n  constexpr\
@@ -107,7 +107,7 @@ data:
   isVerificationFile: true
   path: test/LibraryChecker/range_affine_range_sum.test.cpp
   requiredBy: []
-  timestamp: '2021-10-15 01:32:12+09:00'
+  timestamp: '2022-04-08 13:37:01+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/LibraryChecker/range_affine_range_sum.test.cpp

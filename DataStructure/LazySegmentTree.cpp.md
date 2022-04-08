@@ -42,15 +42,15 @@ data:
     \  }\n  void build(const std::vector<T> &v){\n    int n_ = v.size();\n    build(n_);\n\
     \    for(int i = 0; i < n; ++i) dat[n+i]=v[i];\n    for(int i = n-1; i >= 0; --i)\n\
     \      dat[i]=f(dat[i<<1|0],dat[i<<1|1]);\n  }\n  void update(int l_, int r_,\
-    \ E x){\n    if(l_ >= r_) return;\n    l_ += n, r_ += n;\n    thrust(l_);\n  \
-    \  thrust(r_-1);\n    for(int l = l_, r = r_;l < r; l >>= 1, r >>= 1){\n     \
-    \ if(l&1) laz[l] = h(laz[l],x), ++l;\n      if(r&1) --r, laz[r] = h(laz[r],x);\n\
+    \ E x){ // [l,r)\n    if(l_ >= r_) return;\n    l_ += n, r_ += n;\n    thrust(l_);\n\
+    \    thrust(r_-1);\n    for(int l = l_, r = r_;l < r; l >>= 1, r >>= 1){\n   \
+    \   if(l&1) laz[l] = h(laz[l],x), ++l;\n      if(r&1) --r, laz[r] = h(laz[r],x);\n\
     \    }\n    recalc(l_);\n    recalc(r_-1);\n  }\n  void set_val(int a, T x){\n\
     \    thrust(a+=n);\n    dat[a] = x;\n    laz[a] = ei;\n    recalc(a);\n  }\n \
-    \ T query(int l, int r){\n    if(l >= r) return ti;\n    l += n;\n    r += n;\n\
-    \    thrust(l);\n    thrust(r-1);\n    T vl = ti, vr = ti;\n    for(; l < r; l\
-    \ >>= 1, r >>= 1){\n      if(l&1) vl = f(vl,reflect(l++));\n      if(r&1) vr =\
-    \ f(reflect(--r),vr);\n    }\n    return f(vl,vr);\n  }\n};\n\n"
+    \ T query(int l, int r){ // [l,r)\n    if(l >= r) return ti;\n    l += n;\n  \
+    \  r += n;\n    thrust(l);\n    thrust(r-1);\n    T vl = ti, vr = ti;\n    for(;\
+    \ l < r; l >>= 1, r >>= 1){\n      if(l&1) vl = f(vl,reflect(l++));\n      if(r&1)\
+    \ vr = f(reflect(--r),vr);\n    }\n    return f(vl,vr);\n  }\n};\n\n"
   code: "#include <algorithm>\n#include <iostream>\n#include <vector>\n#include <functional>\n\
     #include <utility>\n\ntemplate <typename T, typename E, typename F, typename G,\
     \ typename H>\nstruct LazySegmentTree{\nprivate:\n  // using F = std::function<T(T,T)>;\n\
@@ -69,26 +69,26 @@ data:
     \  }\n  void build(const std::vector<T> &v){\n    int n_ = v.size();\n    build(n_);\n\
     \    for(int i = 0; i < n; ++i) dat[n+i]=v[i];\n    for(int i = n-1; i >= 0; --i)\n\
     \      dat[i]=f(dat[i<<1|0],dat[i<<1|1]);\n  }\n  void update(int l_, int r_,\
-    \ E x){\n    if(l_ >= r_) return;\n    l_ += n, r_ += n;\n    thrust(l_);\n  \
-    \  thrust(r_-1);\n    for(int l = l_, r = r_;l < r; l >>= 1, r >>= 1){\n     \
-    \ if(l&1) laz[l] = h(laz[l],x), ++l;\n      if(r&1) --r, laz[r] = h(laz[r],x);\n\
+    \ E x){ // [l,r)\n    if(l_ >= r_) return;\n    l_ += n, r_ += n;\n    thrust(l_);\n\
+    \    thrust(r_-1);\n    for(int l = l_, r = r_;l < r; l >>= 1, r >>= 1){\n   \
+    \   if(l&1) laz[l] = h(laz[l],x), ++l;\n      if(r&1) --r, laz[r] = h(laz[r],x);\n\
     \    }\n    recalc(l_);\n    recalc(r_-1);\n  }\n  void set_val(int a, T x){\n\
     \    thrust(a+=n);\n    dat[a] = x;\n    laz[a] = ei;\n    recalc(a);\n  }\n \
-    \ T query(int l, int r){\n    if(l >= r) return ti;\n    l += n;\n    r += n;\n\
-    \    thrust(l);\n    thrust(r-1);\n    T vl = ti, vr = ti;\n    for(; l < r; l\
-    \ >>= 1, r >>= 1){\n      if(l&1) vl = f(vl,reflect(l++));\n      if(r&1) vr =\
-    \ f(reflect(--r),vr);\n    }\n    return f(vl,vr);\n  }\n};\n\n"
+    \ T query(int l, int r){ // [l,r)\n    if(l >= r) return ti;\n    l += n;\n  \
+    \  r += n;\n    thrust(l);\n    thrust(r-1);\n    T vl = ti, vr = ti;\n    for(;\
+    \ l < r; l >>= 1, r >>= 1){\n      if(l&1) vl = f(vl,reflect(l++));\n      if(r&1)\
+    \ vr = f(reflect(--r),vr);\n    }\n    return f(vl,vr);\n  }\n};\n\n"
   dependsOn: []
   isVerificationFile: false
   path: DataStructure/LazySegmentTree.cpp
   requiredBy: []
-  timestamp: '2020-12-13 17:06:49+09:00'
+  timestamp: '2022-04-08 13:37:01+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/AOJ/DSL_2_D.test.cpp
   - test/AOJ/DSL_2_F.test.cpp
-  - test/AOJ/DSL_2_G.test.cpp
   - test/AOJ/DSL_2_E.test.cpp
+  - test/AOJ/DSL_2_G.test.cpp
+  - test/AOJ/DSL_2_D.test.cpp
   - test/LibraryChecker/range_affine_range_sum.test.cpp
 documentation_of: DataStructure/LazySegmentTree.cpp
 layout: document
