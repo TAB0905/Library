@@ -32,9 +32,10 @@ private:
     return a;
   }
 
-  node_ptr root;
   
 public:
+  
+  node_ptr root;
   
   PersistentLeftistHeap() : root(nullptr) {}
   PersistentLeftistHeap(node_ptr t) : root(t) {}
@@ -43,7 +44,7 @@ public:
   PersistentLeftistHeap& operator=(PersistentLeftistHeap&&) = default;
 
   PersistentLeftistHeap meld(PersistentLeftistHeap a){
-    return PersistentLeftistHeap(meld(root,a->root));
+    return PersistentLeftistHeap(meld(root,a.root));
   }
   
   PersistentLeftistHeap insert(T x){
