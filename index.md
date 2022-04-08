@@ -21,7 +21,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: DataStructure/LazySegmentTree.cpp
       title: DataStructure/LazySegmentTree.cpp
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: DataStructure/LeftistHeap.cpp
       title: DataStructure/LeftistHeap.cpp
     - icon: ':heavy_check_mark:'
@@ -58,6 +58,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: Graph/Dinic.cpp
       title: Graph/Dinic.cpp
+    - icon: ':heavy_check_mark:'
+      path: Graph/Eppstein.cpp
+      title: Graph/Eppstein.cpp
     - icon: ':heavy_check_mark:'
       path: Graph/FordFulkerson.cpp
       title: Graph/FordFulkerson.cpp
@@ -258,6 +261,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/LibraryChecker/enumerate_primes.test.cpp
       title: test/LibraryChecker/enumerate_primes.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/LibraryChecker/k_shortest_walk.test.cpp
+      title: test/LibraryChecker/k_shortest_walk.test.cpp
     - icon: ':heavy_check_mark:'
       path: test/LibraryChecker/lca.test.cpp
       title: test/LibraryChecker/lca.test.cpp
