@@ -59,7 +59,7 @@ public:
     for(int i = n-1; i >= 0; --i)
       dat[i]=f(dat[i<<1|0],dat[i<<1|1]);
   }
-  void update(int l_, int r_, E x){
+  void update(int l_, int r_, E x){ // [l,r)
     if(l_ >= r_) return;
     l_ += n, r_ += n;
     thrust(l_);
@@ -77,7 +77,7 @@ public:
     laz[a] = ei;
     recalc(a);
   }
-  T query(int l, int r){
+  T query(int l, int r){ // [l,r)
     if(l >= r) return ti;
     l += n;
     r += n;

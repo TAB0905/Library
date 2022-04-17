@@ -3,22 +3,20 @@
 #include <vector>
 #include <utility>
 
-using ll = long long;
-const ll INF = 1e18;
-
-std::pair<std::vector<ll>,std::vector<int>> dijkstra(const std::vector<std::vector<std::pair<ll,int>>>& G, int s){
+template<typename T>
+std::pair<std::vector<T>,std::vector<int>> dijkstra(const std::vector<std::vector<std::pair<T,int>>>& G, int s, T INF){
   const int n = G.size();
-  std::vector<ll> D(n,INF);
+  std::vector<T> D(n,INF);
   D[s] = 0;
   std::vector<int> pre(n,-1);
-  std::priority_queue<std::pair<ll,ll>, std::vector<std::pair<ll,ll>>, std::greater<std::pair<ll,ll>>> pq;
+  std::priority_queue<std::pair<T,int>, std::vector<std::pair<T,int>>, std::greater<>> pq;
   pq.emplace(0,s);
   while(pq.size()){
     auto [d, v] = pq.top();
     pq.pop();
     if(D[v] < d) continue;
     for(auto [c, v_] : G[v]){
-      ll d_ = d + c;
+      T d_ = d + c;
       if(D[v_] <= d_) continue;
       D[v_] = d_;
       pre[v_] = v;
