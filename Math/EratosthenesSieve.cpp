@@ -41,7 +41,7 @@ public:
   constexpr std::vector<std::pair<T,T>> factorize(T x) const noexcept {
     std::vector<std::pair<T,T>> factor;
     while(x > 1){
-      T p = min_div[x];
+      T p = (min_div[x] >= 0 ? min_div[x] : x);
       x /= p;
       if(factor.empty() or factor.back().first != p){
         factor.emplace_back(p,T(1));
