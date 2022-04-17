@@ -28,9 +28,9 @@ data:
     \ { // count p < x\n    return std::lower_bound(primes.begin(), primes.end(),\
     \ x) - primes.begin();\n  }\n\n  constexpr std::vector<std::pair<T,T>> factorize(T\
     \ x) const noexcept {\n    std::vector<std::pair<T,T>> factor;\n    while(x >\
-    \ 1){\n      T p = min_div[x];\n      x /= p;\n      if(factor.empty() or factor.back().first\
-    \ != p){\n        factor.emplace_back(p,T(1));\n      }else{\n        ++factor.back().second;\n\
-    \      }\n    }\n    return factor;\n  }\n};\n"
+    \ 1){\n      T p = (min_div[x] >= 0 ? min_div[x] : x);\n      x /= p;\n      if(factor.empty()\
+    \ or factor.back().first != p){\n        factor.emplace_back(p,T(1));\n      }else{\n\
+    \        ++factor.back().second;\n      }\n    }\n    return factor;\n  }\n};\n"
   code: "#include <algorithm>\n#include <cassert>\n#include <vector>\n#include <utility>\n\
     \ntemplate<typename T>\nstruct PrimeSieve {\n  T sz;\n  std::vector<T> min_div;\n\
     \  std::vector<T> primes;\n\npublic:\n  constexpr PrimeSieve(T sz) : sz(sz), min_div(sz+1,-1)\
@@ -44,14 +44,14 @@ data:
     \ { // count p < x\n    return std::lower_bound(primes.begin(), primes.end(),\
     \ x) - primes.begin();\n  }\n\n  constexpr std::vector<std::pair<T,T>> factorize(T\
     \ x) const noexcept {\n    std::vector<std::pair<T,T>> factor;\n    while(x >\
-    \ 1){\n      T p = min_div[x];\n      x /= p;\n      if(factor.empty() or factor.back().first\
-    \ != p){\n        factor.emplace_back(p,T(1));\n      }else{\n        ++factor.back().second;\n\
-    \      }\n    }\n    return factor;\n  }\n};\n"
+    \ 1){\n      T p = (min_div[x] >= 0 ? min_div[x] : x);\n      x /= p;\n      if(factor.empty()\
+    \ or factor.back().first != p){\n        factor.emplace_back(p,T(1));\n      }else{\n\
+    \        ++factor.back().second;\n      }\n    }\n    return factor;\n  }\n};\n"
   dependsOn: []
   isVerificationFile: false
   path: Math/EratosthenesSieve.cpp
   requiredBy: []
-  timestamp: '2020-10-23 18:05:35+09:00'
+  timestamp: '2022-04-17 19:32:06+09:00'
   verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
   - test/AOJ/ALDS1_1_C.test.cpp

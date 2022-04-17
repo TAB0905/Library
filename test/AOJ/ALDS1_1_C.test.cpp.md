@@ -29,14 +29,14 @@ data:
     \ int count(T x) const noexcept { // count p < x\n    return std::lower_bound(primes.begin(),\
     \ primes.end(), x) - primes.begin();\n  }\n\n  constexpr std::vector<std::pair<T,T>>\
     \ factorize(T x) const noexcept {\n    std::vector<std::pair<T,T>> factor;\n \
-    \   while(x > 1){\n      T p = min_div[x];\n      x /= p;\n      if(factor.empty()\
-    \ or factor.back().first != p){\n        factor.emplace_back(p,T(1));\n      }else{\n\
-    \        ++factor.back().second;\n      }\n    }\n    return factor;\n  }\n};\n\
-    #line 8 \"test/AOJ/ALDS1_1_C.test.cpp\"\n\nusing namespace std;\n\nint main(){\n\
-    \  cin.tie(nullptr);\n  ios::sync_with_stdio(false);\n  const int sz = 10000;\n\
-    \  // max_a <= sz*sz\n  PrimeSieve<int> sieve(sz);\n  int n;\n  cin >> n;\n  int\
-    \ ans = 0;\n  for(int i = 0; i < n; ++i){\n    int a;\n    cin >> a;\n    ans\
-    \ += sieve.is_prime(a);\n  }\n  cout << ans << endl;\n}\n"
+    \   while(x > 1){\n      T p = (min_div[x] >= 0 ? min_div[x] : x);\n      x /=\
+    \ p;\n      if(factor.empty() or factor.back().first != p){\n        factor.emplace_back(p,T(1));\n\
+    \      }else{\n        ++factor.back().second;\n      }\n    }\n    return factor;\n\
+    \  }\n};\n#line 8 \"test/AOJ/ALDS1_1_C.test.cpp\"\n\nusing namespace std;\n\n\
+    int main(){\n  cin.tie(nullptr);\n  ios::sync_with_stdio(false);\n  const int\
+    \ sz = 10000;\n  // max_a <= sz*sz\n  PrimeSieve<int> sieve(sz);\n  int n;\n \
+    \ cin >> n;\n  int ans = 0;\n  for(int i = 0; i < n; ++i){\n    int a;\n    cin\
+    \ >> a;\n    ans += sieve.is_prime(a);\n  }\n  cout << ans << endl;\n}\n"
   code: "#define PROBLEM \"http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_1_C&lang=ja\"\
     \n\n#include <iostream>\n#include <iomanip>\n#include <vector>\n\n#include \"\
     Math/EratosthenesSieve.cpp\"\n\nusing namespace std;\n\nint main(){\n  cin.tie(nullptr);\n\
@@ -49,7 +49,7 @@ data:
   isVerificationFile: true
   path: test/AOJ/ALDS1_1_C.test.cpp
   requiredBy: []
-  timestamp: '2020-12-13 21:55:55+09:00'
+  timestamp: '2022-04-17 19:32:06+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/AOJ/ALDS1_1_C.test.cpp
