@@ -117,6 +117,11 @@ data:
     - icon: ':heavy_check_mark:'
       path: Math/prime_list.cpp
       title: Math/prime_list.cpp
+  - name: Misc
+    pages:
+    - icon: ':warning:'
+      path: Misc/Compressor.cpp
+      title: Misc/Compressor.cpp
   - name: String
     pages:
     - icon: ':heavy_check_mark:'
