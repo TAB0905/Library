@@ -111,6 +111,9 @@ data:
     - icon: ':warning:'
       path: Math/fraction.cpp
       title: Math/fraction.cpp
+    - icon: ':warning:'
+      path: Math/mebius.cpp
+      title: Math/mebius.cpp
     - icon: ':heavy_check_mark:'
       path: Math/modint.cpp
       title: Math/modint.cpp
