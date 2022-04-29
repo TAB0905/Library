@@ -117,6 +117,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: Math/modint.cpp
       title: Math/modint.cpp
+    - icon: ':warning:'
+      path: Math/normalize_line.cpp
+      title: Math/normalize_line.cpp
     - icon: ':heavy_check_mark:'
       path: Math/prime_list.cpp
       title: Math/prime_list.cpp
