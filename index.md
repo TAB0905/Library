@@ -44,6 +44,9 @@ data:
       title: DataStructure/WeightedUnionFind.cpp
   - name: Geometry
     pages:
+    - icon: ':warning:'
+      path: Geometry/Point.cpp
+      title: Geometry/Point.cpp
     - icon: ':heavy_check_mark:'
       path: Geometry/geometry.cpp
       title: Geometry/geometry.cpp
