@@ -131,6 +131,9 @@ data:
     - icon: ':warning:'
       path: Misc/Compressor.cpp
       title: Misc/Compressor.cpp
+    - icon: ':warning:'
+      path: Misc/RunLength.cpp
+      title: Misc/RunLength.cpp
   - name: String
     pages:
     - icon: ':heavy_check_mark:'
