@@ -96,6 +96,9 @@ data:
     - icon: ':warning:'
       path: Math/Combination.cpp
       title: Math/Combination.cpp
+    - icon: ':heavy_check_mark:'
+      path: Math/DiscreteLog.cpp
+      title: Math/DiscreteLog.cpp
     - icon: ':question:'
       path: Math/EratosthenesSieve.cpp
       title: Math/EratosthenesSieve.cpp
@@ -272,6 +275,9 @@ data:
       title: test/AOJ/GRL_6_B.test.cpp
   - name: test/LibraryChecker
     pages:
+    - icon: ':heavy_check_mark:'
+      path: test/LibraryChecker/DiscreteLogarithm.test.cpp
+      title: test/LibraryChecker/DiscreteLogarithm.test.cpp
     - icon: ':heavy_check_mark:'
       path: test/LibraryChecker/cartesian_tree.test.cpp
       title: test/LibraryChecker/cartesian_tree.test.cpp
