@@ -1,48 +1,53 @@
 #include <array>
 #include <vector>
+#include <string>
 
-struct RollingHash{
+class RollingHash{
+  using ull = unsigned long long;
+
+  static constexpr ull mask31 = (1LL<<31)-1;
+  static constexpr ull mask30 = (1LL<<30)-1;
+  static constexpr ull mask61 = (1LL<<61)-1;
+  static constexpr ull mod = mask61;
+  
   int n;
-  static constexpr int n_base = 2;
-  static constexpr array<long long, n_base> base{1009,9973};
-  static constexpr array<long long, n_base> mod{1000000007,1000000009};
+  ull base;
+  std::vector<ull> hash, power;
+  
+  ull calc_mod(ull x){
+    ull xu = x>>61;
+    ull xd = x&mask61;
+    ull ret = xu+xd;
+    return ret < mod ? ret : ret-mod;
+  }
 
-  vector<array<long long, n_base>> hash, power;
+  ull mul(ull a, ull b){
+    ull au = a>>31;
+    ull ad = a&mask31;
+    ull bu = b>>31;
+    ull bd = b&mask31;
+    ull mid = ad*bu + au*bd;
+    ull midu = mid>>30;
+    ull midd = mid&mask30;
+    return au*bu*2 + midu + (midd<<31) + ad*bd;
+  }
 
-  RollingHash(string s) : n(s.size()), hash(n+1), power(n+1) {
-    for(int i = 0; i < n_base; ++i)
-      power[0][i] = 1;
+public:
+  
+  RollingHash(const std::string& s) :
+    n(s.length()),
+    base(1e9+7),
+    hash(n+1),
+    power(n+1,1)
+  {
     for(int i = 0; i < n; ++i){
-      for(int j = 0; j < n_base; ++j){
-        hash[i+1][j] = (hash[i][j]+s[i])*base[j]%mod[j];
-        power[i+1][j] = power[i][j]*base[j]%mod[j];
-      }
+      hash[i+1] = calc_mod(mul(hash[i],base)+s[i]);
+      power[i+1] = calc_mod(mul(power[i],base));
     }
   }
-  array<long long,n_base> get(int l, int r){//[l,r)
-    array<long long,n_base> ret;
-    for(int i = 0; i < n_base; ++i)
-      ret[i] = ((hash[r][i]-hash[l][i]*power[r-l][i])%mod[i]+mod[i])%mod[i];
-    return ret;
+
+  ull get(int l, int r){//[l,r)
+    return calc_mod(mod*4 + hash[r]-mul(hash[l],power[r-l]));
   }
 };
 
-
-struct RollingHash_64{
-  int n;
-  unsigned long long base;
-  vector<unsigned long long> hash, power;
-  RollingHash_64(string s){
-    base = 1e9 + 7;
-    n = s.size();
-    hash.assign(n+1,0);
-    power.assign(n+1,1);
-    for(int i = 0; i < n; ++i){
-      hash[i+1] = (hash[i]+s[i])*base;
-      power[i+1] = power[i]*base;
-    }
-  }
-  unsigned long long get(int l, int r){//[l,r)
-    return hash[r]-hash[l]*power[r-l];
-  }
-};
