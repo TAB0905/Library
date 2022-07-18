@@ -2,52 +2,53 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: test/AOJ/ALDS1_14_B.test.cpp
+    title: test/AOJ/ALDS1_14_B.test.cpp
   _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 1 \"String/RollingHash.cpp\"\n#include <array>\n#include <vector>\n\
-    \nstruct RollingHash{\n  int n;\n  static constexpr int n_base = 2;\n  static\
-    \ constexpr array<long long, n_base> base{1009,9973};\n  static constexpr array<long\
-    \ long, n_base> mod{1000000007,1000000009};\n\n  vector<array<long long, n_base>>\
-    \ hash, power;\n\n  RollingHash(string s) : n(s.size()), hash(n+1), power(n+1)\
-    \ {\n    for(int i = 0; i < n_base; ++i)\n      power[0][i] = 1;\n    for(int\
-    \ i = 0; i < n; ++i){\n      for(int j = 0; j < n_base; ++j){\n        hash[i+1][j]\
-    \ = (hash[i][j]+s[i])*base[j]%mod[j];\n        power[i+1][j] = power[i][j]*base[j]%mod[j];\n\
-    \      }\n    }\n  }\n  array<long long,n_base> get(int l, int r){//[l,r)\n  \
-    \  array<long long,n_base> ret;\n    for(int i = 0; i < n_base; ++i)\n      ret[i]\
-    \ = ((hash[r][i]-hash[l][i]*power[r-l][i])%mod[i]+mod[i])%mod[i];\n    return\
-    \ ret;\n  }\n};\n\n\nstruct RollingHash_64{\n  int n;\n  unsigned long long base;\n\
-    \  vector<unsigned long long> hash, power;\n  RollingHash_64(string s){\n    base\
-    \ = 1e9 + 7;\n    n = s.size();\n    hash.assign(n+1,0);\n    power.assign(n+1,1);\n\
-    \    for(int i = 0; i < n; ++i){\n      hash[i+1] = (hash[i]+s[i])*base;\n   \
-    \   power[i+1] = power[i]*base;\n    }\n  }\n  unsigned long long get(int l, int\
-    \ r){//[l,r)\n    return hash[r]-hash[l]*power[r-l];\n  }\n};\n"
-  code: "#include <array>\n#include <vector>\n\nstruct RollingHash{\n  int n;\n  static\
-    \ constexpr int n_base = 2;\n  static constexpr array<long long, n_base> base{1009,9973};\n\
-    \  static constexpr array<long long, n_base> mod{1000000007,1000000009};\n\n \
-    \ vector<array<long long, n_base>> hash, power;\n\n  RollingHash(string s) : n(s.size()),\
-    \ hash(n+1), power(n+1) {\n    for(int i = 0; i < n_base; ++i)\n      power[0][i]\
-    \ = 1;\n    for(int i = 0; i < n; ++i){\n      for(int j = 0; j < n_base; ++j){\n\
-    \        hash[i+1][j] = (hash[i][j]+s[i])*base[j]%mod[j];\n        power[i+1][j]\
-    \ = power[i][j]*base[j]%mod[j];\n      }\n    }\n  }\n  array<long long,n_base>\
-    \ get(int l, int r){//[l,r)\n    array<long long,n_base> ret;\n    for(int i =\
-    \ 0; i < n_base; ++i)\n      ret[i] = ((hash[r][i]-hash[l][i]*power[r-l][i])%mod[i]+mod[i])%mod[i];\n\
-    \    return ret;\n  }\n};\n\n\nstruct RollingHash_64{\n  int n;\n  unsigned long\
-    \ long base;\n  vector<unsigned long long> hash, power;\n  RollingHash_64(string\
-    \ s){\n    base = 1e9 + 7;\n    n = s.size();\n    hash.assign(n+1,0);\n    power.assign(n+1,1);\n\
-    \    for(int i = 0; i < n; ++i){\n      hash[i+1] = (hash[i]+s[i])*base;\n   \
-    \   power[i+1] = power[i]*base;\n    }\n  }\n  unsigned long long get(int l, int\
-    \ r){//[l,r)\n    return hash[r]-hash[l]*power[r-l];\n  }\n};\n"
+    #include <string>\n\nclass RollingHash{\n  using ull = unsigned long long;\n\n\
+    \  static constexpr ull mask31 = (1LL<<31)-1;\n  static constexpr ull mask30 =\
+    \ (1LL<<30)-1;\n  static constexpr ull mask61 = (1LL<<61)-1;\n  static constexpr\
+    \ ull mod = mask61;\n  \n  int n;\n  ull base;\n  std::vector<ull> hash, power;\n\
+    \  \n  ull calc_mod(ull x){\n    ull xu = x>>61;\n    ull xd = x&mask61;\n   \
+    \ ull ret = xu+xd;\n    return ret < mod ? ret : ret-mod;\n  }\n\n  ull mul(ull\
+    \ a, ull b){\n    ull au = a>>31;\n    ull ad = a&mask31;\n    ull bu = b>>31;\n\
+    \    ull bd = b&mask31;\n    ull mid = ad*bu + au*bd;\n    ull midu = mid>>30;\n\
+    \    ull midd = mid&mask30;\n    return au*bu*2 + midu + (midd<<31) + ad*bd;\n\
+    \  }\n\npublic:\n  \n  RollingHash(const std::string& s) :\n    n(s.length()),\n\
+    \    base(1e9+7),\n    hash(n+1),\n    power(n+1,1)\n  {\n    for(int i = 0; i\
+    \ < n; ++i){\n      hash[i+1] = calc_mod(mul(hash[i],base)+s[i]);\n      power[i+1]\
+    \ = calc_mod(mul(power[i],base));\n    }\n  }\n\n  ull get(int l, int r){//[l,r)\n\
+    \    return calc_mod(mod*4 + hash[r]-mul(hash[l],power[r-l]));\n  }\n};\n\n"
+  code: "#include <array>\n#include <vector>\n#include <string>\n\nclass RollingHash{\n\
+    \  using ull = unsigned long long;\n\n  static constexpr ull mask31 = (1LL<<31)-1;\n\
+    \  static constexpr ull mask30 = (1LL<<30)-1;\n  static constexpr ull mask61 =\
+    \ (1LL<<61)-1;\n  static constexpr ull mod = mask61;\n  \n  int n;\n  ull base;\n\
+    \  std::vector<ull> hash, power;\n  \n  ull calc_mod(ull x){\n    ull xu = x>>61;\n\
+    \    ull xd = x&mask61;\n    ull ret = xu+xd;\n    return ret < mod ? ret : ret-mod;\n\
+    \  }\n\n  ull mul(ull a, ull b){\n    ull au = a>>31;\n    ull ad = a&mask31;\n\
+    \    ull bu = b>>31;\n    ull bd = b&mask31;\n    ull mid = ad*bu + au*bd;\n \
+    \   ull midu = mid>>30;\n    ull midd = mid&mask30;\n    return au*bu*2 + midu\
+    \ + (midd<<31) + ad*bd;\n  }\n\npublic:\n  \n  RollingHash(const std::string&\
+    \ s) :\n    n(s.length()),\n    base(1e9+7),\n    hash(n+1),\n    power(n+1,1)\n\
+    \  {\n    for(int i = 0; i < n; ++i){\n      hash[i+1] = calc_mod(mul(hash[i],base)+s[i]);\n\
+    \      power[i+1] = calc_mod(mul(power[i],base));\n    }\n  }\n\n  ull get(int\
+    \ l, int r){//[l,r)\n    return calc_mod(mod*4 + hash[r]-mul(hash[l],power[r-l]));\n\
+    \  }\n};\n\n"
   dependsOn: []
   isVerificationFile: false
   path: String/RollingHash.cpp
   requiredBy: []
-  timestamp: '2020-12-13 21:55:55+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  timestamp: '2022-07-19 01:53:48+09:00'
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - test/AOJ/ALDS1_14_B.test.cpp
 documentation_of: String/RollingHash.cpp
 layout: document
 redirect_from:

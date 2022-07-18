@@ -142,7 +142,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: String/PalindromicTree.cpp
       title: String/PalindromicTree.cpp
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: String/RollingHash.cpp
       title: String/RollingHash.cpp
     - icon: ':warning:'
@@ -168,6 +168,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/AOJ/2292.test.cpp
       title: test/AOJ/2292.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/AOJ/ALDS1_14_B.test.cpp
+      title: test/AOJ/ALDS1_14_B.test.cpp
     - icon: ':heavy_check_mark:'
       path: test/AOJ/ALDS1_1_C.test.cpp
       title: test/AOJ/ALDS1_1_C.test.cpp
