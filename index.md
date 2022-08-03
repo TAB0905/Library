@@ -264,7 +264,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/AOJ/DSL_2_G.test.cpp
       title: test/AOJ/DSL_2_G.test.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/AOJ/GRL_3_A.test.cpp
       title: test/AOJ/GRL_3_A.test.cpp
     - icon: ':x:'

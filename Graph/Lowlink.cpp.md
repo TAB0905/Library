@@ -4,6 +4,9 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
+    path: test/AOJ/GRL_3_A.test.cpp
+    title: test/AOJ/GRL_3_A.test.cpp
+  - icon: ':heavy_check_mark:'
     path: test/LibraryChecker/two_edge_connected_components.test.cpp
     title: test/LibraryChecker/two_edge_connected_components.test.cpp
   _isVerificationFailed: false
@@ -82,6 +85,7 @@ data:
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/LibraryChecker/two_edge_connected_components.test.cpp
+  - test/AOJ/GRL_3_A.test.cpp
 documentation_of: Graph/Lowlink.cpp
 layout: document
 redirect_from:
