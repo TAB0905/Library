@@ -4,7 +4,7 @@
 #include <iostream>
 #include <vector>
 #include <utility>
-#include "Graph/LowLink.cpp"
+#include "Graph/Lowlink.cpp"
 using namespace std;
 
 int main(){
@@ -18,9 +18,6 @@ int main(){
   }
   auto ans = TwoEdgeConnectedComponentsDeconposition(E,n).articulationPoints;
   sort(ans.begin(),ans.end());
-  // ans.erase(unique(ans.begin(),ans.end()),ans.end());
-  for(size_t i = 0; i < ans.size(); ++i){
-    // cout << ans[i] << (i+1 < ans.size() ? ' ' : '\n');
-    cout << ans[i] << '\n';
-  }
+  for(auto e : ans)
+    cout << e << '\n';
 }
