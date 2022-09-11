@@ -7,6 +7,7 @@
 struct DecomposedGraph {
   std::vector<std::vector<int>> graph;
   std::vector<std::pair<int,int>> bridge;
+  std::vector<int> articulationPoints;
   std::vector<std::vector<int>> components;
   std::vector<int> affiliation;
 };
@@ -30,34 +31,44 @@ DecomposedGraph TwoEdgeConnectedComponentsDeconposition(const std::vector<std::p
   std::vector<int> low(n), ord(n,-1), node_idx(n,-1);
   std::stack<int> st;
   int t = 0;
-  auto lowlink = [&](auto lowlink, int v, int edge_idx) -> void {
-                   st.push(v);
-                   ord[v] = t++;
-                   low[v] = ord[v];
-                   for(const auto& e : G[v]){
-                     if(e.idx == edge_idx) continue;
-                     int v_ = e.to, idx = e.idx;
-                     if(ord[v_] >= 0){
-                       low[v] = std::min(low[v],ord[v_]);
-                     }else{
-                       lowlink(lowlink,v_,idx);
-                       low[v] = std::min(low[v],low[v_]);
-                     }
-                     if(ord[v] < low[v_]){// u-v is bridge
-                       std::vector<int> cc;
-                       int n_idx = ret.components.size();
-                       while(true){
-                         int tp = st.top();
-                         cc.push_back(tp);
-                         node_idx[tp] = n_idx;
-                         st.pop();
-                         if(tp == v_) break;
-                       }
-                       ret.components.push_back(cc);
-                       ret.bridge.push_back(E[idx]);
-                     }
-                   }
-                 };
+  auto lowlink = [&](auto&& lowlink, int v, int edge_idx) -> void {
+    st.push(v);
+    ord[v] = t++;
+    low[v] = ord[v];
+    int c = 0;
+    bool emplaced = false;
+    for(const auto& e : G[v]){
+      if(e.idx == edge_idx) continue;
+      int v_ = e.to, idx = e.idx;
+      if(ord[v_] >= 0){
+        low[v] = std::min(low[v],ord[v_]);
+      }else{
+        ++c;
+        lowlink(lowlink,v_,idx);
+        low[v] = std::min(low[v],low[v_]);
+        if(edge_idx >= 0 and ord[v] <= low[v_] and not emplaced){
+          ret.articulationPoints.emplace_back(v);
+          emplaced = true;
+        }
+      }
+      if(ord[v] < low[v_]){// u-v is bridge
+        std::vector<int> cc;
+        int n_idx = ret.components.size();
+        while(true){
+          int tp = st.top();
+          cc.push_back(tp);
+          node_idx[tp] = n_idx;
+          st.pop();
+          if(tp == v_) break;
+        }
+        ret.components.push_back(cc);
+        ret.bridge.push_back(E[idx]);
+      }
+    }
+    if(edge_idx < 0 and c > 1){
+      ret.articulationPoints.emplace_back(v);
+    }
+  };
 
   for(int i = 0; i < n; ++i){
     if(ord[i] >= 0) continue;
