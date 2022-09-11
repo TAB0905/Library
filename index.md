@@ -151,6 +151,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: String/SuffixArray.cpp
       title: String/SuffixArray.cpp
+    - icon: ':warning:'
+      path: String/Trie.cpp
+      title: String/Trie.cpp
   - name: test/AtCoder
     pages:
     - icon: ':warning:'

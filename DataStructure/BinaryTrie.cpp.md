@@ -95,8 +95,8 @@ data:
   timestamp: '2021-03-25 17:24:53+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/LibraryChecker/predecessor_problem.test.cpp
   - test/LibraryChecker/set_xor_min.test.cpp
+  - test/LibraryChecker/predecessor_problem.test.cpp
 documentation_of: DataStructure/BinaryTrie.cpp
 layout: document
 redirect_from:
