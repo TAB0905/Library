@@ -44,7 +44,7 @@ public:
 
   AhoCorasick(const std::vector<std::string>& pattern)
     : trie(), suffix_cnt(), failure(), root_idx(0), num_pattern(pattern.size()) {
-    vector<int> idx;
+    std::vector<int> idx;
     for(const auto& p : pattern){
       idx.emplace_back(trie.add(p));
     }

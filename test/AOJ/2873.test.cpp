@@ -2,7 +2,7 @@
 
 #include <iostream>
 #include <vector>
-#include "AhoCorasick.cpp"
+#include "String/AhoCorasick.cpp"
 
 using namespace std;
 
