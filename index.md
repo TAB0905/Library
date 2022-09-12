@@ -139,7 +139,7 @@ data:
       title: Misc/RunLength.cpp
   - name: String
     pages:
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: String/AhoCorasick.cpp
       title: String/AhoCorasick.cpp
     - icon: ':heavy_check_mark:'
@@ -154,7 +154,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: String/SuffixArray.cpp
       title: String/SuffixArray.cpp
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: String/Trie.cpp
       title: String/Trie.cpp
   - name: test/AtCoder
@@ -174,7 +174,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/AOJ/2292.test.cpp
       title: test/AOJ/2292.test.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/AOJ/2873.test.cpp
       title: test/AOJ/2873.test.cpp
     - icon: ':heavy_check_mark:'

@@ -2,13 +2,16 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy:
-  - icon: ':warning:'
+  - icon: ':heavy_check_mark:'
     path: String/AhoCorasick.cpp
     title: String/AhoCorasick.cpp
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: test/AOJ/2873.test.cpp
+    title: test/AOJ/2873.test.cpp
   _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 1 \"String/Trie.cpp\"\n#include <algorithm>\n#include <array>\n\
@@ -40,8 +43,9 @@ data:
   requiredBy:
   - String/AhoCorasick.cpp
   timestamp: '2022-09-11 20:12:20+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - test/AOJ/2873.test.cpp
 documentation_of: String/Trie.cpp
 layout: document
 redirect_from:

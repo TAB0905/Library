@@ -1,14 +1,17 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':warning:'
+  - icon: ':heavy_check_mark:'
     path: String/Trie.cpp
     title: String/Trie.cpp
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: test/AOJ/2873.test.cpp
+    title: test/AOJ/2873.test.cpp
   _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 1 \"String/AhoCorasick.cpp\"\n#include <array>\n#include <cassert>\n\
@@ -37,8 +40,8 @@ data:
     \ break;\n        }\n        failure[trie[v][i]] = (f == -1 or trie[f][i] == -1)\
     \ ? root_idx : trie[f][i];\n      }\n    }\n  }\n\npublic:\n\n  AhoCorasick(const\
     \ std::vector<std::string>& pattern)\n    : trie(), suffix_cnt(), failure(), root_idx(0),\
-    \ num_pattern(pattern.size()) {\n    vector<int> idx;\n    for(const auto& p :\
-    \ pattern){\n      idx.emplace_back(trie.add(p));\n    }\n    failure.resize(trie.size(),-1);\n\
+    \ num_pattern(pattern.size()) {\n    std::vector<int> idx;\n    for(const auto&\
+    \ p : pattern){\n      idx.emplace_back(trie.add(p));\n    }\n    failure.resize(trie.size(),-1);\n\
     \    suffix_cnt.resize(trie.size());\n    for(auto e : idx)\n      ++suffix_cnt[e];\n\
     \    construct_failure();\n  }\n\n  int root(){ return root_idx; }\n\n  std::pair<int,int>\
     \ move(int cur, T c){\n    int i = c - min_element;\n    int nxt = cur;\n    while(trie[nxt][i]\
@@ -60,8 +63,8 @@ data:
     \ break;\n        }\n        failure[trie[v][i]] = (f == -1 or trie[f][i] == -1)\
     \ ? root_idx : trie[f][i];\n      }\n    }\n  }\n\npublic:\n\n  AhoCorasick(const\
     \ std::vector<std::string>& pattern)\n    : trie(), suffix_cnt(), failure(), root_idx(0),\
-    \ num_pattern(pattern.size()) {\n    vector<int> idx;\n    for(const auto& p :\
-    \ pattern){\n      idx.emplace_back(trie.add(p));\n    }\n    failure.resize(trie.size(),-1);\n\
+    \ num_pattern(pattern.size()) {\n    std::vector<int> idx;\n    for(const auto&\
+    \ p : pattern){\n      idx.emplace_back(trie.add(p));\n    }\n    failure.resize(trie.size(),-1);\n\
     \    suffix_cnt.resize(trie.size());\n    for(auto e : idx)\n      ++suffix_cnt[e];\n\
     \    construct_failure();\n  }\n\n  int root(){ return root_idx; }\n\n  std::pair<int,int>\
     \ move(int cur, T c){\n    int i = c - min_element;\n    int nxt = cur;\n    while(trie[nxt][i]\
@@ -73,9 +76,10 @@ data:
   isVerificationFile: false
   path: String/AhoCorasick.cpp
   requiredBy: []
-  timestamp: '2022-09-12 14:24:44+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  timestamp: '2022-09-12 14:31:33+09:00'
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - test/AOJ/2873.test.cpp
 documentation_of: String/AhoCorasick.cpp
 layout: document
 redirect_from:
