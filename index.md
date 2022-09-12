@@ -157,11 +157,6 @@ data:
     - icon: ':warning:'
       path: String/Trie.cpp
       title: String/Trie.cpp
-  - name: test/AOJ
-    pages:
-    - icon: ':warning:'
-      path: test/AOJ/2873.cpp
-      title: test/AOJ/2873.cpp
   - name: test/AtCoder
     pages:
     - icon: ':warning:'
@@ -179,6 +174,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/AOJ/2292.test.cpp
       title: test/AOJ/2292.test.cpp
+    - icon: ':x:'
+      path: test/AOJ/2873.test.cpp
+      title: test/AOJ/2873.test.cpp
     - icon: ':heavy_check_mark:'
       path: test/AOJ/ALDS1_14_B.test.cpp
       title: test/AOJ/ALDS1_14_B.test.cpp
