@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: rbeginend
+# key: rbeginend
+# --
+$1.rbegin(),$1.rend()
