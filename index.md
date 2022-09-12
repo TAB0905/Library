@@ -139,6 +139,9 @@ data:
       title: Misc/RunLength.cpp
   - name: String
     pages:
+    - icon: ':warning:'
+      path: String/AhoCorasick.cpp
+      title: String/AhoCorasick.cpp
     - icon: ':heavy_check_mark:'
       path: String/PalindromicTree.cpp
       title: String/PalindromicTree.cpp
@@ -154,6 +157,11 @@ data:
     - icon: ':warning:'
       path: String/Trie.cpp
       title: String/Trie.cpp
+  - name: test/AOJ
+    pages:
+    - icon: ':warning:'
+      path: test/AOJ/2873.cpp
+      title: test/AOJ/2873.cpp
   - name: test/AtCoder
     pages:
     - icon: ':warning:'
