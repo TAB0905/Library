@@ -3,7 +3,7 @@
 #include <utility>
 #include <vector>
 
-template<typename T, T INF>
+template<typename T, T INF, bool merge=true> // if merge == true then merge [l,m) and [m,r)
 class IntervalSet {
 private:
   using const_iterator = typename std::set<std::pair<T,T>>::const_iterator;
@@ -19,12 +19,12 @@ public:
     assert(l <= r);
     erase(l,r);
     auto itr = data.lower_bound(std::pair(l,r));// *itr == pair(l,r)
-    if(itr->first == r){
+    if(merge and itr->first == r){
       r = itr->second;
       data.erase(itr);
       itr = data.lower_bound(std::pair(l,r));
     }
-    if(std::prev(itr)->second == l){
+    if(merge and std::prev(itr)->second == l){
       l = std::prev(itr)->first;
       data.erase(std::prev(itr));
     }
