@@ -19,6 +19,9 @@ data:
       path: DataStructure/FoldableQueue.cpp
       title: DataStructure/FoldableQueue.cpp
     - icon: ':heavy_check_mark:'
+      path: DataStructure/IntervalSet.cpp
+      title: DataStructure/IntervalSet.cpp
+    - icon: ':heavy_check_mark:'
       path: DataStructure/LazySegmentTree.cpp
       title: DataStructure/LazySegmentTree.cpp
     - icon: ':heavy_check_mark:'
@@ -177,6 +180,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/AOJ/2873.test.cpp
       title: test/AOJ/2873.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/AOJ/2880.test.cpp
+      title: test/AOJ/2880.test.cpp
     - icon: ':heavy_check_mark:'
       path: test/AOJ/ALDS1_14_B.test.cpp
       title: test/AOJ/ALDS1_14_B.test.cpp
