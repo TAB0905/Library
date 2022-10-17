@@ -6,6 +6,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/LibraryChecker/range_kth_smallest.test.cpp
     title: test/LibraryChecker/range_kth_smallest.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/LibraryChecker/static_range_frequency.test.cpp
+    title: test/LibraryChecker/static_range_frequency.test.cpp
   _isVerificationFailed: false
   _pathExtension: cpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -45,6 +48,7 @@ data:
   timestamp: '2021-03-22 00:01:56+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
+  - test/LibraryChecker/static_range_frequency.test.cpp
   - test/LibraryChecker/range_kth_smallest.test.cpp
 documentation_of: DataStructure/RangeTree.cpp
 layout: document

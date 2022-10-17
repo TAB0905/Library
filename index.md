@@ -354,6 +354,9 @@ data:
       path: test/LibraryChecker/shortest_path.test.cpp
       title: test/LibraryChecker/shortest_path.test.cpp
     - icon: ':heavy_check_mark:'
+      path: test/LibraryChecker/static_range_frequency.test.cpp
+      title: test/LibraryChecker/static_range_frequency.test.cpp
+    - icon: ':heavy_check_mark:'
       path: test/LibraryChecker/static_range_sum.test.cpp
       title: test/LibraryChecker/static_range_sum.test.cpp
     - icon: ':heavy_check_mark:'
