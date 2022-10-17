@@ -58,6 +58,7 @@
 "test/LibraryChecker/scc.test.cpp": "2021-03-21 16:59:55 +0900",
 "test/LibraryChecker/set_xor_min.test.cpp": "2021-03-25 17:39:36 +0900",
 "test/LibraryChecker/shortest_path.test.cpp": "2022-04-06 14:42:40 +0900",
+"test/LibraryChecker/static_range_frequency.test.cpp": "2022-10-17 23:26:03 +0900",
 "test/LibraryChecker/static_range_sum.test.cpp": "2022-04-08 13:37:01 +0900",
 "test/LibraryChecker/static_rmq.test.cpp": "2022-04-08 13:37:01 +0900",
 "test/LibraryChecker/suffix_array.test.cpp": "2020-09-24 02:37:40 +0900",
