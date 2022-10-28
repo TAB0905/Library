@@ -114,6 +114,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: Math/MatrixDeterminant.cpp
       title: Math/MatrixDeterminant.cpp
+    - icon: ':heavy_check_mark:'
+      path: Math/PrimeCount.cpp
+      title: Math/PrimeCount.cpp
     - icon: ':warning:'
       path: Math/PrimitiveRoot.cpp
       title: Math/PrimitiveRoot.cpp
@@ -302,6 +305,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/LibraryChecker/cartesian_tree.test.cpp
       title: test/LibraryChecker/cartesian_tree.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/LibraryChecker/counting_primes.test.cpp
+      title: test/LibraryChecker/counting_primes.test.cpp
     - icon: ':heavy_check_mark:'
       path: test/LibraryChecker/enumerate_primes.test.cpp
       title: test/LibraryChecker/enumerate_primes.test.cpp

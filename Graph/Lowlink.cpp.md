@@ -84,8 +84,8 @@ data:
   timestamp: '2022-08-04 07:07:57+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/LibraryChecker/two_edge_connected_components.test.cpp
   - test/AOJ/GRL_3_A.test.cpp
+  - test/LibraryChecker/two_edge_connected_components.test.cpp
 documentation_of: Graph/Lowlink.cpp
 layout: document
 redirect_from:
