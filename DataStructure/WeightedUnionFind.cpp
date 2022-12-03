@@ -14,7 +14,8 @@ struct WeightedUnionFind{
     }
     data[x_].first += data[y_].first;
     data[y_].first = x_;
-    data[y_].second += w + rel_weight(x) - rel_weight(y);
+    // data[y_].second += w + rel_weight(x) - rel_weight(y);
+    data[y_].second += w + data[x].second - data[y].second;
     return true;
   }
   bool same(int x, int y){ return find(x) == find(y); }
@@ -26,6 +27,7 @@ struct WeightedUnionFind{
     return data[x].first;
   }
   long long rel_weight(int x){
+    find(x);
     return data[x].second;
   }
 };
