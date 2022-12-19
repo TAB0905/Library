@@ -380,5 +380,8 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/LibraryChecker/unionfind.test.cpp
       title: test/LibraryChecker/unionfind.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/LibraryChecker/vertex_add_subtree_sum.test.cpp
+      title: test/LibraryChecker/vertex_add_subtree_sum.test.cpp
 layout: toppage
 ---

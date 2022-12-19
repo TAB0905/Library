@@ -56,8 +56,8 @@ data:
   verifiedWith:
   - test/LibraryChecker/point_set_range_composite.test.cpp
   - test/LibraryChecker/static_rmq.test.cpp
-  - test/AOJ/DSL_2_B.test.cpp
   - test/AOJ/DSL_2_A.test.cpp
+  - test/AOJ/DSL_2_B.test.cpp
 documentation_of: DataStructure/SegmentTree.cpp
 layout: document
 redirect_from:
