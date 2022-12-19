@@ -65,5 +65,6 @@
 "test/LibraryChecker/suffix_array.test.cpp": "2020-09-24 02:37:40 +0900",
 "test/LibraryChecker/tree_diameter.test.cpp": "2021-05-02 23:43:49 +0900",
 "test/LibraryChecker/two_edge_connected_components.test.cpp": "2022-08-04 07:07:57 +0900",
-"test/LibraryChecker/unionfind.test.cpp": "2021-01-19 15:33:43 +0900"
+"test/LibraryChecker/unionfind.test.cpp": "2021-01-19 15:33:43 +0900",
+"test/LibraryChecker/vertex_add_subtree_sum.test.cpp": "2022-12-19 15:30:07 +0900"
 }
