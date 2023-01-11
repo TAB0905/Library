@@ -36,7 +36,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: DataStructure/RangeTree.cpp
       title: DataStructure/RangeTree.cpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: DataStructure/SegmentTree.cpp
       title: DataStructure/SegmentTree.cpp
     - icon: ':heavy_check_mark:'
@@ -70,7 +70,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: Graph/FordFulkerson.cpp
       title: Graph/FordFulkerson.cpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: Graph/HLD.cpp
       title: Graph/HLD.cpp
     - icon: ':heavy_check_mark:'
@@ -129,7 +129,7 @@ data:
     - icon: ':warning:'
       path: Math/mebius.cpp
       title: Math/mebius.cpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: Math/modint.cpp
       title: Math/modint.cpp
     - icon: ':warning:'
@@ -389,5 +389,8 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/LibraryChecker/vertex_add_subtree_sum.test.cpp
       title: test/LibraryChecker/vertex_add_subtree_sum.test.cpp
+    - icon: ':x:'
+      path: test/LibraryChecker/vertex_set_path_composite.test.cpp
+      title: test/LibraryChecker/vertex_set_path_composite.test.cpp
 layout: toppage
 ---

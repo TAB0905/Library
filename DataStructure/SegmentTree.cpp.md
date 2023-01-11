@@ -18,9 +18,12 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/LibraryChecker/vertex_add_path_sum.test.cpp
     title: test/LibraryChecker/vertex_add_path_sum.test.cpp
-  _isVerificationFailed: false
+  - icon: ':x:'
+    path: test/LibraryChecker/vertex_set_path_composite.test.cpp
+    title: test/LibraryChecker/vertex_set_path_composite.test.cpp
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':question:'
   attributes:
     links: []
   bundledCode: "#line 1 \"DataStructure/SegmentTree.cpp\"\n#include <vector>\n#include\
@@ -55,13 +58,14 @@ data:
   path: DataStructure/SegmentTree.cpp
   requiredBy: []
   timestamp: '2022-04-08 13:37:01+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
-  - test/AOJ/DSL_2_A.test.cpp
-  - test/AOJ/DSL_2_B.test.cpp
-  - test/LibraryChecker/vertex_add_path_sum.test.cpp
+  - test/LibraryChecker/vertex_set_path_composite.test.cpp
   - test/LibraryChecker/point_set_range_composite.test.cpp
   - test/LibraryChecker/static_rmq.test.cpp
+  - test/LibraryChecker/vertex_add_path_sum.test.cpp
+  - test/AOJ/DSL_2_A.test.cpp
+  - test/AOJ/DSL_2_B.test.cpp
 documentation_of: DataStructure/SegmentTree.cpp
 layout: document
 redirect_from:

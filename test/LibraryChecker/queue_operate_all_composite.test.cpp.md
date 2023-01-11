@@ -4,7 +4,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: DataStructure/FoldableQueue.cpp
     title: DataStructure/FoldableQueue.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: Math/modint.cpp
     title: Math/modint.cpp
   _extendedRequiredBy: []

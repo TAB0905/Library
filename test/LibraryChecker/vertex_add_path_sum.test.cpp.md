@@ -1,10 +1,10 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: DataStructure/SegmentTree.cpp
     title: DataStructure/SegmentTree.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: Graph/HLD.cpp
     title: Graph/HLD.cpp
   _extendedRequiredBy: []
