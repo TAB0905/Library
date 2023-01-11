@@ -4,7 +4,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: Math/MatrixDeterminant.cpp
     title: Math/MatrixDeterminant.cpp
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: Math/modint.cpp
     title: Math/modint.cpp
   _extendedRequiredBy: []

@@ -1,27 +1,27 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: DataStructure/SegmentTree.cpp
     title: DataStructure/SegmentTree.cpp
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: Graph/HLD.cpp
     title: Graph/HLD.cpp
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: Math/modint.cpp
     title: Math/modint.cpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
-    PROBLEM: https://judge.yosupo.jp/problem/vertex_add_set_path_composite
+    PROBLEM: https://judge.yosupo.jp/problem/vertex_set_path_composite
     links:
-    - https://judge.yosupo.jp/problem/vertex_add_set_path_composite
+    - https://judge.yosupo.jp/problem/vertex_set_path_composite
   bundledCode: "#line 1 \"test/LibraryChecker/vertex_set_path_composite.test.cpp\"\
-    \n#define PROBLEM \"https://judge.yosupo.jp/problem/vertex_add_set_path_composite\"\
+    \n#define PROBLEM \"https://judge.yosupo.jp/problem/vertex_set_path_composite\"\
     \n\n#line 1 \"Graph/HLD.cpp\"\n#include <algorithm>\n#include <iostream>\n#include\
     \ <vector>\n#include <utility>\n\ntemplate<typename Tree>\nclass QueryOnRootedTree\
     \ {\n  const int n;\n  const int r;\n  std::vector<int> L, R;\n  std::vector<int>\
@@ -112,7 +112,7 @@ data:
     \ << '\\n';\n    }else{\n      int p;\n      mint c, d;\n      cin >> p >> c >>\
     \ d;\n      p = inv[p];\n      F.set_val(p,pair(c,d));\n      R.set_val(p,pair(c,d));\n\
     \    }\n  }\n}\n"
-  code: "#define PROBLEM \"https://judge.yosupo.jp/problem/vertex_add_set_path_composite\"\
+  code: "#define PROBLEM \"https://judge.yosupo.jp/problem/vertex_set_path_composite\"\
     \n\n#include \"Graph/HLD.cpp\"\n#include \"DataStructure/SegmentTree.cpp\"\n#include\
     \ \"Math/modint.cpp\"\n\n#include <utility>\nusing namespace std;\n\nint main(){\n\
     \  using mint = modint<998244353>;\n  ios::sync_with_stdio(false);\n  cin.tie(nullptr);\n\
@@ -142,8 +142,8 @@ data:
   isVerificationFile: true
   path: test/LibraryChecker/vertex_set_path_composite.test.cpp
   requiredBy: []
-  timestamp: '2023-01-12 01:31:26+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2023-01-12 01:35:56+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/LibraryChecker/vertex_set_path_composite.test.cpp
 layout: document

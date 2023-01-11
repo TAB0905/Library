@@ -18,12 +18,12 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/LibraryChecker/range_affine_range_sum.test.cpp
     title: test/LibraryChecker/range_affine_range_sum.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/LibraryChecker/vertex_set_path_composite.test.cpp
     title: test/LibraryChecker/vertex_set_path_composite.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 1 \"Math/modint.cpp\"\n#include <iostream>\n#include <cassert>\n\
@@ -85,7 +85,7 @@ data:
   path: Math/modint.cpp
   requiredBy: []
   timestamp: '2021-10-15 01:32:12+09:00'
-  verificationStatus: LIBRARY_SOME_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/LibraryChecker/vertex_set_path_composite.test.cpp
   - test/LibraryChecker/range_affine_range_sum.test.cpp
