@@ -42,8 +42,8 @@ data:
   timestamp: '2021-01-19 15:33:43+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/LibraryChecker/unionfind.test.cpp
   - test/AOJ/DSL_1_A.test.cpp
+  - test/LibraryChecker/unionfind.test.cpp
 documentation_of: DataStructure/UnionFind.cpp
 layout: document
 redirect_from:

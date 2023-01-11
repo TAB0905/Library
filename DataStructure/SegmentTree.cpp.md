@@ -15,6 +15,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/LibraryChecker/static_rmq.test.cpp
     title: test/LibraryChecker/static_rmq.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/LibraryChecker/vertex_add_path_sum.test.cpp
+    title: test/LibraryChecker/vertex_add_path_sum.test.cpp
   _isVerificationFailed: false
   _pathExtension: cpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -54,10 +57,11 @@ data:
   timestamp: '2022-04-08 13:37:01+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/LibraryChecker/point_set_range_composite.test.cpp
-  - test/LibraryChecker/static_rmq.test.cpp
   - test/AOJ/DSL_2_A.test.cpp
   - test/AOJ/DSL_2_B.test.cpp
+  - test/LibraryChecker/vertex_add_path_sum.test.cpp
+  - test/LibraryChecker/point_set_range_composite.test.cpp
+  - test/LibraryChecker/static_rmq.test.cpp
 documentation_of: DataStructure/SegmentTree.cpp
 layout: document
 redirect_from:

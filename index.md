@@ -71,6 +71,9 @@ data:
       path: Graph/FordFulkerson.cpp
       title: Graph/FordFulkerson.cpp
     - icon: ':heavy_check_mark:'
+      path: Graph/HLD.cpp
+      title: Graph/HLD.cpp
+    - icon: ':heavy_check_mark:'
       path: Graph/LCA.cpp
       title: Graph/LCA.cpp
     - icon: ':heavy_check_mark:'
@@ -380,6 +383,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/LibraryChecker/unionfind.test.cpp
       title: test/LibraryChecker/unionfind.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/LibraryChecker/vertex_add_path_sum.test.cpp
+      title: test/LibraryChecker/vertex_add_path_sum.test.cpp
     - icon: ':heavy_check_mark:'
       path: test/LibraryChecker/vertex_add_subtree_sum.test.cpp
       title: test/LibraryChecker/vertex_add_subtree_sum.test.cpp

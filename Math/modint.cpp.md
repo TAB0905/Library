@@ -84,9 +84,9 @@ data:
   timestamp: '2021-10-15 01:32:12+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/LibraryChecker/range_affine_range_sum.test.cpp
-  - test/LibraryChecker/point_set_range_composite.test.cpp
   - test/LibraryChecker/matrix_product.test.cpp
+  - test/LibraryChecker/point_set_range_composite.test.cpp
+  - test/LibraryChecker/range_affine_range_sum.test.cpp
   - test/LibraryChecker/queue_operate_all_composite.test.cpp
   - test/LibraryChecker/matrix_det.test.cpp
 documentation_of: Math/modint.cpp
