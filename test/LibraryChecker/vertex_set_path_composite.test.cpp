@@ -1,4 +1,4 @@
-#define PROBLEM "https://judge.yosupo.jp/problem/vertex_add_set_path_composite"
+#define PROBLEM "https://judge.yosupo.jp/problem/vertex_set_path_composite"
 
 #include "Graph/HLD.cpp"
 #include "DataStructure/SegmentTree.cpp"
