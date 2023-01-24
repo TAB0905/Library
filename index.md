@@ -118,6 +118,9 @@ data:
       path: Math/MatrixDeterminant.cpp
       title: Math/MatrixDeterminant.cpp
     - icon: ':heavy_check_mark:'
+      path: Math/ModSqrt.cpp
+      title: Math/ModSqrt.cpp
+    - icon: ':heavy_check_mark:'
       path: Math/PrimeCount.cpp
       title: Math/PrimeCount.cpp
     - icon: ':warning:'
@@ -362,6 +365,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/LibraryChecker/shortest_path.test.cpp
       title: test/LibraryChecker/shortest_path.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/LibraryChecker/sqrt_mod.test.cpp
+      title: test/LibraryChecker/sqrt_mod.test.cpp
     - icon: ':heavy_check_mark:'
       path: test/LibraryChecker/static_range_frequency.test.cpp
       title: test/LibraryChecker/static_range_frequency.test.cpp
