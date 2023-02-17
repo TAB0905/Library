@@ -31,7 +31,7 @@ public:
     A = std::vector<std::vector<int>>(n,std::vector<int>(m,-1));
     build(r);
   }
-  size_t query(int u, int v){
+  size_t lca(int u, int v){
     if(D[u] < D[v]) std::swap(u,v);
 
     for(size_t i = m-1; i < m; --i){
@@ -47,5 +47,23 @@ public:
         u = A[u][i], v = A[v][i];
     }
     return A[u][0];
+  }
+  int dist(int s, int t){
+    int l = lca(s,t);
+    return D[s] + D[t] - 2*D[l];
+  }
+  int jump(int s, int t, int i){ // s から t に i 辺進んだ頂点 (なければ -1 )
+    int l = lca(s,t);
+    int d = dist(s,t);
+    if(d < i) return -1;
+    if(i > D[s]-D[l]){
+      std::swap(s,t);
+      i = d - i;
+    }
+    for(size_t j = m-1; j < m; --j){
+      if(i>>j&1)
+        s = A[s][j];
+    }
+    return s;
   }
 };
