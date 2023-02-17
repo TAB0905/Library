@@ -3,12 +3,15 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
+    path: test/LibraryChecker/jump_on_tree.test.cpp
+    title: test/LibraryChecker/jump_on_tree.test.cpp
+  - icon: ':x:'
     path: test/LibraryChecker/lca.test.cpp
     title: test/LibraryChecker/lca.test.cpp
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     links: []
   bundledCode: "#line 1 \"Graph/LCA.cpp\"\n#include <cassert>\n#include <vector>\n\
@@ -21,11 +24,17 @@ data:
     \      }\n    }\n   }\npublic:\n  LCA(const std::vector<std::vector<int>>& Tree,\
     \ int r) : G(Tree), n(Tree.size()), m(1), D(n,0) {\n    size_t t = 1;\n    while(t\
     \ < n) ++m, t *= 2;\n    A = std::vector<std::vector<int>>(n,std::vector<int>(m,-1));\n\
-    \    build(r);\n  }\n  size_t query(int u, int v){\n    if(D[u] < D[v]) std::swap(u,v);\n\
+    \    build(r);\n  }\n  size_t lca(int u, int v){\n    if(D[u] < D[v]) std::swap(u,v);\n\
     \n    for(size_t i = m-1; i < m; --i){\n      size_t u_ = A[u][i];\n      if(D[u_]\
     \ < D[v]) continue;\n      u = u_;\n    }\n\n    if(u == v) return u;\n    assert(D[u]\
     \ == D[v]);\n    for(size_t i = m-1; i < m; --i){\n      if(A[u][i] != A[v][i])\n\
-    \        u = A[u][i], v = A[v][i];\n    }\n    return A[u][0];\n  }\n};\n"
+    \        u = A[u][i], v = A[v][i];\n    }\n    return A[u][0];\n  }\n  int dist(int\
+    \ s, int t){\n    int l = lca(s,t);\n    return D[s] + D[t] - 2*D[l];\n  }\n \
+    \ int jump(int s, int t, int i){ // s \u304B\u3089 t \u306B i \u8FBA\u9032\u3093\
+    \u3060\u9802\u70B9 (\u306A\u3051\u308C\u3070 -1 )\n    int l = lca(s,t);\n   \
+    \ int d = dist(s,t);\n    if(d < i) return -1;\n    if(i > D[s]-D[l]){\n     \
+    \ std::swap(s,t);\n      i = d - i;\n    }\n    for(size_t j = m-1; j < m; --j){\n\
+    \      if(i>>j&1)\n        s = A[s][j];\n    }\n    return s;\n  }\n};\n"
   code: "#include <cassert>\n#include <vector>\n\nstruct LCA {\nprivate:\n  std::vector<std::vector<int>>\
     \ G;\n  size_t n, m;\n  std::vector<std::vector<int>> A;\n  std::vector<int> D;\n\
     \  void dfs(int v, int p){\n    for(auto v_ : G[v]){\n      if(v_ == p) continue;\n\
@@ -35,18 +44,25 @@ data:
     \      }\n    }\n   }\npublic:\n  LCA(const std::vector<std::vector<int>>& Tree,\
     \ int r) : G(Tree), n(Tree.size()), m(1), D(n,0) {\n    size_t t = 1;\n    while(t\
     \ < n) ++m, t *= 2;\n    A = std::vector<std::vector<int>>(n,std::vector<int>(m,-1));\n\
-    \    build(r);\n  }\n  size_t query(int u, int v){\n    if(D[u] < D[v]) std::swap(u,v);\n\
+    \    build(r);\n  }\n  size_t lca(int u, int v){\n    if(D[u] < D[v]) std::swap(u,v);\n\
     \n    for(size_t i = m-1; i < m; --i){\n      size_t u_ = A[u][i];\n      if(D[u_]\
     \ < D[v]) continue;\n      u = u_;\n    }\n\n    if(u == v) return u;\n    assert(D[u]\
     \ == D[v]);\n    for(size_t i = m-1; i < m; --i){\n      if(A[u][i] != A[v][i])\n\
-    \        u = A[u][i], v = A[v][i];\n    }\n    return A[u][0];\n  }\n};\n"
+    \        u = A[u][i], v = A[v][i];\n    }\n    return A[u][0];\n  }\n  int dist(int\
+    \ s, int t){\n    int l = lca(s,t);\n    return D[s] + D[t] - 2*D[l];\n  }\n \
+    \ int jump(int s, int t, int i){ // s \u304B\u3089 t \u306B i \u8FBA\u9032\u3093\
+    \u3060\u9802\u70B9 (\u306A\u3051\u308C\u3070 -1 )\n    int l = lca(s,t);\n   \
+    \ int d = dist(s,t);\n    if(d < i) return -1;\n    if(i > D[s]-D[l]){\n     \
+    \ std::swap(s,t);\n      i = d - i;\n    }\n    for(size_t j = m-1; j < m; --j){\n\
+    \      if(i>>j&1)\n        s = A[s][j];\n    }\n    return s;\n  }\n};\n"
   dependsOn: []
   isVerificationFile: false
   path: Graph/LCA.cpp
   requiredBy: []
-  timestamp: '2020-09-24 22:06:58+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  timestamp: '2023-02-17 17:41:25+09:00'
+  verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
+  - test/LibraryChecker/jump_on_tree.test.cpp
   - test/LibraryChecker/lca.test.cpp
 documentation_of: Graph/LCA.cpp
 layout: document

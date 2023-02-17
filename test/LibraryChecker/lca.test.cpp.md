@@ -1,14 +1,14 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: Graph/LCA.cpp
     title: Graph/LCA.cpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.yosupo.jp/problem/lca
@@ -24,31 +24,37 @@ data:
     \        A[j][i] = A[A[j][i-1]][i-1];\n      }\n    }\n   }\npublic:\n  LCA(const\
     \ std::vector<std::vector<int>>& Tree, int r) : G(Tree), n(Tree.size()), m(1),\
     \ D(n,0) {\n    size_t t = 1;\n    while(t < n) ++m, t *= 2;\n    A = std::vector<std::vector<int>>(n,std::vector<int>(m,-1));\n\
-    \    build(r);\n  }\n  size_t query(int u, int v){\n    if(D[u] < D[v]) std::swap(u,v);\n\
+    \    build(r);\n  }\n  size_t lca(int u, int v){\n    if(D[u] < D[v]) std::swap(u,v);\n\
     \n    for(size_t i = m-1; i < m; --i){\n      size_t u_ = A[u][i];\n      if(D[u_]\
     \ < D[v]) continue;\n      u = u_;\n    }\n\n    if(u == v) return u;\n    assert(D[u]\
     \ == D[v]);\n    for(size_t i = m-1; i < m; --i){\n      if(A[u][i] != A[v][i])\n\
-    \        u = A[u][i], v = A[v][i];\n    }\n    return A[u][0];\n  }\n};\n#line\
+    \        u = A[u][i], v = A[v][i];\n    }\n    return A[u][0];\n  }\n  int dist(int\
+    \ s, int t){\n    int l = lca(s,t);\n    return D[s] + D[t] - 2*D[l];\n  }\n \
+    \ int jump(int s, int t, int i){ // s \u304B\u3089 t \u306B i \u8FBA\u9032\u3093\
+    \u3060\u9802\u70B9 (\u306A\u3051\u308C\u3070 -1 )\n    int l = lca(s,t);\n   \
+    \ int d = dist(s,t);\n    if(d < i) return -1;\n    if(i > D[s]-D[l]){\n     \
+    \ std::swap(s,t);\n      i = d - i;\n    }\n    for(size_t j = m-1; j < m; --j){\n\
+    \      if(i>>j&1)\n        s = A[s][j];\n    }\n    return s;\n  }\n};\n#line\
     \ 5 \"test/LibraryChecker/lca.test.cpp\"\n#include <iostream>\n#include <iomanip>\n\
     using namespace std;\n\nint main(){\n  cin.tie(nullptr);\n  ios::sync_with_stdio(false);\n\
     \  \n  int N, Q;\n  cin >> N >> Q;\n  vector<vector<int>> G(N);\n  for(int i =\
     \ 1; i < N; ++i){\n    int p;\n    cin >> p;\n    G[i].emplace_back(p);\n    G[p].emplace_back(i);\n\
     \  }\n  LCA lca(G,0);\n  while(Q--){\n    int u, v;\n    cin >> u >> v;\n    cout\
-    \ << lca.query(u,v) << '\\n';\n  }\n}\n"
+    \ << lca.lca(u,v) << '\\n';\n  }\n}\n"
   code: "#define PROBLEM \"https://judge.yosupo.jp/problem/lca\"\n\n#include \"Graph/LCA.cpp\"\
     \n#include <vector>\n#include <iostream>\n#include <iomanip>\nusing namespace\
     \ std;\n\nint main(){\n  cin.tie(nullptr);\n  ios::sync_with_stdio(false);\n \
     \ \n  int N, Q;\n  cin >> N >> Q;\n  vector<vector<int>> G(N);\n  for(int i =\
     \ 1; i < N; ++i){\n    int p;\n    cin >> p;\n    G[i].emplace_back(p);\n    G[p].emplace_back(i);\n\
     \  }\n  LCA lca(G,0);\n  while(Q--){\n    int u, v;\n    cin >> u >> v;\n    cout\
-    \ << lca.query(u,v) << '\\n';\n  }\n}\n"
+    \ << lca.lca(u,v) << '\\n';\n  }\n}\n"
   dependsOn:
   - Graph/LCA.cpp
   isVerificationFile: true
   path: test/LibraryChecker/lca.test.cpp
   requiredBy: []
-  timestamp: '2020-12-13 21:55:55+09:00'
-  verificationStatus: TEST_ACCEPTED
+  timestamp: '2023-02-17 17:41:25+09:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: test/LibraryChecker/lca.test.cpp
 layout: document

@@ -73,7 +73,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: Graph/HLD.cpp
       title: Graph/HLD.cpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: Graph/LCA.cpp
       title: Graph/LCA.cpp
     - icon: ':heavy_check_mark:'
@@ -317,10 +317,13 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/LibraryChecker/enumerate_primes.test.cpp
       title: test/LibraryChecker/enumerate_primes.test.cpp
+    - icon: ':x:'
+      path: test/LibraryChecker/jump_on_tree.test.cpp
+      title: test/LibraryChecker/jump_on_tree.test.cpp
     - icon: ':heavy_check_mark:'
       path: test/LibraryChecker/k_shortest_walk.test.cpp
       title: test/LibraryChecker/k_shortest_walk.test.cpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: test/LibraryChecker/lca.test.cpp
       title: test/LibraryChecker/lca.test.cpp
     - icon: ':heavy_check_mark:'
