@@ -4,7 +4,7 @@
 struct LCA {
 private:
   std::vector<std::vector<int>> G;
-  size_t n, m;
+  int n, m;
   std::vector<std::vector<int>> A;
   std::vector<int> D;
   void dfs(int v, int p){
@@ -18,31 +18,31 @@ private:
   void build(int r){
     dfs(r,-1);
     A[r][0] = r;
-    for(size_t i = 1; i < m; ++i){
-      for(size_t j = 0; j < n; ++j){
+    for(int i = 1; i < m; ++i){
+      for(int j = 0; j < n; ++j){
         A[j][i] = A[A[j][i-1]][i-1];
       }
     }
    }
 public:
   LCA(const std::vector<std::vector<int>>& Tree, int r) : G(Tree), n(Tree.size()), m(1), D(n,0) {
-    size_t t = 1;
+    int t = 1;
     while(t < n) ++m, t *= 2;
     A = std::vector<std::vector<int>>(n,std::vector<int>(m,-1));
     build(r);
   }
-  size_t lca(int u, int v){
+  int lca(int u, int v){
     if(D[u] < D[v]) std::swap(u,v);
 
-    for(size_t i = m-1; i < m; --i){
-      size_t u_ = A[u][i];
+    for(int i = m-1; i >= 0; --i){
+      int u_ = A[u][i];
       if(D[u_] < D[v]) continue;
       u = u_;
     }
 
     if(u == v) return u;
     assert(D[u] == D[v]);
-    for(size_t i = m-1; i < m; --i){
+    for(int i = m-1; i >= 0; --i){
       if(A[u][i] != A[v][i])
         u = A[u][i], v = A[v][i];
     }
@@ -60,7 +60,7 @@ public:
       std::swap(s,t);
       i = d - i;
     }
-    for(size_t j = m-1; j < m; --j){
+    for(int j = m-1; j >= 0; --j){
       if(i>>j&1)
         s = A[s][j];
     }
