@@ -39,7 +39,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: DataStructure/SegmentTree.cpp
       title: DataStructure/SegmentTree.cpp
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: DataStructure/UndoableUnionFind.cpp
       title: DataStructure/UndoableUnionFind.cpp
     - icon: ':heavy_check_mark:'
@@ -344,7 +344,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/LibraryChecker/number_of_substrings.test.cpp
       title: test/LibraryChecker/number_of_substrings.test.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/LibraryChecker/persistent_unionfind.test.cpp
       title: test/LibraryChecker/persistent_unionfind.test.cpp
     - icon: ':heavy_check_mark:'

@@ -2,10 +2,13 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: test/LibraryChecker/persistent_unionfind.test.cpp
+    title: test/LibraryChecker/persistent_unionfind.test.cpp
   _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 1 \"DataStructure/UndoableUnionFind.cpp\"\n#include <vector>\n\
@@ -40,8 +43,9 @@ data:
   path: DataStructure/UndoableUnionFind.cpp
   requiredBy: []
   timestamp: '2023-05-21 17:57:26+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - test/LibraryChecker/persistent_unionfind.test.cpp
 documentation_of: DataStructure/UndoableUnionFind.cpp
 layout: document
 redirect_from:
