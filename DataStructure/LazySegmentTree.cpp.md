@@ -86,9 +86,9 @@ data:
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/AOJ/DSL_2_D.test.cpp
+  - test/AOJ/DSL_2_F.test.cpp
   - test/AOJ/DSL_2_E.test.cpp
   - test/AOJ/DSL_2_G.test.cpp
-  - test/AOJ/DSL_2_F.test.cpp
   - test/LibraryChecker/range_affine_range_sum.test.cpp
 documentation_of: DataStructure/LazySegmentTree.cpp
 layout: document

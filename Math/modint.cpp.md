@@ -88,11 +88,11 @@ data:
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/LibraryChecker/point_set_range_composite.test.cpp
+  - test/LibraryChecker/vertex_set_path_composite.test.cpp
+  - test/LibraryChecker/matrix_product.test.cpp
+  - test/LibraryChecker/range_affine_range_sum.test.cpp
   - test/LibraryChecker/queue_operate_all_composite.test.cpp
   - test/LibraryChecker/matrix_det.test.cpp
-  - test/LibraryChecker/vertex_set_path_composite.test.cpp
-  - test/LibraryChecker/range_affine_range_sum.test.cpp
-  - test/LibraryChecker/matrix_product.test.cpp
 documentation_of: Math/modint.cpp
 layout: document
 redirect_from:

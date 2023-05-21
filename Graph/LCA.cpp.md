@@ -61,8 +61,8 @@ data:
   timestamp: '2023-02-17 17:50:35+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/LibraryChecker/jump_on_tree.test.cpp
   - test/LibraryChecker/lca.test.cpp
+  - test/LibraryChecker/jump_on_tree.test.cpp
 documentation_of: Graph/LCA.cpp
 layout: document
 redirect_from:
