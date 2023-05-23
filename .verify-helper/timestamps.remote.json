@@ -51,6 +51,7 @@
 "test/LibraryChecker/matrix_product.test.cpp": "2021-10-15 01:32:12 +0900",
 "test/LibraryChecker/maximum_independent_set.test.cpp": "2021-05-02 20:29:46 +0900",
 "test/LibraryChecker/number_of_substrings.test.cpp": "2020-09-27 01:04:25 +0900",
+"test/LibraryChecker/persistent_unionfind.test.cpp": "2023-05-21 18:00:51 +0900",
 "test/LibraryChecker/point_add_range_sum.test.cpp": "2021-05-02 22:46:33 +0900",
 "test/LibraryChecker/point_set_range_composite.test.cpp": "2022-04-08 13:37:01 +0900",
 "test/LibraryChecker/predecessor_problem.test.cpp": "2021-03-25 17:24:53 +0900",
