@@ -48,6 +48,11 @@ data:
     - icon: ':heavy_check_mark:'
       path: DataStructure/WeightedUnionFind.cpp
       title: DataStructure/WeightedUnionFind.cpp
+  - name: Generator
+    pages:
+    - icon: ':warning:'
+      path: Generator/RandomString.cpp
+      title: Generator/RandomString.cpp
   - name: Geometry
     pages:
     - icon: ':warning:'
