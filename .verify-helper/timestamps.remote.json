@@ -55,6 +55,7 @@
 "test/LibraryChecker/point_add_range_sum.test.cpp": "2021-05-02 22:46:33 +0900",
 "test/LibraryChecker/point_set_range_composite.test.cpp": "2022-04-08 13:37:01 +0900",
 "test/LibraryChecker/predecessor_problem.test.cpp": "2021-03-25 17:24:53 +0900",
+"test/LibraryChecker/primality_test.test.cpp": "2023-09-22 20:07:24 +0900",
 "test/LibraryChecker/queue_operate_all_composite.test.cpp": "2021-10-15 01:32:12 +0900",
 "test/LibraryChecker/range_affine_range_sum.test.cpp": "2022-04-08 13:37:01 +0900",
 "test/LibraryChecker/range_kth_smallest.test.cpp": "2022-04-05 15:05:18 +0900",
