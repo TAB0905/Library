@@ -126,6 +126,9 @@ data:
       path: Math/MatrixDeterminant.cpp
       title: Math/MatrixDeterminant.cpp
     - icon: ':heavy_check_mark:'
+      path: Math/MillerRabin.cpp
+      title: Math/MillerRabin.cpp
+    - icon: ':heavy_check_mark:'
       path: Math/ModSqrt.cpp
       title: Math/ModSqrt.cpp
     - icon: ':heavy_check_mark:'
@@ -361,6 +364,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/LibraryChecker/predecessor_problem.test.cpp
       title: test/LibraryChecker/predecessor_problem.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/LibraryChecker/primality_test.test.cpp
+      title: test/LibraryChecker/primality_test.test.cpp
     - icon: ':heavy_check_mark:'
       path: test/LibraryChecker/queue_operate_all_composite.test.cpp
       title: test/LibraryChecker/queue_operate_all_composite.test.cpp
